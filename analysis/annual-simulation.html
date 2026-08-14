@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#173f5f">
+  <title>有利車業｜年度營收與獲利情境模擬｜11 日樣本</title>
+  <meta name="description" content="依有利車業 11 個營收記錄日及目前支出資料，模擬全年營收、支出、老闆薪資與店留利潤。">
+  <style>
+    :root {
+      --navy:#173f5f;
+      --navy-2:#245a7e;
+      --ink:#17212b;
+      --muted:#637282;
+      --line:#dce4ea;
+      --paper:#f4f7f9;
+      --card:#fff;
+      --lime:#dff1b5;
+      --lime-strong:#a8cf45;
+      --amber:#fff0c8;
+      --red:#ffe4df;
+      --blue-soft:#e8f2f6;
+      --shadow:0 14px 40px rgba(23,63,95,.09);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6}
+    button,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    .site-header{position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top);color:#fff;background:rgba(23,63,95,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.12)}
+    .header-inner{max-width:1120px;margin:auto;padding:11px max(18px,env(safe-area-inset-right)) 9px max(18px,env(safe-area-inset-left))}
+    .brand-row{display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}
+    .brand-mark{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;color:var(--navy);background:var(--lime);border-radius:12px;font-weight:900}
+    .brand strong{display:block;font-size:16px}.brand small{display:block;color:#bdd4e3;font-size:11px}
+    .print-btn{min-height:42px;padding:7px 11px;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.28);border-radius:10px;font:inherit;cursor:pointer}
+    .nav{display:flex;gap:7px;margin-top:9px;padding-bottom:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
+    .nav a{flex:0 0 auto;padding:6px 10px;color:#dceaf3;border-radius:999px;font-size:12px;text-decoration:none}.nav a:focus,.nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+    main{max-width:1120px;margin:auto;padding:22px max(18px,env(safe-area-inset-right)) calc(72px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}
+    section{margin-bottom:46px;scroll-margin-top:112px}
+    .hero{position:relative;overflow:hidden;padding:clamp(27px,5vw,52px);color:#fff;background:var(--navy);border-radius:28px;box-shadow:var(--shadow)}
+    .hero:after{content:"";position:absolute;width:280px;height:280px;right:-95px;top:-125px;background:var(--lime);border-radius:50%;opacity:.12}
+    .eyebrow{margin:0 0 10px;color:var(--lime);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    h1{max-width:800px;margin:0;font-size:clamp(31px,6vw,58px);line-height:1.08;letter-spacing:-.045em}
+    .hero>p:not(.eyebrow){max-width:780px;margin:17px 0 0;color:#ccdde8;font-size:clamp(14px,2vw,18px)}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.hero-meta span{padding:7px 10px;color:#eef6fa;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:999px;font-size:12px}
+    .verdict{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start;margin-top:14px;padding:17px 18px;background:var(--lime);border:1px solid #c6df8c;border-radius:16px}.verdict b{display:grid;place-items:center;width:34px;height:34px;color:#fff;background:var(--navy);border-radius:10px}.verdict strong{display:block;color:var(--navy)}.verdict p{margin:3px 0 0;color:#425568;font-size:13px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px}.section-head h2{margin:0;color:var(--navy);font-size:clamp(24px,4vw,34px);letter-spacing:-.03em}.section-head p{max-width:680px;margin:4px 0 0;color:var(--muted)}
+    .pill{flex:0 0 auto;padding:6px 10px;color:var(--navy);background:var(--lime);border-radius:999px;font-size:11px;font-weight:900}
+    .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi{min-height:137px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 7px 22px rgba(23,63,95,.04)}.kpi.primary{color:#fff;background:var(--navy);border-color:var(--navy)}.kpi.accent{background:var(--lime);border-color:#c7df90}.kpi span{display:block;color:var(--muted);font-size:11px;font-weight:800}.kpi.primary span{color:#c8dbe7}.kpi strong{display:block;margin-top:8px;color:var(--navy);font-size:clamp(24px,3.4vw,34px);line-height:1.15;letter-spacing:-.03em}.kpi.primary strong{color:#fff}.kpi small{display:block;margin-top:8px;color:var(--muted);font-size:11px}.kpi.primary small{color:#c8dbe7}
+    .panel{padding:20px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 26px rgba(23,63,95,.05)}.panel h3{margin:0;color:var(--navy);font-size:19px}.panel>p{margin:5px 0 0;color:var(--muted);font-size:13px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .table-scroll{margin-top:14px;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px}
+    table{width:100%;min-width:720px;border-collapse:collapse;background:#fff;font-size:13px}th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left;white-space:normal}thead th{color:#fff;background:var(--navy);font-size:11px;letter-spacing:.02em}tbody tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#f7f9fa}.best td{background:#f1f8df}.warn td{background:#fff8e5}.money{font-variant-numeric:tabular-nums;font-weight:800;color:var(--navy)}
+    .assumption-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.assumption{padding:16px;background:#fff;border:1px solid var(--line);border-radius:15px}.assumption span{display:block;color:var(--muted);font-size:11px;font-weight:800}.assumption strong{display:block;margin-top:5px;color:var(--navy);font-size:24px}.assumption p{margin:5px 0 0;color:var(--muted);font-size:11px}
+    .formula{margin-top:14px;padding:16px 18px;color:#fff;background:var(--navy-2);border-radius:15px}.formula strong{display:block}.formula p{margin:4px 0 0;color:#d9e8f1;font-size:12px}
+    .scenario-card{padding:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}.scenario-card span{color:var(--muted);font-size:11px;font-weight:800}.scenario-card strong{display:block;margin-top:6px;color:var(--navy);font-size:26px}.scenario-card p{margin:5px 0 0;color:var(--muted);font-size:12px}.scenario-card.recommended{background:var(--lime);border-color:#c7df90}
+    .bar-list{display:grid;gap:12px;margin-top:15px}.bar-row{display:grid;grid-template-columns:120px 1fr 100px;gap:10px;align-items:center}.bar-row span{color:var(--muted);font-size:12px}.track{height:13px;overflow:hidden;background:#e6edf1;border-radius:999px}.track i{display:block;height:100%;background:var(--navy-2);border-radius:inherit}.bar-row b{text-align:right;color:var(--navy);font-size:12px}
+    .callout{display:grid;grid-template-columns:auto 1fr;gap:12px;margin-top:14px;padding:16px 18px;background:var(--amber);border:1px solid #ecd28c;border-radius:15px}.callout>b{display:grid;place-items:center;width:31px;height:31px;color:#fff;background:#9a7018;border-radius:9px}.callout strong{display:block;color:#6d4e0f}.callout p{margin:3px 0 0;color:#725d2c;font-size:12px}
+    .alert{background:var(--red);border-color:#efbdb5}.alert>b{background:#a54134}.alert strong{color:#793329}.alert p{color:#6d4944}
+    .method{display:grid;grid-template-columns:42px 1fr;gap:13px;padding:16px 0;border-bottom:1px solid var(--line)}.method:last-child{border-bottom:0}.method b{display:grid;place-items:center;width:38px;height:38px;color:#fff;background:var(--navy);border-radius:11px}.method h3{margin:0;color:var(--navy);font-size:16px}.method p{margin:4px 0 0;color:var(--muted);font-size:12px}
+    .source-list{margin:12px 0 0;padding-left:1.2em;color:var(--muted);font-size:12px}.source-list li{margin:7px 0}.source-list a{color:var(--navy-2);overflow-wrap:anywhere}
+    .footer{padding:28px max(18px,env(safe-area-inset-right)) calc(34px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));color:#a9bfcd;background:var(--navy);text-align:center;font-size:11px}
+    @media(max-width:880px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}.three-col,.assumption-grid{grid-template-columns:1fr}}
+    @media(max-width:580px){main{padding:13px max(11px,env(safe-area-inset-right)) calc(58px + env(safe-area-inset-bottom)) max(11px,env(safe-area-inset-left))}section{margin-bottom:36px}.hero{padding:25px 19px;border-radius:20px}.print-btn{display:none}.kpi-grid{gap:8px}.kpi{min-height:122px;padding:14px}.section-head{align-items:start;flex-direction:column;gap:8px}.bar-row{grid-template-columns:82px 1fr 75px}.panel{padding:16px}.verdict{grid-template-columns:1fr}.verdict b{display:none}}
+    @media print{.site-header{display:none}body{background:#fff}main{max-width:none;padding:0}.hero{color:#000;background:#fff;border:2px solid var(--navy);box-shadow:none}.hero>p:not(.eyebrow),.hero-meta span{color:var(--ink)}section{break-inside:avoid}.panel,.kpi,.scenario-card{box-shadow:none}.table-scroll{overflow:visible}table{min-width:0}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-row">
+        <div class="brand"><span class="brand-mark">有利</span><div><strong>年度營收與獲利情境模擬</strong><small>獨立財務試算｜不修改經營戰略報告</small></div></div>
+        <button class="print-btn" type="button" onclick="window.print()">列印／存 PDF</button>
+      </div>
+      <nav class="nav" aria-label="報告章節">
+        <a href="../">報告中心</a><a href="../operations/">最新營運</a>
+        <a href="#basis">試算基礎</a><a href="#expense">支出</a><a href="#model">基本模型</a><a href="#salary">薪資比較</a><a href="#sensitivity">敏感度</a><a href="#decision">建議</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="hero">
+        <p class="eyebrow">Annual operating simulation · 2026/08/07</p>
+        <h1>目前營收能力很強，但獲利仍取決於買料成本是否被看清。</h1>
+        <p>本報告依 11 個營收記錄日與目前已提供的固定支出，模擬全年營收、老闆薪資與店留利潤。所有結果都是經營決策用情境，不是報稅財報。</p>
+        <div class="hero-meta"><span>11 日樣本收入 $558,301</span><span>日均收入 $50,755</span><span>全年營業日假設 312 日</span><span>固定人力：老闆＋小羅</span></div>
+      </div>
+      <div class="verdict"><b>!</b><div><strong>先看結論</strong><p>在「材料 45%＋稅務準備 5%＋設備準備 3%」的基本模型下，全年營收約 $15.84 百萬。老闆月薪 5 萬、8 萬、10 萬時，店裡稅前保留利潤分別約 $5.57 百萬、$5.21 百萬、$4.97 百萬。但材料成本尚未完整，這是目前最大的誤差來源。</p></div></div>
+    </section>
+
+    <section id="basis">
+      <div class="section-head"><div><h2>試算基礎</h2><p>依你的要求採 11 日資料：使用 Day 2–Day 12。Day 1 無收入，Day 13 尚有未 key 金額，因此不納入主模型。</p></div><span class="pill">明確口徑</span></div>
+      <div class="kpi-grid">
+        <article class="kpi primary"><span>11 日收入合計</span><strong>$558,301</strong><small>Day 2–Day 12</small></article>
+        <article class="kpi accent"><span>平均每日收入</span><strong>$50,755</strong><small>$558,301 ÷ 11 日</small></article>
+        <article class="kpi"><span>年化營收</span><strong>$15.84M</strong><small>日均 × 每週 6 日 × 52 週</small></article>
+        <article class="kpi"><span>月均營收</span><strong>$1.32M</strong><small>年化營收 ÷ 12 月</small></article>
+      </div>
+      <div class="callout"><b>i</b><div><strong>交叉檢查</strong><p>若把 Day 13 目前已知收入也納入，12 個收入日年化約 $16.16 百萬，只比主模型高約 2%。因此 11 日模型可作第一版方向判讀，但仍不能取代連續三個月的完整帳務。</p></div></div>
+    </section>
+
+    <section id="expense">
+      <div class="section-head"><div><h2>目前支出結構</h2><p>已知固定支出先年化；買料、稅金與設備支出因沒有完整金額，放入後面的比例情境。</p></div><span class="pill">老闆薪資另列</span></div>
+      <article class="panel">
+        <h3>固定支出</h3>
+        <p>「阿牛」依先前對照視為小羅。房租與店租暫按兩筆不同支出計算。</p>
+        <div class="table-scroll">
+          <table aria-label="固定支出明細">
+            <thead><tr><th>項目</th><th>每月</th><th>每年</th><th>試算處理</th></tr></thead>
+            <tbody>
+              <tr><td>小羅（阿牛）薪資</td><td class="money">$41,500</td><td class="money">$498,000</td><td>固定</td></tr>
+              <tr><td>房租</td><td class="money">$14,000</td><td class="money">$168,000</td><td>固定</td></tr>
+              <tr><td>店租</td><td class="money">$20,000</td><td class="money">$240,000</td><td>固定</td></tr>
+              <tr><td>水電</td><td class="money">$800</td><td class="money">$9,600</td><td>固定</td></tr>
+              <tr><td>勞健保</td><td class="money">$6,125</td><td class="money">$73,500</td><td>$36,750／半年</td></tr>
+              <tr><td>會計師</td><td class="money">$3,740</td><td class="money">$44,880</td><td>固定</td></tr>
+              <tr><td>顧問與系統</td><td class="money">$20,000</td><td class="money">$240,000</td><td>固定</td></tr>
+              <tr class="best"><td><strong>固定支出小計（不含老闆）</strong></td><td class="money">$106,165</td><td class="money">$1,273,980</td><td>模型固定底</td></tr>
+              <tr><td>老闆薪資</td><td class="money">$50,000／$80,000／$100,000</td><td class="money">$600,000／$960,000／$1,200,000</td><td>三種情境</td></tr>
+              <tr><td>買料錢</td><td colspan="2">未完整</td><td>營收 35%／45%／55%</td></tr>
+              <tr><td>稅金</td><td colspan="2">未提供實際申報</td><td>先留營收 5%</td></tr>
+              <tr><td>設備維修保養</td><td colspan="2">未提供預算</td><td>先留營收 3%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <div class="callout alert"><b>!</b><div><strong>需要確認：房租與店租是不是兩筆不同支出</strong><p>本版合計每月 $34,000。如果其實是同一筆，全年固定支出會少 $168,000，模擬利潤會等額增加。</p></div></div>
+    </section>
+
+    <section id="model">
+      <div class="section-head"><div><h2>基本營運模型</h2><p>買料成本尚不完整，因此不能直接使用目前帳上約 14% 的已知材料比。基本情境先採較保守的 45%。</p></div><span class="pill">管理假設</span></div>
+      <div class="assumption-grid">
+        <article class="assumption"><span>買料成本</span><strong>營收 45%</strong><p>輪胎、零件、機油及耗材。之後以系統真實值取代。</p></article>
+        <article class="assumption"><span>稅務準備金</span><strong>營收 5%</strong><p>作現金安全預留；實際營業稅可扣進項，所得稅另依組織與課稅所得計算。</p></article>
+        <article class="assumption"><span>設備維修準備</span><strong>營收 3%</strong><p>工具、機具、定位設備及非固定維修保養準備。</p></article>
+      </div>
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel"><h3>全年基本支出</h3><div class="bar-list">
+          <div class="bar-row"><span>買料 45%</span><div class="track"><i style="width:84.9%"></i></div><b>$7.13M</b></div>
+          <div class="bar-row"><span>稅務 5%</span><div class="track"><i style="width:9.4%"></i></div><b>$0.79M</b></div>
+          <div class="bar-row"><span>設備 3%</span><div class="track"><i style="width:5.7%"></i></div><b>$0.48M</b></div>
+          <div class="bar-row"><span>固定支出</span><div class="track"><i style="width:15.2%;background:#a8cf45"></i></div><b>$1.27M</b></div>
+        </div></article>
+        <article class="panel"><h3>老闆領薪前</h3><p>全年營收扣除材料、稅務準備、設備準備及已知固定支出後的營運剩餘。</p><div class="kpi-grid" style="grid-template-columns:1fr 1fr;margin-top:14px"><article class="kpi accent"><span>全年剩餘</span><strong>$6.17M</strong><small>尚未扣老闆薪資與營所稅</small></article><article class="kpi"><span>每月剩餘</span><strong>$514,057</strong><small>可分配給老闆薪資與店留利潤</small></article></div></article>
+      </div>
+      <div class="formula"><strong>基本公式</strong><p>全年營收 $15,835,447 − 買料 $7,125,951 − 稅務準備 $791,772 − 設備準備 $475,063 − 固定支出 $1,273,980 ＝ 老闆領薪前 $6,168,680。</p></div>
+    </section>
+
+    <section id="salary">
+      <div class="section-head"><div><h2>老闆薪資與店留利潤</h2><p>老闆「自己賺的」先以每月固定薪資表示；「店裡最後的利潤」是扣完老闆薪資後的營運利潤。</p></div><span class="pill">基本營收情境</span></div>
+      <div class="three-col">
+        <article class="scenario-card recommended"><span>現階段建議</span><strong>月薪 $50,000</strong><p>老闆年薪 $600,000；店內保留較多現金，適合成本資料尚未完整的階段。</p></article>
+        <article class="scenario-card"><span>穩定後情境</span><strong>月薪 $80,000</strong><p>老闆年薪 $960,000；需先確認連續三個月實際材料比與現金水位。</p></article>
+        <article class="scenario-card"><span>成熟經營情境</span><strong>月薪 $100,000</strong><p>老闆年薪 $1,200,000；不建議只靠 11 日營收樣本立即採用。</p></article>
+      </div>
+      <div class="table-scroll">
+        <table aria-label="老闆薪資情境比較">
+          <thead><tr><th>老闆月薪</th><th>老闆全年固定收入</th><th>店裡稅前保留利潤</th><th>店裡月均保留</th><th>稅前利潤率</th><th>公司制 20% 所得稅後參考</th><th>月營收損益平衡</th></tr></thead>
+          <tbody>
+            <tr class="best"><td><strong>$50,000</strong></td><td class="money">$600,000</td><td class="money">$5,568,680</td><td class="money">$464,057</td><td>35.2%</td><td class="money">$4,454,944</td><td class="money">$332,266</td></tr>
+            <tr><td><strong>$80,000</strong></td><td class="money">$960,000</td><td class="money">$5,208,680</td><td class="money">$434,057</td><td>32.9%</td><td class="money">$4,166,944</td><td class="money">$396,096</td></tr>
+            <tr><td><strong>$100,000</strong></td><td class="money">$1,200,000</td><td class="money">$4,968,680</td><td class="money">$414,057</td><td>31.4%</td><td class="money">$3,974,944</td><td class="money">$438,649</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><b>!</b><div><strong>薪水高低主要是在「老闆個人」與「店內保留」之間移動現金</strong><p>在不考慮稅務差異時，三種薪資不會改變店的營運產出，只會改變錢留在個人或公司。實際稅負會因有利車業是公司、行號、獨資或合夥而不同；老闆薪資是否可作稅務費用，應由會計師依組織型態確認。</p></div></div>
+    </section>
+
+    <section id="sensitivity">
+      <div class="section-head"><div><h2>情境敏感度</h2><p>短期 11 日可能剛好是旺季，也可能低估真正能力。以下同時測試營收落差與材料成本。</p></div><span class="pill">避免只看單一答案</span></div>
+      <article class="panel">
+        <h3>材料成本 55% 時，最低要做到多少營收才不虧？</h3>
+        <p>老闆月薪仍維持 5 萬、8 萬、10 萬三種條件；稅務準備 5%、設備準備 3% 不變。可用來支付固定支出的貢獻率為 37%。</p>
+        <div class="kpi-grid" style="margin-top:14px">
+          <article class="kpi primary"><span>材料成本</span><strong>55%</strong><small>高成本情境</small></article>
+          <article class="kpi"><span>稅務＋設備準備</span><strong>8%</strong><small>5%＋3%</small></article>
+          <article class="kpi accent"><span>剩餘貢獻率</span><strong>37%</strong><small>用來支付固定費用與老闆薪資</small></article>
+          <article class="kpi"><span>目前推估月營收</span><strong>$1.32M</strong><small>作為下降幅度比較基準</small></article>
+        </div>
+        <div class="table-scroll">
+          <table aria-label="材料成本百分之五十五損益兩平營收">
+            <thead><tr><th>老闆月薪</th><th>每月固定支出<br>含老闆薪資</th><th>月營收損益兩平</th><th>年營收損益兩平</th><th>平均每日營收</th><th>相對目前營收<br>可下降幅度</th></tr></thead>
+            <tbody>
+              <tr class="best"><td><strong>$50,000</strong></td><td class="money">$156,165</td><td class="money">$422,068</td><td class="money">$5,064,811</td><td class="money">$16,233</td><td>可下降約 68.0%</td></tr>
+              <tr><td><strong>$80,000</strong></td><td class="money">$186,165</td><td class="money">$503,149</td><td class="money">$6,037,784</td><td class="money">$19,352</td><td>可下降約 61.9%</td></tr>
+              <tr><td><strong>$100,000</strong></td><td class="money">$206,165</td><td class="money">$557,203</td><td class="money">$6,686,432</td><td class="money">$21,431</td><td>可下降約 57.8%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="formula"><strong>損益兩平公式</strong><p>月營收損益兩平 ＝（每月固定支出 $106,165 ＋ 老闆月薪）÷ 37%。例如老闆月薪 $50,000：$156,165 ÷ 37% ＝ $422,068。</p></div>
+      </article>
+      <article class="panel" style="margin-top:14px">
+        <h3>營收只達目前速度的 70%、85%、100%</h3>
+        <p>材料 45%、稅務準備 5%、設備準備 3% 不變。</p>
+        <div class="table-scroll">
+          <table aria-label="營收速度敏感度">
+            <thead><tr><th>全年營收速度</th><th>模擬年營收</th><th>老闆月薪 5 萬<br>店留利潤</th><th>老闆月薪 8 萬<br>店留利潤</th><th>老闆月薪 10 萬<br>店留利潤</th></tr></thead>
+            <tbody>
+              <tr class="warn"><td><strong>70%｜安全規劃</strong></td><td class="money">$11,084,813</td><td class="money">$3,335,882</td><td class="money">$2,975,882</td><td class="money">$2,735,882</td></tr>
+              <tr><td><strong>85%｜中間情境</strong></td><td class="money">$13,460,130</td><td class="money">$4,452,281</td><td class="money">$4,092,281</td><td class="money">$3,852,281</td></tr>
+              <tr class="best"><td><strong>100%｜目前速度</strong></td><td class="money">$15,835,447</td><td class="money">$5,568,680</td><td class="money">$5,208,680</td><td class="money">$4,968,680</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="panel" style="margin-top:14px">
+        <h3>材料成本若為營收的 35%、45%、55%</h3>
+        <p>營收採目前 100% 速度，稅務與設備準備比例不變。這張表是目前最重要的管理敏感度。</p>
+        <div class="table-scroll">
+          <table aria-label="材料成本敏感度">
+            <thead><tr><th>材料成本率</th><th>全年材料費</th><th>老闆月薪 5 萬<br>店留利潤</th><th>老闆月薪 8 萬<br>店留利潤</th><th>老闆月薪 10 萬<br>店留利潤</th></tr></thead>
+            <tbody>
+              <tr><td><strong>35%｜成本控制佳</strong></td><td class="money">$5,542,406</td><td class="money">$7,152,225</td><td class="money">$6,792,225</td><td class="money">$6,552,225</td></tr>
+              <tr class="best"><td><strong>45%｜基本模型</strong></td><td class="money">$7,125,951</td><td class="money">$5,568,680</td><td class="money">$5,208,680</td><td class="money">$4,968,680</td></tr>
+              <tr class="warn"><td><strong>55%｜成本偏高</strong></td><td class="money">$8,709,496</td><td class="money">$3,985,135</td><td class="money">$3,625,135</td><td class="money">$3,385,135</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <div class="callout alert"><b>!</b><div><strong>材料成本每差 10 個百分點，全年利潤相差約 $1.58 百萬</strong><p>所以現在最重要的不是討論老闆薪水差 2 萬或 5 萬，而是先讓每張工單都有完整買料成本。材料比從 45% 變成 55%，影響遠大於老闆月薪從 5 萬調到 10 萬。</p></div></div>
+    </section>
+
+    <section id="decision">
+      <div class="section-head"><div><h2>管理建議</h2><p>這份模型目前適合拿來決定「先做什麼」，不適合直接當作可分配獲利。</p></div><span class="pill">執行順序</span></div>
+      <div class="two-col">
+        <article class="panel">
+          <div class="method"><b>1</b><div><h3>老闆先固定月薪 5 萬</h3><p>把私人取用與公司支出分開。現階段讓更多現金留在店內，等成本與現金流連續三個月穩定後再調整。</p></div></div>
+          <div class="method"><b>2</b><div><h3>達成三個條件再升到 8 萬</h3><p>連續三個月工單成本完整率至少 90%、應收帳款有追蹤、店內保留至少兩個月總支出。</p></div></div>
+          <div class="method"><b>3</b><div><h3>10 萬薪資放在制度成熟後</h3><p>定位設備資金、新技師人事成本與稅款都已有專戶或準備金，再評估固定 10 萬，而不是用單月高營收判斷。</p></div></div>
+        </article>
+        <article class="panel">
+          <h3>建議現金安全水位</h3>
+          <p>依基本模型與老闆月薪 5 萬，平均每月總支出約 $855,564。</p>
+          <div class="kpi-grid" style="grid-template-columns:1fr 1fr;margin-top:14px">
+            <article class="kpi"><span>兩個月安全水位</span><strong>$1.71M</strong><small>最低營運緩衝</small></article>
+            <article class="kpi accent"><span>三個月安全水位</span><strong>$2.57M</strong><small>設備與增聘前較穩健</small></article>
+          </div>
+          <div class="formula"><strong>薪資調整原則</strong><p>先確保材料款、稅金、薪資、租金及設備準備，再決定老闆可領多少；不要用「帳上剛好有錢」作為加薪依據。</p></div>
+        </article>
+      </div>
+      <div class="callout"><b>→</b><div><strong>下一版只要補三組資料，模擬就會接近真實</strong><p>① 每張工單實際材料成本　② 最近 12 個月實際稅款　③ 最近 12 個月設備維修與採購。完成後，45%／5%／3% 假設即可全部替換成有利車業自己的數字。</p></div></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><h2>稅務與模型限制</h2><p>此處只做經營管理準備，不構成稅務申報或會計意見。</p></div></div>
+      <article class="panel">
+        <h3>重要說明</h3>
+        <ul class="source-list">
+          <li>一般營業稅率目前為 5%，但實際應納額為銷項稅額扣減可扣抵進項稅額；本模型直接留營收 5%，屬現金安全準備，不是預測實際稅單。</li>
+          <li>若為適用營利事業所得稅的公司組織，課稅所得額超過規定門檻時一般稅率為 20%；本報告以「稅前店留利潤」為主，另提供簡化 20% 稅後參考。</li>
+          <li>若為獨資或合夥，老闆薪資、盈餘與所得稅處理可能不同，應由會計師依實際組織型態確認。</li>
+          <li>模型未納入折舊、貸款利息、刷卡手續費、壞帳、加班、年終、獎金、勞退、保險細項、存貨增減及老闆私人稅負。</li>
+          <li><a href="https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-saving-manual/national/business-tax/6opmkDW" target="_blank" rel="noreferrer">財政部稅務入口網：營業稅課稅方式</a></li>
+          <li><a href="https://www.ntbt.gov.tw/singlehtml/0baa381b53034993a08862dfde2243b9?cntId=08f87d2104c04266a40e67c00d7c5c5a" target="_blank" rel="noreferrer">財政部臺北國稅局：營利事業所得稅稅率</a></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">有利車業年度營收與獲利情境模擬｜11 日樣本｜製表日期 2026/08/07｜請以實際工單、銀行、稅務與會計資料持續校正</footer>
+</body>
+</html>

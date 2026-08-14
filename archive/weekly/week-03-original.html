@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173f5f">
+  <title>有利車業｜第三週營運與收支週報｜截至 2026/08/11</title>
+  <meta name="description" content="有利車業第三週營運與收支週報，追蹤車輛產出、人員分工、時間配置、營收、支出與資金流向。">
+  <style>
+    :root{--navy:#173f5f;--navy2:#245a7e;--ink:#17212b;--muted:#647586;--line:#dbe4ea;--paper:#f3f6f8;--card:#fff;--lime:#dff1b5;--green:#4f8b61;--amber:#fff0c8;--red:#ffe4df;--blue:#e8f3f7;--shadow:0 12px 34px rgba(23,63,95,.09);--radius:18px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;color:var(--ink);background:var(--paper);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6}button,a,summary{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    .site-header{position:sticky;top:0;z-index:30;padding-top:env(safe-area-inset-top);color:#fff;background:rgba(23,63,95,.97);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.12)}.header-inner{max-width:1120px;margin:auto;padding:11px max(18px,env(safe-area-inset-right)) 9px max(18px,env(safe-area-inset-left))}.brand-row{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:11px;min-width:0}.brand-mark{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;color:var(--navy);background:var(--lime);border-radius:12px;font-weight:900}.brand strong{display:block;font-size:16px}.brand small{display:block;color:#bdd4e3;font-size:11px}.print-btn{min-height:42px;padding:7px 11px;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.28);border-radius:10px;font:inherit;cursor:pointer}.nav{display:flex;gap:7px;margin-top:9px;padding-bottom:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{flex:0 0 auto;padding:6px 10px;color:#dceaf3;border-radius:999px;font-size:12px;text-decoration:none}.nav a:hover,.nav a:focus{color:#fff;background:rgba(255,255,255,.1)}
+    main{max-width:1120px;margin:auto;padding:22px max(18px,env(safe-area-inset-right)) calc(70px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}section{margin-bottom:44px;scroll-margin-top:112px}.hero{position:relative;overflow:hidden;padding:clamp(27px,5vw,50px);color:#fff;background:var(--navy);border-radius:28px;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:270px;height:270px;right:-95px;top:-125px;background:var(--lime);border-radius:50%;opacity:.12}.eyebrow{margin:0 0 10px;color:var(--lime);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.hero h1{max-width:790px;margin:0;font-size:clamp(31px,6vw,56px);line-height:1.08;letter-spacing:-.045em}.hero>p:not(.eyebrow){max-width:760px;margin:17px 0 0;color:#ccdde8;font-size:clamp(14px,2vw,18px)}.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.hero-meta span{padding:7px 10px;color:#eef6fa;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:999px;font-size:12px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px}.section-head h2{margin:0;color:var(--navy);font-size:clamp(24px,4vw,34px);letter-spacing:-.03em}.section-head p{max-width:680px;margin:4px 0 0;color:var(--muted)}.pill{flex:0 0 auto;padding:6px 10px;color:var(--navy);background:var(--lime);border-radius:999px;font-size:11px;font-weight:900}
+    .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi{min-height:138px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 7px 22px rgba(23,63,95,.04)}.kpi.primary{color:#fff;background:var(--navy);border-color:var(--navy)}.kpi.good{background:var(--lime);border-color:#c7df90}.kpi.warn{background:var(--amber);border-color:#ead18b}.kpi span{display:block;color:var(--muted);font-size:11px;font-weight:800}.kpi.primary span{color:#c8dbe7}.kpi strong{display:block;margin-top:8px;color:var(--navy);font-size:clamp(24px,3.4vw,34px);line-height:1.15;letter-spacing:-.03em}.kpi.primary strong{color:#fff}.kpi small{display:block;margin-top:8px;color:var(--muted);font-size:11px}.kpi.primary small{color:#c8dbe7}
+    .callout{display:grid;grid-template-columns:auto 1fr;gap:12px;margin-top:14px;padding:16px 18px;background:var(--amber);border:1px solid #ecd28c;border-radius:15px}.callout>b{display:grid;place-items:center;width:31px;height:31px;color:#fff;background:#9a7018;border-radius:9px}.callout strong{display:block;color:#6d4e0f}.callout p{margin:3px 0 0;color:#725d2c;font-size:12px}.callout.alert{background:var(--red);border-color:#efbdb5}.callout.alert>b{background:#a54134}.callout.alert strong{color:#793329}.callout.alert p{color:#6d4944}.callout.info{background:var(--blue);border-color:#c8e0e9}.callout.info>b{background:var(--navy2)}.callout.info strong{color:var(--navy)}.callout.info p{color:#486171}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{padding:20px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 26px rgba(23,63,95,.05)}.panel h3{margin:0;color:var(--navy);font-size:19px}.panel>p{margin:5px 0 0;color:var(--muted);font-size:13px}.bar-list{display:grid;gap:13px;margin-top:15px}.bar-row{display:grid;grid-template-columns:130px 1fr 95px;gap:10px;align-items:center}.bar-row span{color:var(--muted);font-size:12px}.track{height:13px;overflow:hidden;background:#e6edf1;border-radius:999px}.track i{display:block;height:100%;background:var(--navy2);border-radius:inherit}.bar-row b{text-align:right;color:var(--navy);font-size:12px}
+    .table-scroll{margin-top:14px;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px}table{width:100%;min-width:840px;border-collapse:collapse;background:#fff;font-size:13px}th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:#fff;background:var(--navy);font-size:11px;white-space:nowrap}td.money,th.money{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.money{font-weight:800;color:var(--navy)}tbody tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#f7f9fa}.pending td{background:#fff8e5}.out td{background:#fff8f6}.status{display:inline-flex;padding:3px 7px;border-radius:999px;font-size:10px;font-weight:900}.status.in{color:#2f6842;background:#dff1b5}.status.out{color:#8b3d31;background:#ffe4df}.status.pending{color:#755718;background:#fff0c8}.status.none{color:#526778;background:#e8eef2}
+    .scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.scenario{padding:17px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}.scenario span{color:var(--muted);font-size:11px;font-weight:800}.scenario strong{display:block;margin-top:6px;color:var(--navy);font-size:26px}.scenario p{margin:5px 0 0;color:var(--muted);font-size:12px}.scenario.current{background:var(--lime);border-color:#c7df90}.scenario.danger{background:var(--red);border-color:#efbdb5}
+    .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.check{display:flex;gap:10px;padding:13px;background:#f7f9fa;border:1px solid var(--line);border-radius:13px}.check b{display:grid;place-items:center;width:28px;height:28px;flex:0 0 28px;color:#fff;background:var(--navy);border-radius:8px;font-size:12px}.check strong{display:block;color:var(--navy);font-size:13px}.check p{margin:2px 0 0;color:var(--muted);font-size:11px}
+    .formula{margin-top:14px;padding:16px 18px;color:#fff;background:var(--navy2);border-radius:15px}.formula strong{display:block}.formula p{margin:4px 0 0;color:#d9e8f1;font-size:12px}.footer{padding:28px max(18px,env(safe-area-inset-right)) calc(34px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));color:#a9bfcd;background:var(--navy);text-align:center;font-size:11px}
+    @media(max-width:860px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}.scenario-grid{grid-template-columns:1fr}}
+    @media(max-width:580px){main{padding:13px max(11px,env(safe-area-inset-right)) calc(58px + env(safe-area-inset-bottom)) max(11px,env(safe-area-inset-left))}section{margin-bottom:35px}.hero{padding:25px 19px;border-radius:20px}.print-btn{display:none}.kpi-grid{gap:8px}.kpi{min-height:122px;padding:14px}.section-head{align-items:start;flex-direction:column;gap:8px}.panel{padding:16px}.bar-row{grid-template-columns:94px 1fr 78px}.check-grid{grid-template-columns:1fr}}
+    @media print{.site-header{display:none}body{background:#fff}main{max-width:none;padding:0}.hero{color:#000;background:#fff;border:2px solid var(--navy);box-shadow:none}.hero>p:not(.eyebrow),.hero-meta span{color:var(--ink)}section{break-inside:avoid}.panel,.kpi{box-shadow:none}.table-scroll{overflow:visible}table{min-width:0}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-row">
+        <div class="brand"><span class="brand-mark">有利</span><div><strong>第三週營運與收支</strong><small>看產出、看分工，也看錢去了哪裡</small></div></div>
+        <button class="print-btn" type="button" onclick="window.print()">列印／存 PDF</button>
+      </div>
+      <nav class="nav" aria-label="報告章節"><a href="#week-summary">本週累計</a><a href="#day-805">8/5</a><a href="#day-806">8/6</a><a href="#day-807">8/7</a><a href="#day-808">8/8</a><a href="#operations">8/10</a><a href="#day-811">8/11</a><a href="#pending">中古車</a><a href="#manage">管理行動</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="hero">
+        <p class="eyebrow">Week 3 operating &amp; cash-flow report · 2026/08/11</p>
+        <h1>第三週，從 8/5 到 8/11 完整看收入與錢的去向。</h1>
+        <p>本週共 6 個有資料的營運日，已知收入 $310,126、實際收款 $238,626、新增應收 $71,500。有利車業已確認現金支出 $153,050，確認淨現金流暫為 +$85,576；Outlander 中古車投入已移出有利車業現金流。但 8/5–8/8 沒有完整支出與付款紀錄，因此仍不能當成實際週獲利。</p>
+        <div class="hero-meta"><span>週期 8/5–8/11</span><span>6 個記錄日</span><span>已知收入 $310,126</span><span>實際收款 $238,626</span><span>新增應收 $71,500</span></div>
+      </div>
+      <div class="callout info"><b>!</b><div><strong>確認淨現金流為正，也不代表本週已經獲利</strong><p>8/5–8/8 尚缺完整現金支出；同時 6 月輪胎貨款、系統開發與薪資集中在本週付款。中古車已另帳，店內仍必須把付款期間與工單材料成本分開。</p></div></div>
+    </section>
+
+    <section id="week-summary">
+      <div class="section-head"><div><h2>第三週累計｜8/5–8/11</h2><p>8/5–8/8、8/10、8/11 有營運資料；目前僅 8/9 未提供紀錄，不以零營收計算。</p></div><span class="pill">6 日資料</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>已知收入</span><strong>$310,126</strong><small>6 個有資料營運日合計</small></article>
+        <article class="kpi"><span>實際收款</span><strong>$238,626</strong><small>另新增應收 $71,500</small></article>
+        <article class="kpi"><span>有利車業確認支出</span><strong>$153,050</strong><small>不含中古車獨立事業投入</small></article>
+        <article class="kpi primary"><span>確認淨現金流</span><strong>+$85,576</strong><small>8/5–8/8 支出不完整，非實際週結餘</small></article>
+      </div>
+      <div class="formula"><strong>本週有利車業目前確認淨現金流</strong><p>實際收款 $238,626－有利車業已確認現金支出 $153,050＝+$85,576。Outlander 老闆投入 $20,000 已移至中古車獨立事業；因 8/5–8/8 未提供完整支出，這仍不能視為週獲利。</p></div>
+
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel">
+          <h3>每日收入與實際收款</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>8/5 收入</span><div class="track"><i style="width:65.3%"></i></div><b>$56,451</b></div>
+            <div class="bar-row"><span>8/5 收款</span><div class="track"><i style="width:28.2%;background:#4f8b61"></i></div><b>$24,351</b></div>
+            <div class="bar-row"><span>8/6 收入</span><div class="track"><i style="width:72.9%"></i></div><b>$63,100</b></div>
+            <div class="bar-row"><span>8/6 收款</span><div class="track"><i style="width:71.6%;background:#4f8b61"></i></div><b>$61,900</b></div>
+            <div class="bar-row"><span>8/7 收入</span><div class="track"><i style="width:69.7%"></i></div><b>$60,325</b></div>
+            <div class="bar-row"><span>8/7 收款</span><div class="track"><i style="width:39.7%;background:#4f8b61"></i></div><b>$34,325</b></div>
+            <div class="bar-row"><span>8/8 收入／收款</span><div class="track"><i style="width:28.7%"></i></div><b>$24,800</b></div>
+            <div class="bar-row"><span>8/10 收入／收款</span><div class="track"><i style="width:21.9%"></i></div><b>$18,950</b></div>
+            <div class="bar-row"><span>8/11 收入</span><div class="track"><i style="width:100%"></i></div><b>$86,500</b></div>
+            <div class="bar-row"><span>8/11 收款</span><div class="track"><i style="width:85.9%;background:#4f8b61"></i></div><b>$74,300</b></div>
+          </div>
+        </article>
+        <article class="panel">
+          <h3>本週人員收入貢獻</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>小羅相關</span><div class="track"><i style="width:52.6%;background:#4f8b61"></i></div><b>$163,176</b></div>
+            <div class="bar-row"><span>老闆相關</span><div class="track"><i style="width:47.4%"></i></div><b>$146,950</b></div>
+          </div>
+          <div class="callout info"><b>i</b><div><strong>小羅已承接本週 52.6% 已知收入</strong><p>Nathan 只是代 Key，8/7 兩筆商品銷售 $14,800 已歸回老闆作業。產值不是店長績效的全部，還要補材料成本、收款與品質結果。</p></div></div>
+        </article>
+      </div>
+
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel"><h3>本週服務量</h3><div class="kpi-grid" style="grid-template-columns:1fr 1fr;margin-top:15px"><article class="kpi good"><span>已知車次／服務項</span><strong>58</strong><small>8/5 14、8/6 11、8/7 4、8/8 1、8/10 10、8/11 18</small></article><article class="kpi"><span>每日平均</span><strong>9.7</strong><small>只用 6 個有資料日計算</small></article></div><p style="margin-top:12px">8/7 的兩筆 SALES 為商品銷售，不增加服務車數；8/11 的 18 項中含 8 項 SALES 散客服務，無法確認唯一車數。</p></article>
+        <article class="panel"><h3>本週工時資料</h3><div class="bar-list"><div class="bar-row"><span>小羅推估</span><div class="track"><i style="width:100%;background:#4f8b61"></i></div><b>3,780 分</b></div><div class="bar-row"><span>老闆已記錄</span><div class="track"><i style="width:54.8%"></i></div><b>2,070 分</b></div></div><p>小羅六個記錄日各估 630 分鐘，共 63 小時；老闆只有 8/5、8/6、8/10 有完整時間資料，8/7、8/8、8/11 不任意換算。</p></article>
+      </div>
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel">
+          <h3>每日有利車業確認現金變化</h3>
+          <p>實際收款減當日已確認店內支出；中古車資金完全排除。</p>
+          <div class="bar-list">
+            <div class="bar-row"><span>8/5＋*</span><div class="track"><i style="width:39.3%;background:#4f8b61"></i></div><b>+$24,351</b></div>
+            <div class="bar-row"><span>8/6＋*</span><div class="track"><i style="width:100%;background:#4f8b61"></i></div><b>+$61,900</b></div>
+            <div class="bar-row"><span>8/7＋*</span><div class="track"><i style="width:55.5%;background:#4f8b61"></i></div><b>+$34,325</b></div>
+            <div class="bar-row"><span>8/8＋*</span><div class="track"><i style="width:40.1%;background:#4f8b61"></i></div><b>+$24,800</b></div>
+            <div class="bar-row"><span>8/10−</span><div class="track"><i style="width:37.2%;background:#c95b4b"></i></div><b>−$23,010</b></div>
+            <div class="bar-row"><span>8/11−</span><div class="track"><i style="width:59.4%;background:#c95b4b"></i></div><b>−$36,790</b></div>
+          </div>
+          <p>* 8/5–8/8 支出未完整，正數只是「已確認差額」，不能視為當日淨利或完整淨現金流。</p>
+        </article>
+        <article class="panel">
+          <h3>收入與支出分類</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>服務／維修收入</span><div class="track"><i style="width:83.5%;background:#16708d"></i></div><b>$258,826</b></div>
+            <div class="bar-row"><span>商品銷售收入</span><div class="track"><i style="width:16.5%;background:#4f8b61"></i></div><b>$51,300</b></div>
+            <div class="bar-row"><span>供應商／前期貨款</span><div class="track"><i style="width:48.7%;background:#e79b3b"></i></div><b>$74,560</b></div>
+            <div class="bar-row"><span>薪資</span><div class="track"><i style="width:27.1%;background:#245a7e"></i></div><b>$41,500</b></div>
+            <div class="bar-row"><span>系統／開發</span><div class="track"><i style="width:19.5%;background:#8b79ad"></i></div><b>$29,800</b></div>
+            <div class="bar-row"><span>設備維修／零件</span><div class="track"><i style="width:4.4%;background:#82909b"></i></div><b>$6,790</b></div>
+            <div class="bar-row"><span>營業車驗車</span><div class="track"><i style="width:.3%;background:#a8cf45"></i></div><b>$400</b></div>
+          </div>
+          <p>收入分類合計 $310,126；有利車業已確認支出分類合計 $153,050。中古車獨立事業不在此圖內。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="day-805">
+      <div class="section-head"><div><h2>8/5 營運與收支摘要</h2><p>本日有完整收入與工單資料，但沒有完整的實際付款清單，因此不能計算日淨現金流。</p></div><span class="pill">Day 12</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>已知收入</span><strong>$56,451</strong><small>14 台已知完工</small></article>
+        <article class="kpi"><span>實際收款</span><strong>$24,351</strong><small>明確現金 $22,351＋其他實收 $2,000</small></article>
+        <article class="kpi warn"><span>新增應收</span><strong>$32,100</strong><small>貨車輪胎簽單 $27,600＋完工未收 $4,500</small></article>
+        <article class="kpi"><span>已知材料使用成本</span><strong>$24,800</strong><small>僅貨車胎工單；其他成本仍缺</small></article>
+      </div>
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel"><h3>人員產值</h3><div class="bar-list"><div class="bar-row"><span>老闆相關</span><div class="track"><i style="width:52.4%"></i></div><b>$29,600</b></div><div class="bar-row"><span>小羅相關</span><div class="track"><i style="width:47.6%;background:#4f8b61"></i></div><b>$26,851</b></div></div><p>小羅包含 6 張系統工單；老闆包含補胎、外修與貨車胎簽單。</p></article>
+        <article class="panel"><h3>工時與管理判讀</h3><div class="bar-list"><div class="bar-row"><span>老闆跨度</span><div class="track"><i style="width:100%"></i></div><b>690 分</b></div><div class="bar-row"><span>小羅推估</span><div class="track"><i style="width:91.3%;background:#4f8b61"></i></div><b>630 分</b></div></div><p>老闆施工約 500 分鐘，占當日 72.5%；仍未出現受保護的管理與成本整理時段。</p></article>
+      </div>
+      <div class="callout alert"><b>!</b><div><strong>8/5 無法完成現金日結</strong><p>已知收入、收款與應收都可確認，但缺少當日實際支付的材料、零用、外出與其他費用；本週現金流只採「已確認」口徑。</p></div></div>
+    </section>
+
+    <section id="day-806">
+      <div class="section-head"><div><h2>8/6 營運與收支摘要</h2><p>本日小羅是主要產值承接者；CX-5 共同投資另列庫存資產，不混入維修收入。</p></div><span class="pill">Day 13</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>已知收入</span><strong>$63,100</strong><small>11 台已知完工</small></article>
+        <article class="kpi"><span>實際收款</span><strong>$61,900</strong><small>明確現金 $59,100＋其他實收 $2,800</small></article>
+        <article class="kpi warn"><span>新增應收</span><strong>$1,200</strong><small>外出補胎 $500＋補胎簽單 $700</small></article>
+        <article class="kpi"><span>CX-5 庫存投資</span><strong>$71,700</strong><small>老闆與阿皓各負擔 $35,850；付款日待確認</small></article>
+      </div>
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel"><h3>人員產值</h3><div class="bar-list"><div class="bar-row"><span>小羅相關</span><div class="track"><i style="width:93.7%;background:#4f8b61"></i></div><b>$59,100</b></div><div class="bar-row"><span>老闆相關</span><div class="track"><i style="width:6.3%"></i></div><b>$4,000</b></div></div><p>小羅承接 5 張主要現金工單；老闆處理補胎、鋁圈代工與共同工單後續。</p></article>
+        <article class="panel"><h3>工時與管理判讀</h3><div class="bar-list"><div class="bar-row"><span>老闆跨度</span><div class="track"><i style="width:100%"></i></div><b>690 分</b></div><div class="bar-row"><span>小羅推估</span><div class="track"><i style="width:91.3%;background:#4f8b61"></i></div><b>630 分</b></div></div><p>小羅產值占比高，證明技術承接能力；下一步仍須補工單成本、排程與收工回報。</p></article>
+      </div>
+      <div class="callout alert"><b>!</b><div><strong>8/6 支出與庫存付款日仍缺</strong><p>CX-5 總投入已知，但老闆 $35,850 的實際付款日期與付款帳戶未記錄；其他營運支出也未提供，因此不納入本週已確認現金支出。</p></div></div>
+    </section>
+
+    <section id="day-807">
+      <div class="section-head"><div><h2>8/7 營運與收支摘要</h2><p>四張車輛工單與兩筆商品銷售分開統計；「nahtan」只是代 Key，兩筆銷售均歸老闆作業。</p></div><span class="pill">Day 14</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>已知收入</span><strong>$60,325</strong><small>服務工單 $45,525＋商品銷售 $14,800</small></article>
+        <article class="kpi"><span>實際收款</span><strong>$34,325</strong><small>現金 $28,525＋轉帳 $5,800</small></article>
+        <article class="kpi warn"><span>新增應收</span><strong>$26,000</strong><small>輪胎工單完工未收</small></article>
+        <article class="kpi"><span>已知服務車</span><strong>4 台</strong><small>另有 2 筆 SALES 商品銷售</small></article>
+      </div>
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel"><h3>人員收入貢獻</h3><div class="bar-list"><div class="bar-row"><span>老闆相關</span><div class="track"><i style="width:86.2%"></i></div><b>$52,000</b></div><div class="bar-row"><span>小羅相關</span><div class="track"><i style="width:13.8%;background:#4f8b61"></i></div><b>$8,325</b></div></div><p>Nathan 只代 Key，不列為實際執行者。</p></article>
+        <article class="panel"><h3>付款與工時</h3><div class="bar-list"><div class="bar-row"><span>現金</span><div class="track"><i style="width:47.3%;background:#4f8b61"></i></div><b>$28,525</b></div><div class="bar-row"><span>轉帳</span><div class="track"><i style="width:9.6%;background:#16708d"></i></div><b>$5,800</b></div><div class="bar-row"><span>應收</span><div class="track"><i style="width:43.1%;background:#e79b3b"></i></div><b>$26,000</b></div></div><p>小羅依固定上班日推估 630 分鐘；老闆未提供時間戳，不任意換算。</p></article>
+      </div>
+      <div class="table-scroll">
+        <table aria-label="8月7日營運與收支明細"><thead><tr><th>類型</th><th>內容</th><th>執行者</th><th>付款狀態</th><th class="money">收入</th><th>管理判讀</th></tr></thead><tbody>
+          <tr><td>保養</td><td>機油、機油芯、空氣芯等</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$2,525</td><td>材料成本待補</td></tr>
+          <tr><td>輪胎</td><td>輪胎服務</td><td>小羅</td><td><span class="status in">轉帳</span></td><td class="money">$5,800</td><td>材料成本待補</td></tr>
+          <tr><td>輪胎</td><td>輪胎服務</td><td>老闆</td><td><span class="status in">現金</span></td><td class="money">$11,200</td><td>材料成本待補</td></tr>
+          <tr class="pending"><td>輪胎</td><td>輪胎更換</td><td>老闆</td><td><span class="status pending">完工未收</span></td><td class="money">$26,000</td><td>建立催收日與付款承諾</td></tr>
+          <tr><td>商品銷售</td><td>輪胎銷售</td><td>老闆（Nathan 代 Key）</td><td><span class="status in">現金</span></td><td class="money">$8,800</td><td>商品成本待補；不列服務車數</td></tr>
+          <tr><td>商品銷售</td><td>中古胎銷售</td><td>老闆（Nathan 代 Key）</td><td><span class="status in">現金</span></td><td class="money">$6,000</td><td>商品成本待補；不列服務車數</td></tr>
+        </tbody></table>
+      </div>
+      <div class="callout alert"><b>!</b><div><strong>8/7 最大缺口是成本與應收管理</strong><p>已知收入 $60,325，但 $26,000 尚未收款，且六筆收入均未提供材料／商品成本；不能用收入直接判斷當日毛利。</p></div></div>
+    </section>
+
+    <section id="day-808">
+      <div class="section-head"><div><h2>8/8 營運與收支摘要</h2><p>當日只收到一張小羅輪胎工單，依已提供資料呈現，不把缺少紀錄的工作視為零產出。</p></div><span class="pill">Day 15</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>已知收入</span><strong>$24,800</strong><small>1 台輪胎工單</small></article>
+        <article class="kpi"><span>實際收款</span><strong>$24,800</strong><small>信用卡</small></article>
+        <article class="kpi"><span>新增應收</span><strong>$0</strong><small>本筆已完成收款</small></article>
+        <article class="kpi"><span>小羅推估工時</span><strong>630 分</strong><small>依固定上班日估算</small></article>
+      </div>
+      <div class="callout info"><b>i</b><div><strong>8/8 只能確認一張工單</strong><p>材料成本、信用卡入帳日與手續費尚未提供；若當日另有其他工作或支出，需補入後才能完成日結。</p></div></div>
+    </section>
+
+    <section id="operations">
+      <div class="section-head"><div><h2>8/10 營運整理</h2><p>把「做了多少車、誰完成產值、老闆的時間花在哪裡」放在收支之前，先看店內真實運作。</p></div><span class="pill">營運＋分工</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>已知服務車</span><strong>10 台</strong><small>9 台已有收款；1 台漏水異常查修中</small></article>
+        <article class="kpi"><span>已有收款服務</span><strong>9 台</strong><small>另有 X6 復原／移車，完工與收費待確認</small></article>
+        <article class="kpi primary"><span>小羅相關營收</span><strong>$12,700</strong><small>占確認服務收款 67.0%</small></article>
+        <article class="kpi warn"><span>老闆在店跨度</span><strong>11.5 小時</strong><small>08:30–20:00 推估；含午晚餐與個人行程</small></article>
+      </div>
+
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel">
+          <h3>確認服務收款：人員貢獻</h3>
+          <p>依原始紀錄的執行者歸屬；未寫他人姓名的工作歸老闆。</p>
+          <div class="bar-list">
+            <div class="bar-row"><span>小羅相關</span><div class="track"><i style="width:67%;background:#4f8b61"></i></div><b>$12,700</b></div>
+            <div class="bar-row"><span>老闆相關</span><div class="track"><i style="width:33%;background:#245a7e"></i></div><b>$6,250</b></div>
+          </div>
+          <div class="callout info"><b>i</b><div><strong>小羅已是當日主要產值承接者</strong><p>他完成或參與中古胎、保養＋中古胎、RAV4 發電機與電瓶，共創造 67.0% 的已知服務收款，符合逐步培養店長／技術主責的方向。</p></div></div>
+        </article>
+        <article class="panel">
+          <h3>確認服務收款：項目組成</h3>
+          <p>同一工單含多項服務時先以組合工單呈現，避免任意拆分金額。</p>
+          <div class="bar-list">
+            <div class="bar-row"><span>機械／電系</span><div class="track"><i style="width:43.8%;background:#e79b3b"></i></div><b>43.8%</b></div>
+            <div class="bar-row"><span>機油保養</span><div class="track"><i style="width:22.7%;background:#4f8b61"></i></div><b>22.7%</b></div>
+            <div class="bar-row"><span>保養＋中古胎</span><div class="track"><i style="width:13.7%;background:#16708d"></i></div><b>13.7%</b></div>
+            <div class="bar-row"><span>中古胎</span><div class="track"><i style="width:9.5%;background:#2b9ec1"></i></div><b>9.5%</b></div>
+            <div class="bar-row"><span>配件／耗材</span><div class="track"><i style="width:6.3%;background:#a8cf45"></i></div><b>6.3%</b></div>
+            <div class="bar-row"><span>補胎</span><div class="track"><i style="width:4%;background:#82909b"></i></div><b>4.0%</b></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel">
+          <h3>老闆時間配置（推估）</h3>
+          <p>依下一個工作開始時間切分；08:30–20:00，固定午餐 12:00–12:30，晚餐 18:00–18:30。</p>
+          <div class="bar-list">
+            <div class="bar-row"><span>技師／服務</span><div class="track"><i style="width:46.4%"></i></div><b>320 分</b></div>
+            <div class="bar-row"><span>營運外務</span><div class="track"><i style="width:20.3%;background:#4f8b61"></i></div><b>140 分</b></div>
+            <div class="bar-row"><span>車輛／個人交易</span><div class="track"><i style="width:10.1%;background:#e79b3b"></i></div><b>70 分</b></div>
+            <div class="bar-row"><span>個人接送</span><div class="track"><i style="width:8.7%;background:#8b79ad"></i></div><b>60 分</b></div>
+            <div class="bar-row"><span>關係維護</span><div class="track"><i style="width:4.3%;background:#2b9ec1"></i></div><b>30 分</b></div>
+            <div class="bar-row"><span>午／晚餐</span><div class="track"><i style="width:8.7%;background:#82909b"></i></div><b>60 分</b></div>
+            <div class="bar-row"><span>未分類</span><div class="track"><i style="width:1.4%;background:#b7c1c8"></i></div><b>10 分</b></div>
+          </div>
+          <div class="callout"><b>!</b><div><strong>老闆仍有接近一半時間親自當技師</strong><p>即使小羅已承接主要產值，老闆仍約有 320 分鐘投入施工、查修與補胎；要轉型經營者，下一步是逐週降低這一比例，而不是只延長工時。</p></div></div>
+        </article>
+        <article class="panel">
+          <h3>小羅角色與工時（推估）</h3>
+          <p>工單沒有逐筆起訖時間，依固定技師全日上班推估，不虛構各車施工分鐘數。</p>
+          <div class="kpi-grid" style="grid-template-columns:1fr 1fr;margin-top:15px">
+            <article class="kpi good"><span>淨工作時數</span><strong>10.5 小時</strong><small>08:30–20:00，扣午晚餐各 30 分</small></article>
+            <article class="kpi"><span>已知相關收款</span><strong>$12,700</strong><small>3 筆工作／工單；其中一筆與阿公共同</small></article>
+          </div>
+          <div class="check-grid">
+            <div class="check"><b>1</b><div><strong>中古胎作業 $1,800</strong><p>小羅與阿公共同處理，阿公列活動支援。</p></div></div>
+            <div class="check"><b>2</b><div><strong>保養＋中古胎 $2,600</strong><p>獨立工單，與 09:30 的車不同。</p></div></div>
+            <div class="check"><b>3</b><div><strong>RAV4 電系 $8,300</strong><p>承接故障車，更換發電機與電瓶。</p></div></div>
+            <div class="check"><b>4</b><div><strong>與老闆外出牽車</strong><p>11:20 共同外務，顯示技師時間也受移車影響。</p></div></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout info"><b>→</b><div><strong>8/10 的管理結論</strong><p>店內產值已有能力由小羅主力承接，但老闆仍在施工、牽車、過戶、付款、驗車、免費排解與接送之間頻繁切換。近期不是只看「忙不忙」，而是每天追蹤：老闆技師占比、小羅獨立產值、未收／未完工車，以及每筆工單材料成本。</p></div></div>
+    </section>
+
+    <section id="snapshot">
+      <div class="section-head"><div><h2>8/10 收支日結</h2><p>Outlander 總庫存成本 $40,000 已確認，但屬中古車獨立事業；老闆與阿皓投入均不列有利車業現金流。</p></div><span class="pill">已校正事業別</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>確認服務收款</span><strong>$18,950</strong><small>工單補登後；9 台已有收款</small></article>
+        <article class="kpi"><span>確認總支出</span><strong>$41,960</strong><small>材料款、驗車、程式設計／工資</small></article>
+        <article class="kpi primary"><span>確認淨現金流</span><strong>−$23,010</strong><small>Outlander 投入移列 8/11</small></article>
+        <article class="kpi warn"><span>老闆個人支出</span><strong>$1,450</strong><small>過戶規費＋個人保險；不列店內現金流</small></article>
+      </div>
+      <div class="formula"><strong>確認淨現金流</strong><p>服務收款 $18,950 − 材料商付款 $11,760 − 驗車 $400 − 程式設計／工資 $29,800 ＝ −$23,010。</p></div>
+    </section>
+
+    <section id="flow">
+      <div class="section-head"><div><h2>8/10 錢到哪裡去了</h2><p>確認支出 $41,960；Outlander 的老闆投入改列 8/11，避免跨日重複計算。</p></div></div>
+      <div class="two-col">
+        <article class="panel">
+          <h3>支出流向</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>程式設計／工資</span><div class="track"><i style="width:71%"></i></div><b>$29,800</b></div>
+            <div class="bar-row"><span>材料商付款</span><div class="track"><i style="width:28%"></i></div><b>$11,760</b></div>
+            <div class="bar-row"><span>自營貨車驗車</span><div class="track"><i style="width:1%"></i></div><b>$400</b></div>
+          </div>
+          <div class="callout"><b>!</b><div><strong>8/10 最大支出是系統／開發</strong><p>$29,800 占當日確認支出 71.0%；需標示服務期間與一次性／固定性質，避免日後誤判單日損益。</p></div></div>
+        </article>
+        <article class="panel">
+          <h3>服務收款組成</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>機械／電系</span><div class="track"><i style="width:43.8%;background:#e79b3b"></i></div><b>$8,300</b></div>
+            <div class="bar-row"><span>機油保養</span><div class="track"><i style="width:22.7%;background:#4f8b61"></i></div><b>$4,300</b></div>
+            <div class="bar-row"><span>保養＋中古胎</span><div class="track"><i style="width:13.7%;background:#16708d"></i></div><b>$2,600</b></div>
+            <div class="bar-row"><span>中古胎</span><div class="track"><i style="width:9.5%;background:#2b9ec1"></i></div><b>$1,800</b></div>
+            <div class="bar-row"><span>配件／耗材</span><div class="track"><i style="width:6.3%;background:#a8cf45"></i></div><b>$1,200</b></div>
+            <div class="bar-row"><span>補胎</span><div class="track"><i style="width:4%;background:#82909b"></i></div><b>$750</b></div>
+          </div>
+          <div class="callout info"><b>i</b><div><strong>服務營收不能直接拿來抵今天付款</strong><p>材料商收款可能是過去進貨，程式費可能服務多個月份；週報會同時追蹤「現金流」與「工單損益」，避免把付款日誤當成本發生日。</p></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ledger">
+      <div class="section-head"><div><h2>8/10 收支與工作明細</h2><p>車牌與客戶姓名不記錄；與老闆個人或車輛投資有關的項目獨立標示。</p></div><span class="pill">工單已核對</span></div>
+      <div class="table-scroll">
+        <table aria-label="8月10日收支明細">
+          <thead><tr><th>時間</th><th>活動</th><th>執行者</th><th>分類</th><th class="money">流入</th><th class="money">流出</th><th>財務判讀</th></tr></thead>
+          <tbody>
+            <tr><td>08:30</td><td>兩台車各補胎一條</td><td>老闆</td><td><span class="status in">服務收款</span></td><td class="money">$300</td><td class="money">—</td><td>兩車次；付款方式待補</td></tr>
+            <tr><td>09:30</td><td>更換 3 條中古胎</td><td>小羅＋阿公</td><td><span class="status in">服務收款</span></td><td class="money">$1,800</td><td class="money">—</td><td>實收；與 $2,600 系統工單為不同車，阿公列活動支援</td></tr>
+            <tr><td>當日／未拆分</td><td>機油、機油芯及中古胎更換</td><td>小羅</td><td><span class="status in">現金收款</span></td><td class="money">$2,600</td><td class="money">—</td><td>系統工單補登；與 09:30 中古胎為不同車</td></tr>
+            <tr><td>09:40</td><td>補胎 1 條</td><td>未標示</td><td><span class="status in">服務收款</span></td><td class="money">$150</td><td class="money">—</td><td>付款方式待補</td></tr>
+            <tr><td>10:30</td><td>九人座漏水異常查修</td><td>未標示</td><td><span class="status none">診斷中</span></td><td class="money">—</td><td class="money">—</td><td>是否完工、是否收費待補</td></tr>
+            <tr><td>11:20</td><td>外出牽兩台車：中古車看車＋RAV4 發電機異常車</td><td>老闆＋小羅</td><td><span class="status none">車輛移動</span></td><td class="money">—</td><td class="money">—</td><td>RAV4 後續由小羅完成發電機與電瓶工單；另一台用途待確認</td></tr>
+            <tr><td>當日／未拆分</td><td>RAV4 更換發電機與電瓶</td><td>小羅</td><td><span class="status in">現金收款</span></td><td class="money">$8,300</td><td class="money">—</td><td>系統工單補登；材料成本待補</td></tr>
+            <tr><td>13:30</td><td>復原 X6、移車</td><td>老闆</td><td><span class="status none">施工／移車</span></td><td class="money">—</td><td class="money">—</td><td>收入與完工狀態待補</td></tr>
+            <tr><td>14:00</td><td>Camry 雨刷、牌照燈兩顆、汽油精</td><td>老闆</td><td><span class="status in">服務收款</span></td><td class="money">$1,200</td><td class="money">—</td><td>實收；材料成本待補</td></tr>
+            <tr><td>14:30</td><td>Outlander 中古車庫存取得</td><td>老闆＋阿皓</td><td><span class="status none">庫存資產</span></td><td class="money">—</td><td class="money">—</td><td>總成本 $40,000；兩人各 $20,000，老闆現金投入依 8/11 清單列於翌日</td></tr>
+            <tr><td>14:30</td><td>Outlander 過戶規費＋個人保險</td><td>老闆</td><td><span class="status none">個人支出</span></td><td class="money">—</td><td class="money">$1,450（個人）</td><td>全數由老闆個人負擔，不列有利車業現金流與費用</td></tr>
+            <tr class="out"><td>15:40</td><td>進口材料商收款</td><td>店內</td><td><span class="status out">材料付款</span></td><td class="money">—</td><td class="money">$11,760</td><td>需確認對應進貨日期、發票與是否形成庫存</td></tr>
+            <tr class="out"><td>15:50</td><td>自營貨車驗車</td><td>老闆</td><td><span class="status out">車輛費用</span></td><td class="money">—</td><td class="money">$400</td><td>營業用車支出</td></tr>
+            <tr><td>16:20</td><td>外出排解故障、聊天約 30 分鐘</td><td>老闆</td><td><span class="status none">免費服務</span></td><td class="money">$0</td><td class="money">—</td><td>記錄關係維護時間，不列營收</td></tr>
+            <tr><td>17:00</td><td>接送小朋友</td><td>老闆</td><td><span class="status none">個人行程</span></td><td class="money">—</td><td class="money">—</td><td>不列店內收支</td></tr>
+            <tr><td>18:00</td><td>更換機油與機油芯</td><td>老闆</td><td><span class="status in">服務收款</span></td><td class="money">$4,300</td><td class="money">—</td><td>與老闆系統工單核對一致，不重複計算；材料成本待補</td></tr>
+            <tr><td>19:00</td><td>補胎</td><td>未標示</td><td><span class="status in">服務收款</span></td><td class="money">$300</td><td class="money">—</td><td>付款方式待補</td></tr>
+            <tr class="out"><td>未記錄</td><td>Nathan 程式設計費用＋工資</td><td>店內</td><td><span class="status out">系統／開發支出</span></td><td class="money">—</td><td class="money">$29,800</td><td>需確認付款方式、服務期間及一次性／固定性質</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pending">
+      <div class="section-head"><div><h2>中古車獨立事業帳</h2><p>CX-5 與 Outlander 的成本、出資與未來售車收入全部另帳，不進有利車業現金活動。</p></div><span class="pill">獨立事業</span></div>
+      <div class="scenario-grid">
+        <article class="scenario current"><span>兩車庫存總成本</span><strong>$111,700</strong><p>CX-5 $71,700＋Outlander $40,000；皆為待售庫存。</p></article>
+        <article class="scenario"><span>老闆已知出資</span><strong>$55,850</strong><p>CX-5 $35,850＋Outlander $20,000；阿皓另投入同額。</p></article>
+        <article class="scenario danger"><span>目前已確認售車收入</span><strong>$0</strong><p>CX-5 開價 $168,000 不是成交收入；Outlander 售價待定。</p></article>
+      </div>
+      <div class="callout info"><b>✓</b><div><strong>中古車與保養廠已分帳</strong><p>另有 Outlander 過戶規費與個人保險 $1,450 由老闆負擔，暫列老闆側費用。未來每車需獨立記錄買價、整備、持有、交易費、成交收入、合夥分配與實際淨利。</p></div></div>
+    </section>
+
+    <section id="day-811">
+      <div class="section-head"><div><h2>8/11 營運與收支日結</h2><p>「SALES」是散客服務或零件商品銷售的彙總類型，不視為車牌；商品銷售不自動增加來店車數。</p></div><span class="pill">Day 17</span></div>
+      <div class="kpi-grid">
+        <article class="kpi good"><span>已知收入</span><strong>$86,500</strong><small>服務 $50,000＋商品銷售 $36,500</small></article>
+        <article class="kpi"><span>實際收款</span><strong>$74,300</strong><small>另有完工未收 $12,200</small></article>
+        <article class="kpi"><span>有利車業確認支出</span><strong>$111,090</strong><small>中古車投入另列，不計入</small></article>
+        <article class="kpi primary"><span>當日淨現金流</span><strong>−$36,790</strong><small>$74,300－$111,090</small></article>
+      </div>
+
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel">
+          <h3>收入結構</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>服務／維修</span><div class="track"><i style="width:57.8%;background:#16708d"></i></div><b>$50,000</b></div>
+            <div class="bar-row"><span>商品銷售</span><div class="track"><i style="width:42.2%;background:#4f8b61"></i></div><b>$36,500</b></div>
+          </div>
+          <div class="callout info"><b>i</b><div><strong>SALES 必須再分成「服務」與「商品」</strong><p>$800 補胎彙總、$1,300 補胎／冷媒列服務；$3,600 輪胎列商品銷售，並與老闆清單中的同額項目視為同一筆，不重複計算。</p></div></div>
+        </article>
+        <article class="panel">
+          <h3>人員收入貢獻</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>老闆相關</span><div class="track"><i style="width:63.7%"></i></div><b>$55,100</b></div>
+            <div class="bar-row"><span>小羅相關</span><div class="track"><i style="width:36.3%;background:#4f8b61"></i></div><b>$31,400</b></div>
+          </div>
+          <div class="callout"><b>!</b><div><strong>小羅收入含 $12,200 應收</strong><p>小羅相關已知收入 $31,400，已確認現金收款 $19,200；管理店長績效時，必須同時看產值、收款與材料毛利。</p></div></div>
+        </article>
+      </div>
+
+      <div class="two-col" style="margin-top:14px">
+        <article class="panel">
+          <h3>支出去向</h3>
+          <div class="bar-list">
+            <div class="bar-row"><span>6月輪胎貨款</span><div class="track"><i style="width:56.5%;background:#e79b3b"></i></div><b>$62,800</b></div>
+            <div class="bar-row"><span>小羅薪資</span><div class="track"><i style="width:37.4%;background:#245a7e"></i></div><b>$41,500</b></div>
+            <div class="bar-row"><span>零件進貨</span><div class="track"><i style="width:3.4%;background:#82909b"></i></div><b>$3,790</b></div>
+            <div class="bar-row"><span>維修大門</span><div class="track"><i style="width:2.7%;background:#a8cf45"></i></div><b>$3,000</b></div>
+          </div>
+        </article>
+        <article class="panel">
+          <h3>工時與車數資料狀態</h3>
+          <div class="check-grid">
+            <div class="check"><b>工</b><div><strong>小羅暫估 630 分</strong><p>依固定技師全日工作估算，扣午晚餐。</p></div></div>
+            <div class="check"><b>時</b><div><strong>老闆時段未提供</strong><p>本日不硬拆施工、銷售與財務處理分鐘數。</p></div></div>
+            <div class="check"><b>車</b><div><strong>至少 10 張車輛工作</strong><p>8 張一般工單＋2 張尚未 key 的服務。</p></div></div>
+            <div class="check"><b>S</b><div><strong>另有 8 項散客服務</strong><p>SALES 內含補胎與冷媒，無法確認唯一車數。</p></div></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="table-scroll">
+        <table aria-label="8月11日營運與收支明細">
+          <thead><tr><th>類型</th><th>內容</th><th>執行者</th><th>狀態</th><th class="money">收入</th><th class="money">支出</th><th>管理判讀</th></tr></thead>
+          <tbody>
+            <tr><td>散客服務</td><td>補胎 5 項</td><td>老闆</td><td><span class="status in">現金</span></td><td class="money">$800</td><td class="money">—</td><td>SALES 彙總；服務項目數不等於唯一車數</td></tr>
+            <tr><td>服務</td><td>雨刷、牌照燈、汽油精</td><td>老闆</td><td><span class="status in">現金</span></td><td class="money">$1,200</td><td class="money">—</td><td>1 張工單</td></tr>
+            <tr><td>保養</td><td>機油、機油芯</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$2,300</td><td class="money">—</td><td>1 張工單</td></tr>
+            <tr class="pending"><td>輪胎／冷卻</td><td>輪胎、熱水循環馬達、水箱精</td><td>小羅</td><td><span class="status pending">完工未收</span></td><td class="money">$12,200</td><td class="money">—</td><td>新增應收；需補催收日與付款承諾</td></tr>
+            <tr><td>散客服務</td><td>補胎 2 項、冷媒充填</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$1,300</td><td class="money">—</td><td>SALES 彙總</td></tr>
+            <tr><td>輪胎／驗車</td><td>輪胎、驗車</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$4,700</td><td class="money">—</td><td>1 張工單</td></tr>
+            <tr><td>輪胎</td><td>中古胎與輪胎</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$3,900</td><td class="money">—</td><td>1 張工單</td></tr>
+            <tr><td>輪胎</td><td>中古胎更換</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$5,000</td><td class="money">—</td><td>1 張工單</td></tr>
+            <tr><td>輪胎</td><td>中古胎更換</td><td>老闆</td><td><span class="status in">現金</span></td><td class="money">$1,600</td><td class="money">—</td><td>1 張工單</td></tr>
+            <tr><td>商品銷售</td><td>輪胎賣貨</td><td>老闆</td><td><span class="status in">現金</span></td><td class="money">$3,600</td><td class="money">—</td><td>與老闆清單同額 $3,600 視為同一筆</td></tr>
+            <tr><td>輪胎</td><td>輪胎服務</td><td>老闆</td><td><span class="status in">現金</span></td><td class="money">$15,000</td><td class="money">—</td><td>1 張工單</td></tr>
+            <tr><td>未 key 服務</td><td>冷氣處理</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$1,000</td><td class="money">—</td><td>已確認現金；仍需補建工單</td></tr>
+            <tr><td>未 key 服務</td><td>中古胎更換</td><td>小羅</td><td><span class="status in">現金</span></td><td class="money">$1,000</td><td class="money">—</td><td>已確認現金；仍需補建工單</td></tr>
+            <tr><td>商品銷售</td><td>輪胎賣貨三筆</td><td>老闆</td><td><span class="status in">已進帳</span></td><td class="money">$18,800</td><td class="money">—</td><td>$1,400＋$13,200＋$4,200；不含已計的 $3,600</td></tr>
+            <tr><td>商品銷售</td><td>鋁圈銷售</td><td>老闆</td><td><span class="status in">已進帳</span></td><td class="money">$14,100</td><td class="money">—</td><td>商品成本待補</td></tr>
+            <tr class="out"><td>設備維修</td><td>維修大門</td><td>店內</td><td><span class="status out">支出</span></td><td class="money">—</td><td class="money">$3,000</td><td>設備維修費</td></tr>
+            <tr class="out"><td>零件進貨</td><td>購買零件</td><td>店內</td><td><span class="status out">零件費用</span></td><td class="money">—</td><td class="money">$3,790</td><td>列零件進貨／材料支出；仍需對應供應商與工單或庫存</td></tr>
+            <tr><td>中古車獨立事業</td><td>Outlander 老闆投入</td><td>老闆</td><td><span class="status none">另帳排除</span></td><td class="money">—</td><td class="money">$20,000（另帳）</td><td>不列有利車業現金活動；總庫存成本 $40,000，阿皓另投入 $20,000</td></tr>
+            <tr class="out"><td>人事</td><td>支付小羅薪資</td><td>店內</td><td><span class="status out">薪資支出</span></td><td class="money">—</td><td class="money">$41,500</td><td>應標示薪資所屬月份</td></tr>
+            <tr class="out"><td>供應商付款</td><td>廣豐輪胎貨款</td><td>店內</td><td><span class="status out">6月應付款</span></td><td class="money">—</td><td class="money">$62,800</td><td>屬 6 月貨款，不列 8/11 工單材料成本</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout alert"><b>!</b><div><strong>8/11 最大風險不是營收，而是付款跨期</strong><p>當天收入能力達 $86,500，但排除中古車後，有利車業仍因支付 6 月輪胎貨款與薪資而淨流出 $36,790。接下來必須建立「供應商應付款月份」與「每日工單使用成本」兩張不同的表。</p></div></div>
+    </section>
+
+    <section id="manage">
+      <div class="section-head"><div><h2>本週金錢管理行動</h2><p>先建立可對帳的資料，再談獲利分配與投資。</p></div></div>
+      <div class="two-col">
+        <article class="panel">
+          <h3>每天收工前 10 分鐘</h3>
+          <div class="check-grid">
+            <div class="check"><b>1</b><div><strong>對完所有工單</strong><p>營收、實收、應收、付款方式。</p></div></div>
+            <div class="check"><b>2</b><div><strong>登錄所有支出</strong><p>發票、付款日、付款帳戶與分類。</p></div></div>
+            <div class="check"><b>3</b><div><strong>核對現金與銀行</strong><p>期初＋流入−流出＝期末。</p></div></div>
+            <div class="check"><b>4</b><div><strong>列出未結案</strong><p>未收、未付、未 key、個人往來。</p></div></div>
+          </div>
+        </article>
+        <article class="panel">
+          <h3>本週尚缺的日結資料</h3>
+          <div class="check-grid">
+            <div class="check"><b>?</b><div><strong>8/5–8/8 實際支出</strong><p>材料付款、零用、外出與其他現金流出。</p></div></div>
+            <div class="check"><b>?</b><div><strong>CX-5 付款日期</strong><p>老闆 $35,850 何時由哪個帳戶支付。</p></div></div>
+            <div class="check"><b>?</b><div><strong>材料使用成本</strong><p>不是今天支付多少，而是工單實際用了多少。</p></div></div>
+            <div class="check"><b>?</b><div><strong>期初與期末餘額</strong><p>現金、店內銀行帳戶與應收應付。</p></div></div>
+          </div>
+        </article>
+      </div>
+      <div class="callout info"><b>→</b><div><strong>第三週日期範圍已更新</strong><p>8/5–8/11 共 6 個有資料營運日；目前只有 8/9 未提供紀錄，未以零值填入。下一步補齊 8/5–8/8 支出後，再更新真正的週淨現金流。</p></div></div>
+    </section>
+  </main>
+
+  <footer class="footer">有利車業第三週營運與收支週報｜截至 2026/08/11｜營運、分工與財務整合追蹤</footer>
+</body>
+</html>

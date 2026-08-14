@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="description" content="有利車業第二週管理檢討：摘要第一週營運證據，追蹤老闆與小羅分工、時間配置、成本、待辦與老闆回饋。">
+  <title>有利車業｜第二週管理檢討與老闆回饋｜截至 8/6</title>
+  <style>
+    :root {
+      --navy: #173f5f;
+      --navy-2: #0e2e46;
+      --blue: #16708d;
+      --lime: #dff2a6;
+      --lime-strong: #8eb72b;
+      --amber: #fff1c9;
+      --amber-strong: #b7791f;
+      --red-soft: #fbe4df;
+      --red: #a94b3d;
+      --green-soft: #e3f1df;
+      --green: #416f39;
+      --paper: #f3f5f4;
+      --card: #ffffff;
+      --ink: #20313e;
+      --muted: #687984;
+      --line: #dce4e8;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(23, 63, 95, .07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    button, input, select, textarea { font: inherit; }
+    a { color: inherit; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding-top: env(safe-area-inset-top);
+      color: white;
+      background: rgba(14, 46, 70, .97);
+      box-shadow: 0 4px 18px rgba(14, 46, 70, .15);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+    .header-inner { max-width: 1180px; margin: auto; padding: 11px max(18px, env(safe-area-inset-right)) 9px max(18px, env(safe-area-inset-left)); }
+    .brand-row { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+    .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; color: var(--navy-2); background: var(--lime); border-radius: 12px; font-weight: 950; }
+    .brand strong, .brand small { display: block; }
+    .brand strong { font-size: 14px; }
+    .brand small { color: #c9dae6; font-size: 10px; }
+    .toolbar { display: flex; gap: 8px; }
+    .toolbar button, .copy-btn, .clear-btn {
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+    .toolbar button { color: var(--navy-2); background: white; }
+    .nav-strip { display: flex; gap: 8px; overflow-x: auto; margin-top: 9px; padding-bottom: 2px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .nav-strip::-webkit-scrollbar { display: none; }
+    .nav-strip a { flex: 0 0 auto; padding: 6px 10px; color: #d8e7f1; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; font-size: 11px; text-decoration: none; }
+    main { max-width: 1180px; margin: auto; padding: 24px max(18px, env(safe-area-inset-right)) calc(72px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); }
+    section { scroll-margin-top: 120px; margin-bottom: 48px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 5vw, 56px);
+      color: white;
+      background: var(--navy-2);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+    .hero::after { content: "W02"; position: absolute; right: -16px; bottom: -54px; color: rgba(223,242,166,.08); font-size: clamp(120px, 22vw, 260px); font-weight: 950; line-height: 1; }
+    .eyebrow { margin: 0 0 10px; color: var(--lime); font-size: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .hero h1 { position: relative; z-index: 1; max-width: 850px; margin: 0; font-size: clamp(34px, 6vw, 64px); line-height: 1.08; letter-spacing: -.05em; }
+    .hero > p:not(.eyebrow) { position: relative; z-index: 1; max-width: 790px; margin: 18px 0 0; color: #d8e7f1; font-size: clamp(15px, 2vw, 19px); }
+    .hero-meta { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .hero-meta span { padding: 7px 10px; color: #e8f0f4; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.13); border-radius: 999px; font-size: 11px; }
+    .thesis { margin-top: 14px; padding: 17px 20px; color: var(--navy-2); background: var(--lime); border-radius: 16px; font-size: 16px; font-weight: 900; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 18px; }
+    .section-head h2 { margin: 0; color: var(--navy); font-size: clamp(25px, 4vw, 36px); line-height: 1.2; letter-spacing: -.035em; }
+    .section-head p { max-width: 700px; margin: 5px 0 0; color: var(--muted); }
+    .pill { flex: 0 0 auto; padding: 7px 10px; color: var(--navy); background: var(--lime); border-radius: 999px; font-size: 11px; font-weight: 900; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .kpi { min-height: 145px; padding: 19px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .kpi.primary { color: white; background: var(--navy); border-color: var(--navy); }
+    .kpi.accent { background: var(--lime); border-color: #c7df87; }
+    .kpi span, .kpi small { display: block; color: var(--muted); }
+    .kpi.primary span, .kpi.primary small { color: #d8e7f1; }
+    .kpi span { font-size: 12px; font-weight: 800; }
+    .kpi strong { display: block; margin-top: 9px; font-size: clamp(25px, 3vw, 36px); letter-spacing: -.04em; }
+    .kpi small { margin-top: 7px; font-size: 11px; }
+    .callout { display: grid; grid-template-columns: auto 1fr; gap: 13px; margin-top: 16px; padding: 17px 19px; background: var(--amber); border: 1px solid #eed48a; border-radius: 16px; }
+    .callout b:first-child { display: grid; place-items: center; width: 34px; height: 34px; color: #704f10; background: white; border-radius: 10px; }
+    .callout strong { display: block; color: #6d4d11; }
+    .callout p { margin: 3px 0 0; color: #6f5c31; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .panel { min-width: 0; padding: 22px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .panel h3 { margin: 0; color: var(--navy); font-size: 19px; }
+    .panel > p { margin: 5px 0 18px; color: var(--muted); font-size: 12px; }
+    .owner-stack { display: flex; height: 30px; overflow: hidden; background: #edf1f3; border-radius: 9px; }
+    .owner-stack i { display: block; height: 100%; }
+    .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+    .legend-item { padding: 9px 10px; background: #f7f9fa; border-radius: 10px; }
+    .legend-item span { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 10px; }
+    .legend-item i { width: 9px; height: 9px; border-radius: 3px; }
+    .legend-item strong { display: block; margin-top: 2px; color: var(--navy); font-size: 13px; }
+    .table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { width: 100%; min-width: 610px; border-collapse: collapse; }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--navy); background: #f3f7f8; font-size: 11px; }
+    td { font-size: 12px; }
+    td strong { color: var(--navy); }
+    .evidence { margin-top: 16px; padding: 19px; color: white; background: var(--navy); border-radius: 16px; }
+    .evidence span { color: var(--lime); font-size: 11px; font-weight: 900; }
+    .evidence h3 { margin: 5px 0; color: white; font-size: 22px; }
+    .evidence p { margin: 0; color: #d8e7f1; }
+    .finding-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .finding { padding: 20px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .finding b { display: inline-grid; place-items: center; width: 28px; height: 28px; color: white; background: var(--navy); border-radius: 9px; font-size: 11px; }
+    .finding h3 { margin: 12px 0 6px; color: var(--navy); font-size: 17px; line-height: 1.35; }
+    .finding p { margin: 0; color: var(--muted); font-size: 12px; }
+    .focus-banner { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-bottom: 16px; padding: 20px; color: white; background: var(--navy-2); border-radius: 18px; }
+    .focus-banner h3 { margin: 0; font-size: 21px; }
+    .focus-banner p { margin: 4px 0 0; color: #d8e7f1; }
+    .focus-banner strong { padding: 8px 11px; color: var(--navy-2); background: var(--lime); border-radius: 10px; font-size: 12px; }
+    .role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .role-card { padding: 19px; background: white; border: 1px solid var(--line); border-radius: var(--radius); }
+    .role-card.owner { border-top: 5px solid var(--navy); }
+    .role-card.tech { border-top: 5px solid var(--lime-strong); }
+    .role-card.future { border-top: 5px solid #d79935; }
+    .role-card h3 { margin: 0; color: var(--navy); }
+    .role-card small { display: block; color: var(--muted); }
+    .role-card ul { margin: 13px 0 0; padding-left: 19px; }
+    .role-card li { margin: 6px 0; font-size: 12px; }
+    .rhythm { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+    .rhythm div { padding: 15px; background: #f7f9fa; border: 1px solid var(--line); border-radius: 14px; }
+    .rhythm span { color: var(--blue); font-size: 10px; font-weight: 900; }
+    .rhythm strong { display: block; margin-top: 3px; color: var(--navy); }
+    .rhythm p { margin: 5px 0 0; color: var(--muted); font-size: 11px; }
+    .issue-list { display: grid; gap: 12px; }
+    .issue-card { display: grid; grid-template-columns: 54px 1fr; gap: 15px; padding: 20px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .issue-no { display: grid; place-items: center; width: 48px; height: 48px; color: white; background: var(--navy); border-radius: 14px; font-size: 18px; font-weight: 950; }
+    .issue-head { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+    .issue-head h3 { margin: 0; color: var(--navy); font-size: 18px; }
+    .status { flex: 0 0 auto; padding: 4px 8px; border-radius: 999px; font-size: 10px; font-weight: 900; }
+    .status.done { color: var(--green); background: var(--green-soft); }
+    .status.open { color: var(--red); background: var(--red-soft); }
+    .status.plan { color: #765618; background: var(--amber); }
+    .issue-body > p { margin: 5px 0 12px; color: var(--muted); }
+    .action-facts { display: grid; grid-template-columns: 1.15fr .8fr .7fr 1.35fr; gap: 8px; }
+    .action-facts div { padding: 11px; background: #f7f9fa; border-radius: 11px; }
+    .action-facts span { display: block; color: var(--muted); font-size: 10px; }
+    .action-facts strong { display: block; margin-top: 3px; color: var(--navy); font-size: 12px; }
+    .priority-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .priority { padding: 19px; border-radius: var(--radius); }
+    .priority.p0 { color: white; background: var(--navy); }
+    .priority.p1 { background: var(--amber); border: 1px solid #edd287; }
+    .priority.p2 { background: white; border: 1px solid var(--line); }
+    .priority span { font-size: 10px; font-weight: 900; }
+    .priority h3 { margin: 7px 0; font-size: 18px; }
+    .priority p { margin: 0; font-size: 12px; }
+    .priority.p0 p { color: #d8e7f1; }
+    .success-list { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 14px; }
+    .success-list div { display: flex; gap: 9px; padding: 12px; background: white; border: 1px solid var(--line); border-radius: 12px; }
+    .success-list b { color: var(--lime-strong); }
+    .success-list span { font-size: 12px; }
+    .feedback-wrap { padding: clamp(20px, 4vw, 34px); background: white; border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); }
+    .feedback-intro { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: start; margin-bottom: 18px; }
+    .feedback-intro h3 { margin: 0; color: var(--navy); font-size: 22px; }
+    .feedback-intro p { margin: 4px 0 0; color: var(--muted); }
+    .save-state { padding: 6px 9px; color: var(--green); background: var(--green-soft); border-radius: 999px; font-size: 10px; font-weight: 900; }
+    .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field { padding: 15px; background: #f7f9fa; border: 1px solid var(--line); border-radius: 14px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { display: block; margin-bottom: 7px; color: var(--navy); font-size: 12px; font-weight: 850; }
+    .field small { display: block; margin-top: 6px; color: var(--muted); }
+    input[type="text"], input[type="date"], select, textarea {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 11px;
+      color: var(--ink);
+      background: white;
+      border: 1px solid #bdcbd3;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+    textarea { min-height: 96px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,112,141,.12); }
+    .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .check-item { display: flex; gap: 9px; align-items: start; padding: 10px; background: white; border: 1px solid var(--line); border-radius: 10px; }
+    .check-item input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--lime-strong); }
+    .check-item span { font-size: 12px; }
+    .feedback-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
+    .copy-btn { color: white; background: var(--navy); }
+    .clear-btn { color: var(--red); background: var(--red-soft); }
+    .feedback-note { margin: 10px 0 0; color: var(--muted); font-size: 10px; }
+    .method { padding: 22px; color: white; background: var(--navy-2); border-radius: 20px; }
+    .method h3 { margin: 0; }
+    .method-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 14px; }
+    .method-flow div { padding: 13px; color: var(--navy-2); background: white; border-radius: 12px; }
+    .method-flow b { display: block; color: var(--blue); font-size: 10px; }
+    .method-flow span { display: block; margin-top: 3px; font-size: 12px; font-weight: 800; }
+    .page-footer { padding: 24px max(18px, env(safe-area-inset-right)) calc(30px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); color: var(--muted); text-align: center; font-size: 11px; }
+    .toast { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 40; display: none; padding: 11px 14px; color: white; background: var(--navy-2); border-radius: 12px; box-shadow: var(--shadow); font-size: 12px; }
+    @media (max-width: 940px) {
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .kpi:last-child { grid-column: 1 / -1; }
+      .finding-grid, .role-grid, .priority-grid { grid-template-columns: 1fr; }
+      .action-facts { grid-template-columns: 1fr 1fr; }
+      .rhythm, .method-flow { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 700px) {
+      .two-col, .decision-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .section-head, .feedback-intro { display: block; }
+      .pill, .save-state { display: inline-block; margin-top: 8px; }
+      .success-list, .check-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .header-inner { padding-inline: 12px; }
+      .toolbar button:first-child { display: none; }
+      main { padding: 13px max(11px, env(safe-area-inset-right)) calc(58px + env(safe-area-inset-bottom)) max(11px, env(safe-area-inset-left)); }
+      section { margin-bottom: 36px; }
+      .hero { padding: 26px 20px; border-radius: 20px; }
+      .hero h1 { font-size: 35px; }
+      .thesis { font-size: 14px; }
+      .kpi-grid { gap: 8px; }
+      .kpi { min-height: 126px; padding: 15px; border-radius: 15px; }
+      .kpi strong { font-size: 25px; }
+      .panel, .issue-card { padding: 16px; }
+      .issue-card { grid-template-columns: 1fr; }
+      .issue-no { width: 38px; height: 38px; border-radius: 11px; font-size: 15px; }
+      .issue-head { display: block; }
+      .status { display: inline-block; margin-top: 5px; }
+      .action-facts, .rhythm, .method-flow { grid-template-columns: 1fr; }
+      .legend-grid { grid-template-columns: 1fr 1fr; }
+      .focus-banner { grid-template-columns: 1fr; }
+      .feedback-actions { display: grid; grid-template-columns: 1fr; }
+      .feedback-actions button { width: 100%; }
+    }
+    @media print {
+      .site-header, .feedback-actions, .toast { display: none !important; }
+      body { background: white; }
+      main { max-width: none; padding: 0; }
+      section { break-inside: avoid; margin-bottom: 24px; }
+      .hero { color: black; background: white; border: 2px solid var(--navy); box-shadow: none; }
+      .hero > p:not(.eyebrow), .hero-meta span { color: var(--ink); }
+      .hero::after { display: none; }
+      .kpi, .panel, .finding, .issue-card, .feedback-wrap { box-shadow: none; }
+      textarea { min-height: 70px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-row">
+        <div class="brand"><span class="brand-mark">有利</span><div><strong>第二週管理檢討</strong><small>分工・時間・成本・待辦閉環</small></div></div>
+        <div class="toolbar"><button type="button" onclick="window.print()">列印／存 PDF</button><button type="button" onclick="copyFeedback()">複製回饋</button></div>
+      </div>
+      <nav class="nav-strip" aria-label="報告章節">
+        <a href="../">報告中心</a><a href="./">週報索引</a><a href="#summary">第一週摘要</a><a href="#time">分工與時間</a><a href="#findings">顧問看見</a><a href="#issues">七項追蹤</a><a href="#priorities">本週優先</a><a href="#feedback">老闆回饋</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="hero">
+        <p class="eyebrow">Weekly management review · 第二週檢討版 · 2026/08/07</p>
+        <h1>第一週看見產能；第二週建立管理。</h1>
+        <p>第一週已證明有利車業具備車流與營收能力。第二週不再只追問「今天做了多少」，而要看老闆與小羅如何分工、時間是否被安排、待辦能否完成、成本是否回到工單。</p>
+        <div class="hero-meta"><span>營運資料：7/23–8/6</span><span>第二週證據：8/3–8/6</span><span>固定人力：老闆＋小羅</span><span>本週主軸：分工、時間與管理閉環</span></div>
+      </div>
+      <div class="thesis">本週不是要求老闆做更多，而是要求他留下固定管理時間，讓事情不再只存在腦中。</div>
+    </section>
+
+    <section id="summary">
+      <div class="section-head"><div><h2>累計營運摘要</h2><p>第二週四個記錄日已知 41 台、收入 $217,376；8/5、8/6 的小羅工單已補入。現在最大缺口已從「有沒有生意」轉成「材料成本是否完整、每天有沒有把帳關完」。</p></div><span class="pill">資料截至 8/6</span></div>
+      <div class="kpi-grid">
+        <article class="kpi primary"><span>累計已知收入</span><strong>$621,401</strong><small>8/6 貨車燈泡／煞車皮仍待補金額</small></article>
+        <article class="kpi accent"><span>累計完工</span><strong>116 車次</strong><small>十三個記錄日平均 8.9 車次</small></article>
+        <article class="kpi"><span>明確現金實收</span><strong>$418,151</strong><small>新增小羅現金工單 $81,451</small></article>
+        <article class="kpi"><span>已知應收</span><strong>$108,000</strong><small>含 8/5 引擎腳完工未收 $4,500</small></article>
+        <article class="kpi"><span>營運材料成本</span><strong>$87,130</strong><small>CX-5 總投資 $71,700 另列；老闆負擔 $35,850</small></article>
+        <article class="kpi"><span>小羅累計工時</span><strong>4,210 分</strong><small>8/5、8/6 各依全日工單估 630 分</small></article>
+      </div>
+      <div class="callout"><b>!</b><div><strong>第二週真正得到的結論</strong><p>小羅已能整日承接多車施工，工單收入也可回補日結；但材料成本仍普遍缺漏，老闆也留下未 key、付款方式未確認的工單。店長養成的下一步不是做更多車，而是讓小羅對排工、成本、收款與收工回報負責。</p></div></div>
+    </section>
+
+    <section id="time">
+      <div class="section-head"><div><h2>第二週主軸：分工與時間</h2><p>加入 8/5、8/6 後，老闆施工占比回升至 46.9%。這兩天各有約 690 分鐘營運跨度，卻仍沒有明確的成本、定位場地或固定支出管理時段。</p></div><span class="pill">從技師走向經營者</span></div>
+      <div class="two-col">
+        <article class="panel">
+          <h3>老闆累計時間結構</h3>
+          <p>共記錄 7,910 分鐘；施工／交車仍是最大類別，店外事務次之。</p>
+          <div class="owner-stack" role="img" aria-label="老闆時間：施工交車46.9%，店外事務23.8%，低載未分類8.6%，休息8.1%，技術學習4.2%，行政3.8%，外出接送2.7%，報價開發2.0%">
+            <i style="width:46.9%;background:#16708d"></i><i style="width:23.8%;background:#70ad47"></i><i style="width:8.6%;background:#82909b"></i><i style="width:8.1%;background:#a7328a"></i><i style="width:4.2%;background:#7b65a8"></i><i style="width:3.8%;background:#e79b3b"></i><i style="width:2.7%;background:#2b9ec1"></i><i style="width:2%;background:#5b8c51"></i>
+          </div>
+          <div class="legend-grid">
+            <div class="legend-item"><span><i style="background:#16708d"></i>施工／交車</span><strong>3,710 分・46.9%</strong></div>
+            <div class="legend-item"><span><i style="background:#70ad47"></i>店外事務</span><strong>1,880 分・23.8%</strong></div>
+            <div class="legend-item"><span><i style="background:#82909b"></i>低載／未分類</span><strong>680 分・8.6%</strong></div>
+            <div class="legend-item"><span><i style="background:#a7328a"></i>休息</span><strong>640 分・8.1%</strong></div>
+            <div class="legend-item"><span><i style="background:#7b65a8"></i>技術學習</span><strong>330 分・4.2%</strong></div>
+            <div class="legend-item"><span><i style="background:#e79b3b"></i>行政／庫存</span><strong>300 分・3.8%</strong></div>
+            <div class="legend-item"><span><i style="background:#2b9ec1"></i>外出／接送</span><strong>210 分・2.7%</strong></div>
+            <div class="legend-item"><span><i style="background:#5b8c51"></i>開發／報價</span><strong>160 分・2.0%</strong></div>
+          </div>
+        </article>
+        <article class="panel">
+          <h3>資料較清楚日期的人力承接</h3>
+          <p>小羅累計推估工作 4,210 分鐘。8/5、8/6 都有整日多車系統工單，依當日 08:30–20:00 並扣固定中、晚餐，各估 630 分鐘；單車未記錄起迄，不硬拆時數。</p>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>日期</th><th>老闆非休息時間</th><th>小羅施工時間</th><th>管理判讀</th></tr></thead>
+              <tbody>
+                <tr><td><strong>7/29</strong></td><td>390 分</td><td>230 分</td><td>兩人分頭施工，但小羅晚間補胎時數仍有缺口。</td></tr>
+                <tr><td><strong>7/30</strong></td><td>600 分</td><td>600 分</td><td>老闆外出學習，小羅處理 T6 與插單，具獨立施工證據。</td></tr>
+                <tr><td><strong>7/31</strong></td><td>630 分</td><td>420 分</td><td>兩人並行多工；老闆仍大量施工並有義消值班。</td></tr>
+                <tr><td><strong>8/1</strong></td><td>510 分義消</td><td>510 分</td><td>小羅獨立完成 5 車次、現金實收 $30,800。</td></tr>
+                <tr><td><strong>8/3</strong></td><td>570 分</td><td>540 分／推估</td><td>完成 4 台，含 Wish 電瓶交接；老闆義消與家庭行程 450 分。</td></tr>
+                <tr><td><strong>8/4</strong></td><td>630 分</td><td>600 分／推估</td><td>獨立完成 7 台、現金 $59,625，另共同完成煞車油。</td></tr>
+                <tr><td><strong>8/5</strong></td><td>630 分</td><td>630 分／估</td><td>6 張系統工單＋共同外修，14 車次；其中 1 張完工未收。</td></tr>
+                <tr><td><strong>8/6</strong></td><td>690 分</td><td>630 分／估</td><td>5 張現金工單，11 車次；GLA 與老闆後續作業合併一車。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+      <div class="evidence"><span>第二週關鍵證據</span><h3>小羅已反覆證明整日施工承接能力，但店長的「關帳能力」尚未被證明。</h3><p>8/5、8/6 的系統工單已補出收入與收款狀態，證明資料可以追溯；但材料成本幾乎都未填，另有未 key 工單。第三週應讓小羅每天收工前交付「全部工單、材料成本、收款狀態、未結案」四項回報。</p></div>
+    </section>
+
+    <section id="findings">
+      <div class="section-head"><div><h2>顧問的看見</h2><p>目前不是缺努力，而是努力尚未被轉成可追蹤、可交接、可完成的管理系統。</p></div></div>
+      <div class="finding-grid">
+        <article class="finding"><b>01</b><h3>車流與營收不是主要疑問</h3><p>116 車次與 $621,401 已知收入，足以證明店內有工作。現在要回答的是哪些工作值得做、誰來做，以及最後留下多少毛利。</p></article>
+        <article class="finding"><b>02</b><h3>老闆缺的是受保護的管理時間</h3><p>待辦、定位場地、保險、LINE 與固定支出都沒有自然完成，因為管理工作沒有被排進行事曆，只能被現場施工不斷擠掉。</p></article>
+        <article class="finding"><b>03</b><h3>小羅已有整日承接證據</h3><p>8/5、8/6 各有多張系統工單，推估第二週四日工作 2,400 分鐘，表示施工分工已自然發生。下一步是把「key 單」升級成對金額、成本、收款及未結案負責。</p></article>
+        <article class="finding"><b>04</b><h3>義消不是錯，但已是可量化的產能議題</h3><p>8/1、8/3、8/4 均有義消投入，僅最近兩日就有 460 分鐘。長期要追蹤離店時數、營收、未承接工作與小羅負荷，建立提前告知及店內代理規則。</p></article>
+        <article class="finding"><b>05</b><h3>工具到位不等於流程完成</h3><p>掃描機可使用、LINE 已重啟、發票已寄出，都是進度；但沒有分類規則、每週目標與完成證據，工具仍不會變成制度。</p></article>
+        <article class="finding"><b>06</b><h3>成本缺口會擋住所有重大決策</h3><p>不能算毛利，就不能合理決定增聘技師、定位設備預算、服務組合或第二店。工單材料成本與固定支出是本週最高優先。</p></article>
+        <article class="finding"><b>07</b><h3>CX-5 投資必須與保養廠分帳</h3><p>總投入 $71,700，已確認老闆與阿皓各半、每人 $35,850，目前開價 $168,000。仍須補其他整備、持有成本與成交淨利；開價差額不是毛利，也不是可用現金。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><h2>本週分工設計</h2><p>不是一次把老闆抽走，而是先把可以交接的責任做成固定節奏。</p></div></div>
+      <div class="focus-banner"><div><h3>本週最低要求：老闆保留 2 次 × 45 分鐘管理時段</h3><p>管理時段只能做成本、固定支出、定位場地、保險、LINE 或待辦檢討，不接一般施工插單。</p></div><strong>共 90 分鐘</strong></div>
+      <div class="role-grid">
+        <article class="role-card owner"><h3>老闆</h3><small>應逐步保留</small><ul><li>現金流、成本與固定支出。</li><li>定位設備與場地決策。</li><li>保險、重要供應商與行政決策。</li><li>小羅授權、品質標準與例外處理。</li><li>LINE 會員經營方向與目標。</li></ul></article>
+        <article class="role-card tech"><h3>小羅</h3><small>本週增加管理責任</small><ul><li>每天開工前說明工單順序。</li><li>回報插單與預計交車時間。</li><li>至少一次負責品質及收工檢查。</li><li>確認每張工單都有執行人與狀態。</li><li>協助材料單據放入正確分類。</li></ul></article>
+        <article class="role-card future"><h3>新技師</h3><small>尚未增聘，先定義承接範圍</small><ul><li>補胎、換胎與基礎保養。</li><li>標準拆裝、清潔與工位復原。</li><li>定位前後準備。</li><li>交車前標準檢查。</li><li>目標是釋放老闆與小羅的管理時間。</li></ul></article>
+      </div>
+      <div class="rhythm">
+        <div><span>每天開工前 10 分鐘</span><strong>排工與風險</strong><p>今日交車、待料、插單、兩人工作分配。</p></div>
+        <div><span>每天收工前 10 分鐘</span><strong>錢與未結案</strong><p>收入、收款、成本、未完工、明日第一步。</p></div>
+        <div><span>本週兩次 45 分鐘</span><strong>老闆管理時段</strong><p>不可被一般施工占用，完成七項待辦。</p></div>
+        <div><span>每週一次 30 分鐘</span><strong>老闆＋小羅復盤</strong><p>分工、品質、卡點、授權與下週責任。</p></div>
+      </div>
+    </section>
+
+    <section id="issues">
+      <div class="section-head"><div><h2>七項管理追蹤</h2><p>每個項目都轉成「下一步、負責人、建議期限、完成證據」。期限可由老闆在回饋區調整，但不能沒有日期。</p></div><span class="pill">待辦閉環</span></div>
+      <div class="issue-list">
+        <article class="issue-card"><div class="issue-no">1</div><div class="issue-body"><div class="issue-head"><h3>行政待辦：發票完成，保險尚未申請／詢價</h3><span class="status open">逾期未回報</span></div><p>原建議期限 8/6 已過，8/5、8/6 紀錄未見處理；請老闆確認是尚未完成，或只是沒有回報。</p><div class="action-facts"><div><span>下一步</span><strong>確認險種與資料，送出申請或詢價</strong></div><div><span>負責人</span><strong>老闆</strong></div><div><span>新回覆期限</span><strong>8/7 檢討時確認</strong></div><div><span>完成證據</span><strong>已送出＋承辦窗口＋回覆日期</strong></div></div></div></article>
+        <article class="issue-card"><div class="issue-no">2</div><div class="issue-body"><div class="issue-head"><h3>定位設備場地：尚未安排時間與計畫</h3><span class="status open">今日必答</span></div><p>10 月要運轉，但 8/5、8/6 仍未看到場地時段；今天至少要排定 60 分鐘現勘，不能再只保留目標日期。</p><div class="action-facts"><div><span>下一步</span><strong>量尺寸、電力、動線與施工障礙</strong></div><div><span>負責人</span><strong>老闆＋小羅</strong></div><div><span>回覆期限</span><strong>8/7 排定日期</strong></div><div><span>完成證據</span><strong>日期、照片／草圖、尺寸、問題清單、下一里程碑</strong></div></div></div></article>
+        <article class="issue-card"><div class="issue-no">3</div><div class="issue-body"><div class="issue-head"><h3>義消投入：是老闆選擇，但長期影響未量化</h3><span class="status plan">需要規則</span></div><p>8/1、8/3、8/4 都有義消投入，最近兩個記錄日合計 460 分鐘；店內仍有產出，但不能只靠小羅臨時承接。</p><div class="action-facts"><div><span>下一步</span><strong>連續 4 週記錄義消時數、提前通知、店內代理、未承接工作</strong></div><div><span>負責人</span><strong>老闆</strong></div><div><span>建議期限</span><strong>本週開始</strong></div><div><span>完成證據</span><strong>每次事件有時數、代理人與營運影響</strong></div></div></div></article>
+        <article class="issue-card"><div class="issue-no">4</div><div class="issue-body"><div class="issue-head"><h3>LINE 官方帳號已重啟，會員尚未大量轉入</h3><span class="status plan">已開始</span></div><p>第二週先建立基線與第一批轉入，不追求一次完成全部。</p><div class="action-facts"><div><span>下一步</span><strong>確認目前好友數、邀請話術、店內 QR 位置與第一批轉入名單</strong></div><div><span>負責人</span><strong>老闆／待指定執行人</strong></div><div><span>建議期限</span><strong>8/9</strong></div><div><span>完成證據</span><strong>基線好友數＋本週新增數＋邀請方式</strong></div></div></div></article>
+        <article class="issue-card"><div class="issue-no">5</div><div class="issue-body"><div class="issue-head"><h3>進料單據：掃描機可用，電腦需更換</h3><span class="status plan">分工處理</span></div><p>電腦更換由顧問接手；店內不能因此停止分類，先把紙本流程固定。</p><div class="action-facts"><div><span>下一步</span><strong>店內先分輪胎／零件／耗材／其他；顧問處理電腦更換</strong></div><div><span>負責人</span><strong>老闆／小羅＋顧問</strong></div><div><span>建議期限</span><strong>8/8 前完成第一批</strong></div><div><span>完成證據</span><strong>四類資料夾＋已掃描清單＋電腦更換日期</strong></div></div></div></article>
+        <article class="issue-card"><div class="issue-no">6</div><div class="issue-body"><div class="issue-head"><h3>工單成本仍不完整</h3><span class="status open">最高優先</span></div><p>沒有材料成本就沒有可信毛利，也無法評估增聘技師或定位設備投資。</p><div class="action-facts"><div><span>下一步</span><strong>從本週起每張完工工單當日補齊材料成本與付款狀態</strong></div><div><span>負責人</span><strong>老闆；小羅協助核對用料</strong></div><div><span>建議期限</span><strong>每天收工前</strong></div><div><span>完成證據</span><strong>連續 7 日成本完整率至少 90%</strong></div></div></div></article>
+        <article class="issue-card"><div class="issue-no">7</div><div class="issue-body"><div class="issue-head"><h3>固定支出項目與金額尚未列出</h3><span class="status open">逾期未回報</span></div><p>原建議期限 8/6 已過。沒有固定支出，就不能把老闆負擔的 $35,850 中古車投資、定位設備與新技師放進同一張現金配置圖。</p><div class="action-facts"><div><span>下一步</span><strong>列薪資、勞健保、房租、水電、電話、系統、保險、貸款、設備分期等</strong></div><div><span>負責人</span><strong>老闆</strong></div><div><span>新回覆期限</span><strong>8/7 檢討時確認</strong></div><div><span>完成證據</span><strong>項目、月金額、付款日、付款方式、是否可調整</strong></div></div></div></article>
+      </div>
+    </section>
+
+    <section id="priorities">
+      <div class="section-head"><div><h2>本週優先順序</h2><p>七項事情不應同時搶注意力。先把會阻擋現金、投資與人力判斷的事項完成。</p></div></div>
+      <div class="priority-grid">
+        <article class="priority p0"><span>P0・先看錢</span><h3>成本＋固定支出</h3><p>建立工單成本完整率與每月固定現金需求。這是定位設備及增聘評估的入口。</p></article>
+        <article class="priority p1"><span>P1・排入時間</span><h3>定位場地＋保險</h3><p>兩件事都必須先有明確日期與下一步，不再停留於口頭待辦。</p></article>
+        <article class="priority p2"><span>P2・建立成長系統</span><h3>分工、LINE、單據、義消規則</h3><p>讓小羅承接管理責任，讓工具與外部投入都變成可追蹤流程。</p></article>
+      </div>
+      <div class="success-list">
+        <div><b>✓</b><span>老闆完成 2 次共 90 分鐘管理時段。</span></div>
+        <div><b>✓</b><span>小羅至少 1 次負責排工、進度、品質與收工。</span></div>
+        <div><b>✓</b><span>連續 7 日工單材料成本完整率達 90%。</span></div>
+        <div><b>✓</b><span>固定支出完成項目、金額、付款日與方式。</span></div>
+        <div><b>✓</b><span>定位場地完成現勘時間與下一個里程碑。</span></div>
+        <div><b>✓</b><span>保險已送出；LINE 有基線與本週新增數。</span></div>
+        <div><b>✓</b><span>進料單據完成第一批分類與掃描。</span></div>
+        <div><b>✓</b><span>義消事件開始記錄時數、代理與營運影響。</span></div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <div class="section-head"><div><h2>老闆回饋與承諾</h2><p>請老闆直接填寫。內容會嘗試儲存在目前裝置；按「複製老闆回饋」即可貼到 LINE 回傳。</p></div><span class="pill">需要老闆回答</span></div>
+      <div class="feedback-wrap">
+        <div class="feedback-intro"><div><h3>第二週不是交作業，而是做選擇。</h3><p>若期限不合理可以調整，但每個項目都要留下明確日期、負責人與完成定義。</p></div><span id="saveState" class="save-state">尚未填寫</span></div>
+        <div class="decision-grid">
+          <div class="field"><label for="focusAgree">1. 我是否認同第二週主軸改為「分工、時間、成本」？</label><select id="focusAgree" data-feedback="主軸認同"><option value="">請選擇</option><option>認同，照此執行</option><option>部分認同，需要調整</option><option>不認同，需重新討論</option></select></div>
+          <div class="field"><label for="fixedExpenseDate">2. 我承諾何時提供固定支出項目與金額？</label><input id="fixedExpenseDate" data-feedback="固定支出完成日期" type="date"></div>
+          <div class="field"><label for="alignmentSlot">3. 定位場地現勘要排在哪一天、哪個時段？</label><input id="alignmentSlot" data-feedback="定位場地現勘時間" type="text" placeholder="例如：8/7 14:00–15:00"></div>
+          <div class="field"><label for="insuranceDate">4. 保險申請／詢價預計何時送出？</label><input id="insuranceDate" data-feedback="保險送出日期" type="date"></div>
+          <div class="field full"><label for="topThree">5. 本週最重要的三件事是什麼？</label><textarea id="topThree" data-feedback="本週三項優先" placeholder="1.&#10;2.&#10;3."></textarea></div>
+          <div class="field"><label for="delegate">6. 本週要交給小羅哪一項管理責任？</label><select id="delegate" data-feedback="小羅管理責任"><option value="">請選擇</option><option>開工排程與派工</option><option>進度與交車時間</option><option>品質檢查</option><option>收工與未結案回報</option><option>完整負責一次店長值班</option></select></div>
+          <div class="field"><label for="managementBlocks">7. 老闆兩次 45 分鐘管理時段</label><input id="managementBlocks" data-feedback="老闆管理時段" type="text" placeholder="例如：週三 14:00、週六 16:00"></div>
+          <div class="field full"><label for="fireRule">8. 義消投入希望如何兼顧？店內需要什麼代理或通知規則？</label><textarea id="fireRule" data-feedback="義消與店內規則" placeholder="請寫下可接受的安排、提前通知方式與店內代理原則"></textarea></div>
+          <div class="field"><label for="lineTarget">9. LINE 本週目標</label><input id="lineTarget" data-feedback="LINE 本週目標" type="text" placeholder="目前好友數／本週新增目標"></div>
+          <div class="field"><label for="supportNeed">10. 最需要顧問協助的是什麼？</label><input id="supportNeed" data-feedback="需要顧問協助" type="text" placeholder="例如：電腦更換、表格、流程整理"></div>
+          <div class="field full"><label>11. 本週完成確認</label><div class="check-grid">
+            <label class="check-item"><input type="checkbox" data-feedback="保險已送出"><span>保險已送出申請／詢價</span></label>
+            <label class="check-item"><input type="checkbox" data-feedback="定位場地已排定"><span>定位場地現勘時間已排定</span></label>
+            <label class="check-item"><input type="checkbox" data-feedback="固定支出已列"><span>固定支出項目與金額已列出</span></label>
+            <label class="check-item"><input type="checkbox" data-feedback="成本完整率達標"><span>本週工單成本完整率達 90%</span></label>
+            <label class="check-item"><input type="checkbox" data-feedback="LINE 有基線與新增"><span>LINE 有基線好友數與本週新增數</span></label>
+            <label class="check-item"><input type="checkbox" data-feedback="單據第一批完成"><span>進料單據第一批分類／掃描完成</span></label>
+            <label class="check-item"><input type="checkbox" data-feedback="小羅完成管理值班"><span>小羅完成一次管理值班與復盤</span></label>
+            <label class="check-item"><input type="checkbox" data-feedback="義消影響已記錄"><span>義消時數、代理與營運影響已記錄</span></label>
+          </div></div>
+          <div class="field full"><label for="ownerMessage">12. 老闆想補充的話</label><textarea id="ownerMessage" data-feedback="老闆補充" placeholder="對報告的不同看法、擔心、資源需求或希望調整的目標"></textarea></div>
+        </div>
+        <div class="feedback-actions"><button class="copy-btn" type="button" onclick="copyFeedback()">複製老闆回饋</button><button class="clear-btn" type="button" onclick="clearFeedback()">清除本機回饋</button></div>
+        <p class="feedback-note">提醒：離線 HTML 的自動儲存依瀏覽器而異。重要回饋請按複製後貼到 LINE 或其他文件保存。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="method"><h3>每週管理方法：不只問「做了沒有」，而是確認閉環。</h3><div class="method-flow"><div><b>STEP 1</b><span>說清楚問題</span></div><div><b>STEP 2</b><span>決定下一步與負責人</span></div><div><b>STEP 3</b><span>排入明確日期</span></div><div><b>STEP 4</b><span>用完成證據結案</span></div></div></div>
+    </section>
+  </main>
+
+  <footer class="page-footer">有利車業第二週管理檢討與老闆回饋｜第二週檢討版 2026/08/07｜營運資料截至 2026/08/06；財務數字以工單系統與實際帳務為準。</footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script>
+    (function () {
+      var key = 'yuli-week2-owner-feedback-v1';
+      var fields = Array.prototype.slice.call(document.querySelectorAll('[data-feedback]'));
+      var state = document.getElementById('saveState');
+      function valueOf(el) { return el.type === 'checkbox' ? el.checked : el.value; }
+      function applyValue(el, value) { if (el.type === 'checkbox') el.checked = Boolean(value); else el.value = value || ''; }
+      function save() {
+        var data = {};
+        fields.forEach(function (el, index) { data[el.id || ('check-' + index)] = valueOf(el); });
+        try { localStorage.setItem(key, JSON.stringify(data)); state.textContent = '已暫存於此裝置'; } catch (e) { state.textContent = '瀏覽器未提供暫存'; }
+      }
+      try {
+        var saved = JSON.parse(localStorage.getItem(key) || '{}');
+        fields.forEach(function (el, index) { var id = el.id || ('check-' + index); if (Object.prototype.hasOwnProperty.call(saved, id)) applyValue(el, saved[id]); });
+        if (Object.keys(saved).length) state.textContent = '已載入本機回饋';
+      } catch (e) { state.textContent = '尚未填寫'; }
+      fields.forEach(function (el) { el.addEventListener('input', save); el.addEventListener('change', save); });
+      window._feedbackFields = fields;
+      window._feedbackKey = key;
+    }());
+    function feedbackText() {
+      var lines = ['有利車業｜第二週老闆回饋', '日期：' + new Date().toLocaleDateString('zh-TW'), ''];
+      (window._feedbackFields || []).forEach(function (el) {
+        var label = el.getAttribute('data-feedback');
+        if (el.type === 'checkbox') lines.push('[' + (el.checked ? '✓' : ' ') + '] ' + label);
+        else lines.push(label + '：' + (el.value.trim() || '未填'));
+      });
+      return lines.join('\n');
+    }
+    function showToast(message) {
+      var toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.style.display = 'block';
+      window.clearTimeout(window._toastTimer);
+      window._toastTimer = window.setTimeout(function () { toast.style.display = 'none'; }, 2400);
+    }
+    function fallbackCopy(text) {
+      var area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      area.setSelectionRange(0, area.value.length);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(area);
+      showToast(ok ? '回饋已複製，可貼到 LINE' : '無法自動複製，請手動選取回饋');
+    }
+    function copyFeedback() {
+      var text = feedbackText();
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { showToast('回饋已複製，可貼到 LINE'); }).catch(function () { fallbackCopy(text); });
+      else fallbackCopy(text);
+    }
+    function clearFeedback() {
+      if (!window.confirm('只會清除這份報告在目前裝置上的回饋，確定清除嗎？')) return;
+      (window._feedbackFields || []).forEach(function (el) { if (el.type === 'checkbox') el.checked = false; else el.value = ''; });
+      try { localStorage.removeItem(window._feedbackKey); } catch (e) {}
+      document.getElementById('saveState').textContent = '尚未填寫';
+      showToast('本機回饋已清除');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>有利車業｜第三週營運與現金流檢討</title>
+  <style>
+    :root{--paper:#f4f1e8;--surface:#fffdf8;--ink:#17231f;--muted:#69736f;--line:#d9d6cb;--deep:#173f34;--accent:#b86434;--soft:#e7ede7;--danger:#9b4439;--good:#2f6b4e;--blue:#2d6374}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--paper)}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}a{color:inherit}
+    header{position:sticky;top:0;z-index:5;background:rgba(244,241,232,.95);border-bottom:1px solid var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}.nav{max-width:1120px;margin:auto;display:flex;align-items:center;gap:1rem;padding:.72rem max(1rem,env(safe-area-inset-left))}.brand{text-decoration:none;font-weight:850;white-space:nowrap}.links{display:flex;gap:.25rem;overflow:auto}.links a{text-decoration:none;white-space:nowrap;color:var(--muted);font-size:.8rem;font-weight:700;padding:.45rem .65rem;border-radius:.55rem}.links a:hover,.links a:focus-visible{background:var(--soft);color:var(--deep);outline:none}
+    main{max-width:1120px;margin:auto;padding:clamp(1.5rem,5vw,4rem) max(1rem,env(safe-area-inset-left)) calc(4rem + env(safe-area-inset-bottom))}.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(17rem,.7fr);gap:clamp(2rem,6vw,5rem);align-items:end;padding-bottom:clamp(2.5rem,7vw,5rem)}.eyebrow{margin:0 0 .7rem;color:var(--accent);font-size:.74rem;font-weight:850;letter-spacing:.1em}h1,h2,h3,p{margin-top:0}h1{max-width:12ch;margin-bottom:1rem;font-size:clamp(2.5rem,8vw,5.2rem);line-height:1;letter-spacing:-.065em}.lead{max-width:62ch;color:var(--muted)}.hero-note{border-top:1px solid var(--line);padding-top:1rem}.hero-note strong{display:block;font-size:1.1rem}.hero-note p{margin:.35rem 0 0;color:var(--muted);font-size:.85rem}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:1.2rem;overflow:hidden;background:var(--surface)}.kpi{padding:1.1rem;border-right:1px solid var(--line)}.kpi:last-child{border:0}.kpi span{display:block;color:var(--muted);font-size:.72rem;font-weight:750}.kpi b{display:block;margin:.2rem 0;font-size:clamp(1.2rem,3vw,1.8rem);letter-spacing:-.04em}.kpi small{display:block;color:var(--muted);font-size:.7rem}.negative b{color:var(--danger)}
+    section{padding-top:clamp(3rem,7vw,5rem)}.section-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1rem}.section-head h2{margin:0;font-size:clamp(1.5rem,4vw,2.25rem);letter-spacing:-.04em}.section-head p{max-width:50ch;margin:0;color:var(--muted);font-size:.84rem}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:1rem;background:var(--surface)}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:.8rem .85rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-size:.72rem;letter-spacing:.04em}td{font-size:.82rem}.num{text-align:right;white-space:nowrap}.total td{background:var(--deep);color:var(--surface);font-weight:800}.tag{display:inline-block;padding:.15rem .42rem;border-radius:999px;background:var(--soft);font-size:.68rem;font-weight:800}.tag.missing{background:#f5ded8;color:#7e332c}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.panel{padding:1.2rem;border:1px solid var(--line);border-radius:1rem;background:var(--surface)}.panel h3{margin-bottom:.25rem}.panel>p{color:var(--muted);font-size:.82rem}.bar{display:grid;grid-template-columns:8rem 1fr auto;gap:.7rem;align-items:center;margin:.75rem 0}.bar span,.bar b{font-size:.76rem}.track{height:9px;background:var(--soft);border-radius:999px;overflow:hidden}.fill{display:block;height:100%;width:var(--w);background:var(--deep);border-radius:inherit}.fill.accent{background:var(--accent)}.fill.blue{background:var(--blue)}.fill.good{background:var(--good)}
+    .insights{counter-reset:item;border-top:1px solid var(--line)}.insight{counter-increment:item;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--line)}.insight:before{content:counter(item,decimal-leading-zero);color:var(--accent);font-size:.72rem;font-weight:850}.insight strong{display:block;margin-bottom:.25rem}.insight p{margin:0;color:var(--muted);font-size:.84rem}
+    .actions{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--line);border-radius:1rem;overflow:hidden;background:var(--line)}.action{background:var(--surface);padding:1.2rem}.action time{color:var(--accent);font-size:.7rem;font-weight:850}.action strong{display:block;margin:.35rem 0}.action p{margin:0;color:var(--muted);font-size:.8rem}
+    .feedback{padding:clamp(1.3rem,4vw,2.2rem);border-radius:1rem;background:var(--deep);color:var(--surface)}.feedback h2{margin-bottom:.4rem}.feedback>p{color:#d7e2dd}.question{display:grid;grid-template-columns:1.5rem 1fr;gap:.7rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.2)}.box{width:1.1rem;height:1.1rem;margin-top:.2rem;border:1px solid rgba(255,255,255,.65);border-radius:.2rem}.question p{margin:0;font-size:.88rem}
+    .warning{margin-top:1rem;padding:1rem;border:1px solid #d6a28a;border-radius:.8rem;background:#f7e6dc;font-size:.82rem}footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.77rem}
+    @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;gap:.4rem}.hero{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.kpi:nth-child(2){border-right:0}.kpi:nth-child(-n+2){border-bottom:1px solid var(--line)}.two{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:.3rem}.bar{grid-template-columns:6.8rem 1fr auto}}
+  </style>
+</head>
+<body>
+  <header><div class="nav"><a class="brand" href="../">有利車業報告中心</a><nav class="links" aria-label="報告導覽"><a href="../operations/">最新營運</a><a href="./">週報索引</a><a href="week-02.html">第二週</a></nav></div></header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">第三週管理檢討 · 2026/08/05–08/11</p><h1>錢有進來，但還不能說錢有留下。</h1><p class="lead">本週把管理焦點從工作時間移到收支。營收與車流已經成立，現在要建立每天能對帳、每週能關帳的現金管理制度。</p></div>
+      <aside class="hero-note"><strong>本週資料已重新去重校正</strong><p>8/5新增電池賣貨$4,800，ANY工單改為$4,550，7005-DK依最新狀態改列現金。</p></aside>
+    </section>
+
+    <div class="kpis" aria-label="第三週營運摘要"><div class="kpi"><span>已知營收</span><b>$296,125</b><small>6個營運資料日</small></div><div class="kpi"><span>實際收款</span><b>$229,125</b><small>收款率77.4%</small></div><div class="kpi"><span>確認支出</span><b>$249,953</b><small>只有3日支出完整</small></div><div class="kpi negative"><span>確認現金差額</span><b>−$20,828</b><small>不是完整週損益</small></div></div>
+
+    <section id="daily"><div class="section-head"><h2>每日收入與收款</h2><p>現金差額只在已提供完整支出的日期計算；缺支出日不得把實收當成現金淨增加。</p></div><div class="table-wrap"><table><thead><tr><th>日期</th><th class="num">營收</th><th class="num">實收</th><th class="num">應收／草稿</th><th class="num">確認支出</th><th class="num">確認差額</th><th>資料狀態</th></tr></thead><tbody>
+      <tr><td>8/5</td><td class="num">$33,650</td><td class="num">$33,650</td><td class="num">$0</td><td class="num">未完整</td><td class="num">不可計算</td><td><span class="tag missing">缺支出</span></td></tr>
+      <tr><td>8/6</td><td class="num">$90,700</td><td class="num">$61,900</td><td class="num">$28,800</td><td class="num">$96,903</td><td class="num">−$35,003</td><td><span class="tag">含6月昇陽零件款</span></td></tr>
+      <tr><td>8/7</td><td class="num">$60,325</td><td class="num">$34,325</td><td class="num">$26,000</td><td class="num">未完整</td><td class="num">不可計算</td><td><span class="tag missing">缺支出</span></td></tr>
+      <tr><td>8/8</td><td class="num">$24,800</td><td class="num">$24,800</td><td class="num">$0</td><td class="num">未完整</td><td class="num">不可計算</td><td><span class="tag missing">可能缺工單與支出</span></td></tr>
+      <tr><td>8/10</td><td class="num">$18,950</td><td class="num">$18,950</td><td class="num">$0</td><td class="num">$41,960</td><td class="num">−$23,010</td><td><span class="tag">材料、驗車、系統</span></td></tr>
+      <tr><td>8/11</td><td class="num">$67,700</td><td class="num">$55,500</td><td class="num">$12,200</td><td class="num">$111,090</td><td class="num">−$55,590</td><td><span class="tag">前期輪胎款與薪資</span></td></tr>
+      <tr class="total"><td>本週合計</td><td class="num">$296,125</td><td class="num">$229,125</td><td class="num">$67,000</td><td class="num">$249,953</td><td class="num">−$20,828*</td><td>＊支出仍不完整</td></tr>
+    </tbody></table></div><div class="warning"><strong>付款狀態需再核對：</strong>依當日狀態形成$67,000應收／草稿，但最新明確未收清單中的本週款項較少。差額不能自動視為已收，應逐筆回沖工單。</div></section>
+
+    <section><div class="section-head"><h2>收入與支出去向</h2><p>收入結構說明店裡做了什麼；付款結構說明現金在本週何時流出。兩者不是同一套成本口徑。</p></div><div class="two">
+      <article class="panel"><h3>收入結構</h3><p>服務仍是主要收入，商品銷售占12.6%。</p><div class="bar"><span>服務／維修</span><div class="track"><i class="fill blue" style="--w:87.4%"></i></div><b>$258,825</b></div><div class="bar"><span>商品銷售</span><div class="track"><i class="fill good" style="--w:12.6%"></i></div><b>$37,300</b></div><div class="bar"><span>小羅相關</span><div class="track"><i class="fill" style="--w:55.1%"></i></div><b>$163,175</b></div><div class="bar"><span>老闆相關</span><div class="track"><i class="fill accent" style="--w:44.9%"></i></div><b>$132,950</b></div></article>
+      <article class="panel"><h3>確認支出結構</h3><p>前期貨款占68.6%，因此本週付款不能直接當成本週工單材料成本。</p><div class="bar"><span>前期貨款</span><div class="track"><i class="fill accent" style="--w:68.6%"></i></div><b>$171,463</b></div><div class="bar"><span>小羅薪資</span><div class="track"><i class="fill" style="--w:16.6%"></i></div><b>$41,500</b></div><div class="bar"><span>系統／開發</span><div class="track"><i class="fill blue" style="--w:11.9%"></i></div><b>$29,800</b></div><div class="bar"><span>其他已知</span><div class="track"><i class="fill good" style="--w:2.9%"></i></div><b>$7,190</b></div></article>
+    </div></section>
+
+    <section><div class="section-head"><h2>顧問看見</h2><p>第三週的重點不是判斷賺或賠，而是把之後可以判斷的管理制度補起來。</p></div><div class="insights">
+      <div class="insight"><div><strong>營收能力已經不是主要疑問</strong><p>六個資料日營收接近30萬元，車流與服務需求足以支持人力規劃；真正限制是現金是否能被保留下來。</p></div></div>
+      <div class="insight"><div><strong>前期貨款會讓單週現金看起來劇烈波動</strong><p>8/6昇陽$96,903與8/11廣豐$62,800均屬前期貨款。必須在付款紀錄標示所屬月份，避免誤判當週工單虧損。</p></div></div>
+      <div class="insight"><div><strong>小羅已經承接過半收入</strong><p>小羅相關收入占55.1%，可繼續代理店長測試；老闆的考核應逐步轉為現金、成本、應收應付與團隊結果。</p></div></div>
+      <div class="insight"><div><strong>可動用現金仍無法確認</strong><p>8月昇陽零件款$169,810預計9月支付。沒有期初、期末現金銀行餘額與完整支出前，不能承諾新技師的長期成本。</p></div></div>
+    </div></section>
+
+    <section><div class="section-head"><h2>下週三個必做</h2><p>只有留下可核對結果才算完成。</p></div><div class="actions"><div class="action"><time>01 · 每日</time><strong>補齊支出日結</strong><p>先回補8/5、8/7、8/8，再要求每天收工前登錄付款、帳戶、單據與所屬月份。</p></div><div class="action"><time>02 · 應收</time><strong>核對付款狀態差額</strong><p>逐筆確認已收、未收與草稿，任何狀態變更都要回沖工單與應收表。</p></div><div class="action"><time>03 · 現金</time><strong>隔離9月貨款</strong><p>把$169,810列為不可動用現金，並補齊其他供應商近期應付。</p></div></div></section>
+
+    <section class="feedback"><p class="eyebrow">OWNER FEEDBACK</p><h2>老闆本週回饋</h2><p>下次週報前請回答，顧問才知道制度是否真的執行。</p><div class="question"><span class="box" aria-hidden="true"></span><p>8/5、8/7、8/8的支出是否已補齊？若沒有，卡在哪裡？</p></div><div class="question"><span class="box" aria-hidden="true"></span><p>目前店內現金與銀行餘額各是多少？是否已保留9月昇陽貨款？</p></div><div class="question"><span class="box" aria-hidden="true"></span><p>小羅本週是否能獨立負責排工、品質、工單狀態與收工回報？</p></div><div class="question"><span class="box" aria-hidden="true"></span><p>定位設備場地本週完成了哪一個具體節點？</p></div></section>
+    <footer><a href="./">返回週報索引</a> · <a href="../operations/">查看最新營運報告</a><br>本週報是8/5–8/11管理快照；最新應收、應付與現金狀態以最新營運報告為準。</footer>
+  </main>
+</body>
+</html>
