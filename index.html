@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="有利營運報告">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta name="description" content="有利車業現金經營控制與營運報告：追蹤營收、實收、應收、支出、可動用現金與聘請技師準備度。資料截至2026年8月13日。">
+  <title>有利車業｜現金經營控制與營運報告｜截至 2026/08/13</title>
+  <style>
+    :root{
+      --paper:#f4f1e8;--surface:#fffdf8;--ink:#17231f;--muted:#69736f;
+      --line:#d9d6cb;--deep:#173f34;--accent:#b86434;--soft:#e7ede7;
+      --warn:#8a4b2d;--danger:#a33f37;--good:#2f6b4e;--blue:#2d6374;
+      --radius:22px;--shadow:0 18px 50px rgba(32,52,45,.09);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--paper)}
+    body{margin:0;color:var(--ink);background:
+      radial-gradient(circle at 90% 2%,rgba(184,100,52,.09),transparent 28rem),
+      linear-gradient(rgba(23,63,52,.024) 1px,transparent 1px),
+      var(--paper);background-size:auto,100% 34px,auto;
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+      font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}
+    button,input{font:inherit}
+    a{color:inherit}
+    .skip{position:fixed;left:1rem;top:-5rem;z-index:20;background:var(--deep);color:white;padding:.65rem 1rem;border-radius:.5rem}
+    .skip:focus{top:1rem}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(244,241,232,.94);border-bottom:1px solid rgba(23,35,31,.1);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .topbar-inner{max-width:1220px;margin:auto;display:flex;align-items:center;gap:1rem;padding:.7rem max(1rem,env(safe-area-inset-left))}
+    .brand{white-space:nowrap;font-weight:800;letter-spacing:-.03em}.brand small{display:block;color:var(--muted);font-size:.68rem;font-weight:600;letter-spacing:.08em}
+    nav{display:flex;gap:.35rem;overflow:auto;scrollbar-width:none;padding:.1rem}nav::-webkit-scrollbar{display:none}
+    nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.82rem;font-weight:650;padding:.42rem .68rem;border-radius:.5rem}
+    nav a:hover,nav a:focus-visible{background:var(--soft);color:var(--deep);outline:none}
+    .top-actions{margin-left:auto;display:flex;gap:.35rem}
+    .btn{border:1px solid var(--line);background:var(--surface);color:var(--deep);border-radius:.6rem;padding:.48rem .7rem;font-weight:700;font-size:.8rem;cursor:pointer;transition:transform .2s,background .2s}
+    .btn:hover{background:var(--soft)}.btn:active{transform:translateY(1px)}.btn:focus-visible{outline:3px solid rgba(45,99,116,.28);outline-offset:2px}
+    main{max-width:1220px;margin:auto;padding:0 max(1.1rem,env(safe-area-inset-left)) 6rem}
+    .hero{padding:clamp(3.6rem,8vw,7rem) 0 3.8rem;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(17rem,.55fr);gap:clamp(2rem,7vw,7rem);align-items:end}
+    .eyebrow{margin:0 0 1.2rem;color:var(--accent);font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    h1,h2,h3,p{margin-top:0}h1{max-width:820px;margin-bottom:1.25rem;font-size:clamp(2.6rem,7.2vw,6.6rem);line-height:.93;letter-spacing:-.075em;text-wrap:balance}
+    .hero-copy{max-width:720px;color:#4e5a55;font-size:clamp(1rem,2vw,1.2rem);text-wrap:pretty}
+    .hero-aside{border-left:3px solid var(--accent);padding:.15rem 0 .15rem 1.2rem}.hero-aside strong{display:block;font-size:2rem;letter-spacing:-.05em}.hero-aside p{color:var(--muted);font-size:.9rem;margin:0}.hero-aside .stamp{display:inline-block;margin-bottom:.7rem;color:var(--deep);font-weight:800;font-size:.72rem;letter-spacing:.08em}
+    section{padding:2.7rem 0 3.6rem;border-top:1px solid var(--line);scroll-margin-top:4.5rem}
+    .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(14rem,.45fr);gap:2rem;align-items:end;margin-bottom:1.7rem}
+    .section-head h2{margin-bottom:.4rem;font-size:clamp(1.8rem,4vw,3.1rem);line-height:1;letter-spacing:-.055em;text-wrap:balance}.section-head p{max-width:680px;color:var(--muted);margin-bottom:0}.section-note{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-align:right}
+    .kpi-lead{display:grid;grid-template-columns:1.25fr repeat(2,1fr);gap:1rem;margin-bottom:1rem}
+    .metric{background:rgba(255,253,248,.82);border-top:4px solid var(--deep);padding:1.25rem 1.2rem 1.45rem;min-width:0;box-shadow:var(--shadow)}
+    .metric.primary{background:var(--deep);color:white;border-color:var(--accent);border-radius:0 var(--radius) var(--radius) 0}.metric.primary .label,.metric.primary small{color:#cad9d2}
+    .metric.warn{border-color:var(--accent)}.metric.missing{border-color:var(--danger)}
+    .metric .label{display:block;color:var(--muted);font-size:.76rem;font-weight:800;letter-spacing:.06em}
+    .metric strong{display:block;margin:.22rem 0 .22rem;font-size:clamp(1.75rem,4vw,3.1rem);line-height:1;letter-spacing:-.055em;white-space:nowrap}.metric small{display:block;color:var(--muted);font-size:.78rem;line-height:1.45}
+    .kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);background:var(--surface);border:1px solid var(--line)}
+    .mini{padding:1rem;border-right:1px solid var(--line)}.mini:last-child{border-right:0}.mini span{display:block;color:var(--muted);font-size:.73rem;font-weight:700}.mini b{display:block;margin-top:.2rem;font-size:1.35rem;letter-spacing:-.04em}
+    .verdict{display:grid;grid-template-columns:auto 1fr;gap:1rem;margin-top:1.25rem;padding:1.2rem 1.25rem;background:#f2e6d9;border-left:4px solid var(--accent)}
+    .verdict b:first-child{font-size:1.2rem}.verdict strong{display:block}.verdict p{margin:.2rem 0 0;color:#67584f;font-size:.9rem}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}.panel{background:rgba(255,253,248,.86);padding:1.35rem;border:1px solid var(--line)}.panel:nth-child(2n){border-radius:0 var(--radius) 0 0}.panel h3{font-size:1.15rem;letter-spacing:-.025em;margin-bottom:.3rem}.panel>p{color:var(--muted);font-size:.86rem}
+    .bars{display:grid;gap:.82rem;margin-top:1.15rem}.bar-row{display:grid;grid-template-columns:minmax(7rem,.7fr) minmax(7rem,1.4fr) auto;align-items:center;gap:.7rem;font-size:.82rem}.track{height:.55rem;background:#e2e3dc;overflow:hidden}.fill{display:block;height:100%;width:var(--w);background:var(--deep)}.fill.accent{background:var(--accent)}.fill.good{background:var(--good)}.fill.blue{background:var(--blue)}.bar-row b{min-width:5.2rem;text-align:right}
+    .formula{margin-top:1rem;padding:1rem 1.1rem;background:var(--soft);border-left:4px solid var(--deep)}.formula strong{display:block}.formula code{white-space:normal;color:var(--deep);font-weight:750}.formula p{margin:.25rem 0 0;color:var(--muted);font-size:.86rem}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);background:var(--surface)}
+    table{width:100%;border-collapse:collapse;min-width:720px;font-size:.82rem}th,td{padding:.76rem .8rem;text-align:left;border-bottom:1px solid #e3e1d8;vertical-align:top}th{position:sticky;top:0;background:#e9e7de;color:#4f5a55;font-size:.72rem;letter-spacing:.04em}td.num,th.num{text-align:right;white-space:nowrap}tr:last-child td{border-bottom:0}tbody tr:hover{background:#faf6ec}.total td{font-weight:800;background:#edf0e9}.bad{color:var(--danger);font-weight:750}.good-text{color:var(--good);font-weight:750}.muted{color:var(--muted)}
+    .tag{display:inline-block;padding:.2rem .4rem;border-radius:.35rem;background:var(--soft);color:var(--deep);font-size:.68rem;font-weight:800;white-space:nowrap}.tag.warn{background:#f2e2d5;color:var(--warn)}.tag.danger{background:#f2deda;color:var(--danger)}
+    .calculator{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);background:var(--deep);color:white;border-radius:0 var(--radius) var(--radius) 0;overflow:hidden}
+    .calc-intro{padding:clamp(1.4rem,4vw,2.5rem);background:linear-gradient(145deg,rgba(255,255,255,.06),transparent)}.calc-intro h3{font-size:clamp(1.7rem,4vw,2.8rem);line-height:1;letter-spacing:-.05em}.calc-intro p{color:#c6d5cf}.calc-result{margin-top:2rem;border-top:1px solid rgba(255,255,255,.25);padding-top:1.1rem}.calc-result span{color:#c6d5cf;font-size:.78rem}.calc-result strong{display:block;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1;letter-spacing:-.06em}.calc-result small{display:block;margin-top:.45rem;color:#c6d5cf}
+    .calc-form{padding:clamp(1.35rem,4vw,2.2rem);background:#214c40}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}.field label{display:block;margin-bottom:.3rem;color:#d5e0dc;font-size:.74rem;font-weight:700}.money-input{display:flex;align-items:center;background:#173f34;border:1px solid rgba(255,255,255,.2)}.money-input span{padding-left:.7rem;color:#aebfb8}.money-input input{min-width:0;width:100%;border:0;background:transparent;color:white;padding:.7rem .65rem;outline:none;font-variant-numeric:tabular-nums}.money-input:focus-within{border-color:#e1a77f;box-shadow:0 0 0 3px rgba(225,167,127,.15)}.calc-actions{display:flex;gap:.55rem;margin-top:1rem;flex-wrap:wrap}.calc-actions .btn{border-color:rgba(255,255,255,.24);background:rgba(255,255,255,.08);color:white}.calc-actions .btn:hover{background:rgba(255,255,255,.15)}
+    .status-board{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1rem}.status-item{background:var(--surface);padding:1.15rem}.status-item span{display:block;color:var(--muted);font-size:.72rem}.status-item strong{font-size:1.25rem}.status-item p{margin:.3rem 0 0;color:var(--muted);font-size:.78rem}
+    .rule-list{display:grid;gap:0}.rule{display:grid;grid-template-columns:3rem minmax(0,1fr) minmax(12rem,.65fr);gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);align-items:start}.rule:last-child{border-bottom:0}.rule-num{font-size:1.8rem;font-weight:800;color:#b7b8b0;line-height:1}.rule strong{display:block}.rule p{margin:.2rem 0 0;color:var(--muted);font-size:.86rem}.rule aside{color:var(--deep);font-size:.8rem;font-weight:750}
+    .trend{display:grid;grid-template-columns:repeat(18,minmax(34px,1fr));gap:.45rem;align-items:end;height:260px;padding:1rem .65rem .2rem;border-left:1px solid var(--line);border-bottom:1px solid var(--line);overflow-x:auto}.daybar{height:calc(var(--h) * 1%);min-height:4px;background:var(--deep);position:relative;transition:filter .2s}.daybar:hover{filter:brightness(1.35)}.daybar b{position:absolute;bottom:calc(100% + .3rem);left:50%;transform:translateX(-50%) rotate(-55deg);transform-origin:center;white-space:nowrap;font-size:.64rem;color:var(--muted)}.daybar span{position:absolute;top:calc(100% + .38rem);left:50%;transform:translateX(-50%);font-size:.64rem;color:var(--muted);white-space:nowrap}.daybar.current{background:var(--accent)}
+    .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.goal{padding:1.3rem 1.2rem;background:var(--surface);border-top:4px solid var(--deep)}.goal time{color:var(--accent);font-weight:800;font-size:.78rem}.goal strong{display:block;margin:.3rem 0;font-size:1.3rem;letter-spacing:-.03em}.goal p{color:var(--muted);font-size:.84rem;margin:0}
+    details{background:var(--surface);border-bottom:1px solid var(--line)}summary{cursor:pointer;padding:1rem;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary::after{content:"＋";float:right;color:var(--accent)}details[open] summary::after{content:"－"}.details-body{padding:0 1rem 1rem;color:var(--muted);font-size:.86rem}
+    footer{max-width:1220px;margin:auto;padding:2rem max(1.1rem,env(safe-area-inset-left)) calc(2rem + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--muted);font-size:.75rem}
+    @media(max-width:900px){.hero,.section-head,.calculator{grid-template-columns:1fr}.hero{gap:1.5rem}.hero-aside{max-width:30rem}.section-note{text-align:left}.kpi-lead{grid-template-columns:1fr 1fr}.metric.primary{grid-column:1/-1}.kpi-strip{grid-template-columns:repeat(2,1fr)}.mini{border-bottom:1px solid var(--line)}.two-col{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.rule{grid-template-columns:2.4rem 1fr}.rule aside{grid-column:2}.status-board{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){body{font-size:15px}.topbar-inner{align-items:flex-start}.brand{padding-top:.15rem}.top-actions{display:none}nav{margin-left:auto}.hero{padding-top:3rem}.kpi-lead{grid-template-columns:1fr}.metric.primary{grid-column:auto;border-radius:0 1rem 1rem 0}.kpi-strip{grid-template-columns:1fr 1fr}.bar-row{grid-template-columns:6.5rem 1fr auto;gap:.45rem}.bar-row b{min-width:4.6rem}.field-grid{grid-template-columns:1fr}.status-board{grid-template-columns:1fr}.rule{grid-template-columns:2rem 1fr}.trend{grid-template-columns:repeat(18,38px);height:240px}.metric strong{white-space:normal}}
+    @media print{.topbar,.calc-actions{display:none!important}body{background:white;color:#111}.hero{padding-top:2rem}section{break-inside:avoid}.calculator{background:#173f34!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.table-wrap{overflow:visible}table{min-width:0;font-size:8pt}.trend{overflow:visible}.panel,.metric{box-shadow:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">有利車業<small>CASH CONTROL</small></div>
+      <nav aria-label="報告導覽">
+        <a href="#snapshot">總覽</a><a href="#cash-flow">現金流</a><a href="#day-812">8/12</a><a href="#day-813">8/13</a><a href="#cash">可用現金</a><a href="#receivable">應收</a><a href="#expense">支出</a><a href="#hiring">聘人</a><a href="#operations">營運</a><a href="#actions">行動</a>
+      </nav>
+      <div class="top-actions"><button class="btn" type="button" onclick="window.print()">列印／PDF</button></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">現金經營控制版 · 資料截至 2026/08/13</p>
+        <h1>先看錢有沒有留下，再決定何時請人。</h1>
+        <p class="hero-copy">前三週已經證明有利有車流、有營收，也證明小羅能承接。新版把老闆時間移到後段，首頁只回答：收了多少、付了多少、還欠多少、真正能用多少，以及現金能不能支撐一位新技師。</p>
+      </div>
+      <aside class="hero-aside">
+        <span class="stamp">報告改版結論</span>
+        <strong>不是沒生意，是錢還看不清楚。</strong>
+        <p>8/1–8/13已知營收 58.8 萬元；但現金與銀行餘額、完整應付及多日支出尚缺，所以暫時不能把帳面營收當成聘人預算。</p>
+      </aside>
+    </header>
+
+    <section id="snapshot">
+      <div class="section-head"><div><h2>老闆 30 秒總覽</h2><p>已知數字與不能判定的項目並列，避免用不完整資料做錯誤投資決策。</p></div><div class="section-note">本版首要指標：可動用現金</div></div>
+      <div class="kpi-lead">
+        <article class="metric primary"><span class="label">8/1–8/13已知營收</span><strong>$587,800</strong><small>11個營運資料日；同工單摘要與明細只算一次</small></article>
+        <article class="metric warn"><span class="label">目前提供的未收款</span><strong>$97,200</strong><small>6筆；其中統立環保合計$52,000</small></article>
+        <article class="metric missing"><span class="label">目前可動用現金</span><strong>尚不可算</strong><small>缺現金／銀行餘額與完整應付</small></article>
+      </div>
+      <div class="kpi-strip">
+        <div class="mini"><span>8/1–8/13實收</span><b>$477,200</b></div>
+        <div class="mini"><span>已知現金支出</span><b>$284,953</b></div>
+        <div class="mini"><span>已知現金差額*</span><b>+$192,247</b></div>
+        <div class="mini"><span>目前未收款</span><b>$97,200</b></div>
+        <div class="mini"><span>付款狀態待核</span><b>$13,400</b></div>
+        <div class="mini"><span>9月應付預留</span><b>$169,810</b></div>
+      </div>
+      <div class="verdict"><b>結論</b><div><strong>+$192,247只是已知收支差額，扣9月昇陽預留$169,810後僅餘$22,437。</strong><p>8/1、8/3、8/4、8/5、8/7、8/8、8/12仍缺完整支出；$22,437尚未扣這七天支出，不能視為可動用現金。</p></div></div>
+    </section>
+
+    <section id="cash-flow">
+      <div class="section-head"><div><h2>現金流量總表</h2><p>期間8/1–8/13，共11個有營運資料日。現金流只認實際收款與實際付款；應收款、應付款、材料使用成本與中古車獨立事業另外管理。</p></div><div class="section-note">目前支出完整度：4／11日</div></div>
+      <div class="kpi-lead">
+        <article class="metric primary"><span class="label">期間已知實收</span><strong>$477,200</strong><small>8/1起依最新工單與付款狀態去重計算</small></article>
+        <article class="metric warn"><span class="label">期間已知實付</span><strong>$284,953</strong><small>8/6、8/10、8/11、8/13有明確支出</small></article>
+        <article class="metric missing"><span class="label">已知收支差額</span><strong>+$192,247</strong><small>缺7日支出，不能視為現金淨增加</small></article>
+      </div>
+      <div class="table-wrap"><table aria-label="8月1日至8月13日現金流量表">
+        <thead><tr><th>日期</th><th class="num">實際收款</th><th class="num">實際支出</th><th class="num">現金增減</th><th>完整度與說明</th></tr></thead>
+        <tbody>
+          <tr><td>8/1</td><td class="num">$30,800</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 5張去重工單均列現金</td></tr>
+          <tr><td>8/3</td><td class="num">$23,600</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 收入$31,600；BRE-3831 $8,000未收</td></tr>
+          <tr><td>8/4</td><td class="num">$66,225</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> AKY／ARY暫視為車牌誤植同筆</td></tr>
+          <tr><td>8/5</td><td class="num">$33,650</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 新增電池賣貨$4,800；7005-DK改列現金</td></tr>
+          <tr><td>8/6</td><td class="num">$61,900</td><td class="num">$96,903</td><td class="num bad">−$35,003</td><td><span class="tag">已知完整</span> 昇陽汽車材料行6月零件款，8月支付</td></tr>
+          <tr><td>8/7</td><td class="num">$34,325</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span></td></tr>
+          <tr><td>8/8</td><td class="num">$24,800</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 當日可能也缺工單</td></tr>
+          <tr><td>8/10</td><td class="num">$18,950</td><td class="num">$41,960</td><td class="num bad">−$23,010</td><td><span class="tag">已知完整</span> 材料商、驗車、系統開發</td></tr>
+          <tr><td>8/11</td><td class="num">$55,500</td><td class="num">$111,090</td><td class="num bad">−$55,590</td><td><span class="tag">已知完整</span> 含廣豐輪胎6月貨款$62,800、薪資、零件、大門</td></tr>
+          <tr><td>8/12</td><td class="num">$106,425</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 即使高營收也不能判斷留多少錢</td></tr>
+          <tr><td>8/13</td><td class="num">$21,025</td><td class="num">$35,000</td><td class="num bad">−$13,975</td><td><span class="tag">已知完整</span> 材料行$34,800＋定位$200</td></tr>
+          <tr class="total"><td>已知合計</td><td class="num">$477,200</td><td class="num">$284,953</td><td class="num">+$192,247*</td><td>＊因7日支出缺漏，不是實際期間淨現金流</td></tr>
+        </tbody>
+      </table></div>
+      <div class="table-wrap" style="margin-top:1rem"><table aria-label="已知現金支出逐筆明細">
+        <thead><tr><th>付款日</th><th>支出項目</th><th>分類</th><th class="num">金額</th><th>所屬期間／判讀</th></tr></thead>
+        <tbody>
+          <tr><td>8/6</td><td><strong>昇陽汽車材料行零件款</strong></td><td>供應商／前期貨款</td><td class="num"><strong>$96,903</strong></td><td><strong>6月零件款，8月支付</strong></td></tr>
+          <tr><td>8/10</td><td>宜福進口材料商收款</td><td>供應商付款</td><td class="num">$11,760</td><td>需補對應進貨月份</td></tr>
+          <tr><td>8/10</td><td>自營貨車驗車</td><td>營業車費用</td><td class="num">$400</td><td>8/10付款</td></tr>
+          <tr><td>8/10</td><td>Nathan程式設計費用＋工資</td><td>系統／開發</td><td class="num">$29,800</td><td>需區分一次性與固定費</td></tr>
+          <tr><td>8/11</td><td><strong>廣豐輪胎貨款</strong></td><td>供應商／前期貨款</td><td class="num"><strong>$62,800</strong></td><td><strong>6月貨款；已計入8/11現金流，不列為8/11工單成本</strong></td></tr>
+          <tr><td>8/11</td><td>小羅薪資</td><td>人事</td><td class="num">$41,500</td><td>薪資月份待標示</td></tr>
+          <tr><td>8/11</td><td>零件購買</td><td>零件／進貨</td><td class="num">$3,790</td><td>需對應工單或庫存</td></tr>
+          <tr><td>8/11</td><td>維修大門</td><td>設備維修</td><td class="num">$3,000</td><td>8/11付款</td></tr>
+          <tr><td>8/13</td><td>丞品汽車材料行</td><td>供應商付款</td><td class="num">$34,800</td><td>需補所屬月份與對應進貨</td></tr>
+          <tr><td>8/13</td><td>外部定位</td><td>外包服務成本</td><td class="num">$200</td><td>8/13付款</td></tr>
+          <tr class="total"><td colspan="3">已知現金支出合計</td><td class="num">$284,953</td><td>含昇陽$96,903與廣豐$62,800，沒有重複加總</td></tr>
+        </tbody>
+      </table></div>
+      <div class="two-col" style="margin-top:1rem">
+        <article class="panel"><h3>已知現金支出去向</h3><p>目前有憑據或明確付款紀錄的支出合計284,953元。</p><div class="bars">
+          <div class="bar-row"><span>供應商／零件</span><div class="track"><i class="fill accent" style="--w:73.7%"></i></div><b>$210,053</b></div>
+          <div class="bar-row"><span>小羅薪資</span><div class="track"><i class="fill" style="--w:14.6%"></i></div><b>$41,500</b></div>
+          <div class="bar-row"><span>系統／開發</span><div class="track"><i class="fill blue" style="--w:10.5%"></i></div><b>$29,800</b></div>
+          <div class="bar-row"><span>設備維修</span><div class="track"><i class="fill good" style="--w:1.1%"></i></div><b>$3,000</b></div>
+          <div class="bar-row"><span>驗車／定位</span><div class="track"><i class="fill" style="--w:.2%"></i></div><b>$600</b></div>
+        </div></article>
+        <article class="panel"><h3>現金流還缺三個關鍵數字</h3><div class="rule-list">
+          <div class="rule"><div class="rule-num">1</div><div><strong>期間期初現金＋銀行</strong><p>8/1開店前可動用餘額。</p></div></div>
+          <div class="rule"><div class="rule-num">2</div><div><strong>七個缺漏日的所有實付</strong><p>8/1、8/3、8/4、8/5、8/7、8/8、8/12。</p></div></div>
+          <div class="rule"><div class="rule-num">3</div><div><strong>8/13期末現金＋銀行</strong><p>用來核對帳面現金流是否一致。</p></div></div>
+        </div><div class="formula"><strong>完整現金流公式</strong><code>期初現金＋銀行＋期間實收−期間實付＝期末現金＋銀行</code><p>若公式對不起來，差額就是漏登、私人取用、跨帳戶或現金未入帳。</p></div></article>
+      </div>
+      <div class="verdict"><b>去重</b><div><strong>8/1、8/3、8/4、8/5同工單摘要與品項明細只計一次。</strong><p>8/5新增電池賣貨$4,800，ANY-2922改為$4,550，7005-DK依最新狀態改列現金。AKY-7500／ARY-7500同日、同額$11,000且同項目，暫按同筆車牌誤植；若確認是兩台不同車，本期營收與實收均再加$11,000。</p></div></div>
+    </section>
+
+    <section id="day-812">
+      <div class="section-head"><div><h2>8/12 收入與收款</h2><p>1,400、13,200、4,200元三筆輪胎賣貨與先前8/11清單金額完全相同，已依系統日期移到8/12，不重複計算。最後一筆1,400元沿用先前老闆收支清單的已進帳口徑。</p></div><div class="section-note">支出未提供，不能算現金差額</div></div>
+      <div class="kpi-lead">
+        <article class="metric primary"><span class="label">8/12 已知收入</span><strong>$136,425</strong><small>10張車輛工單＋5筆SALES</small></article>
+        <article class="metric warn"><span class="label">實際收款</span><strong>$106,425</strong><small>收款率78.0%</small></article>
+        <article class="metric missing"><span class="label">完工未收</span><strong>$30,000</strong><small>$4,000＋$26,000</small></article>
+      </div>
+      <div class="two-col">
+        <article class="panel"><h3>人員收入與收款</h3><p>老闆相關收入99,550元；小羅相關收入36,875元。</p><div class="bars">
+          <div class="bar-row"><span>老闆相關</span><div class="track"><i class="fill" style="--w:73%"></i></div><b>$99,550</b></div>
+          <div class="bar-row"><span>小羅相關</span><div class="track"><i class="fill good" style="--w:27%"></i></div><b>$36,875</b></div>
+          <div class="bar-row"><span>實際收款</span><div class="track"><i class="fill blue" style="--w:78%"></i></div><b>$106,425</b></div>
+          <div class="bar-row"><span>完工未收</span><div class="track"><i class="fill accent" style="--w:22%"></i></div><b>$30,000</b></div>
+        </div></article>
+        <article class="panel"><h3>收入結構</h3><p>一般車輛服務與外出換胎合計103,425元；輪胎／報廢鋁圈等商品銷售33,000元。</p><div class="bars">
+          <div class="bar-row"><span>車輛服務</span><div class="track"><i class="fill blue" style="--w:75.8%"></i></div><b>$103,425</b></div>
+          <div class="bar-row"><span>商品銷售</span><div class="track"><i class="fill good" style="--w:24.2%"></i></div><b>$33,000</b></div>
+        </div><div class="formula"><strong>目前不能計算8/12現金差額</strong><p>當日沒有提供材料付款、零用或其他現金流出。收入高不代表當日留下同額現金。</p></div></article>
+      </div>
+      <div class="table-wrap" style="margin-top:1rem"><table aria-label="8月12日收入與工單">
+        <thead><tr><th>內容</th><th>執行者</th><th class="num">收入</th><th>付款狀態</th><th>管理判讀</th></tr></thead>
+        <tbody>
+          <tr><td>輪胎、機油、機油芯等</td><td>小羅</td><td class="num">$21,600</td><td><span class="tag">現金</span></td><td>1張車輛工單</td></tr>
+          <tr><td>機油、機油芯</td><td>小羅</td><td class="num">$3,575</td><td><span class="tag">現金</span></td><td>1張車輛工單</td></tr>
+          <tr><td>調胎</td><td>老闆</td><td class="num">$300</td><td><span class="tag">現金</span></td><td>1張車輛工單</td></tr>
+          <tr><td>外出更換輪胎</td><td>老闆</td><td class="num">$2,200</td><td><span class="tag">現金</span></td><td>SALES服務項目</td></tr>
+          <tr><td>煞車油、左右前輪培林組</td><td>小羅</td><td class="num">$4,000</td><td><span class="tag danger">完工未收</span></td><td>需補付款承諾日</td></tr>
+          <tr><td>更換火星塞</td><td>小羅</td><td class="num">$1,200</td><td><span class="tag">現金</span></td><td>1張車輛工單</td></tr>
+          <tr><td>機油、機油芯</td><td>老闆</td><td class="num">$2,050</td><td><span class="tag">現金</span></td><td>1張車輛工單</td></tr>
+          <tr><td>更換Rays鋁圈</td><td>老闆</td><td class="num">$36,000</td><td><span class="tag">現金</span></td><td>材料成本待補</td></tr>
+          <tr><td>295-70-19.5大胎</td><td>老闆</td><td class="num">$26,000</td><td><span class="tag danger">完工未收</span></td><td>需補付款承諾日</td></tr>
+          <tr><td>輪胎</td><td>小羅</td><td class="num">$3,500</td><td><span class="tag">現金</span></td><td>1張車輛工單</td></tr>
+          <tr><td>輪胎賣貨</td><td>老闆</td><td class="num">$13,200</td><td><span class="tag">現金</span></td><td>自8/11移入，不重複計算</td></tr>
+          <tr><td>輪胎賣貨</td><td>老闆</td><td class="num">$4,200</td><td><span class="tag">現金</span></td><td>自8/11移入，不重複計算</td></tr>
+          <tr><td>出售報廢鋁圈</td><td>老闆</td><td class="num">$14,200</td><td><span class="tag">現金</span></td><td>列商品／回收收入</td></tr>
+          <tr><td>更換左前傳動軸</td><td>小羅</td><td class="num">$3,000</td><td><span class="tag">現金</span></td><td>1張車輛工單</td></tr>
+          <tr><td>輪胎賣貨</td><td>老闆</td><td class="num">$1,400</td><td><span class="tag warn">依先前清單列已收</span></td><td>自8/11移入；若未收需再校正</td></tr>
+          <tr class="total"><td colspan="2">8/12合計</td><td class="num">收入 $136,425<br>實收 $106,425</td><td>未收 $30,000</td><td>當日支出未提供，現金差額不可算</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="day-813">
+      <div class="section-head"><div><h2>8/13 收支日結</h2><p>Suzuki 作業與 $11,025 系統工單視為同一車，不重複計算。兩張草稿工單因原始紀錄明確寫「收」，暫列已收並標示待完成系統狀態。</p></div><div class="section-note">支出已記錄，材料使用成本仍缺</div></div>
+      <div class="kpi-lead">
+        <article class="metric primary"><span class="label">8/13 已知收入</span><strong>$26,625</strong><small>4 張車輛工單＋1 項散客服務</small></article>
+        <article class="metric warn"><span class="label">實際收款</span><strong>$21,025</strong><small>另有完工未收 $5,600</small></article>
+        <article class="metric missing"><span class="label">確認現金差額</span><strong>−$13,975</strong><small>實收 $21,025－支出 $35,000</small></article>
+      </div>
+      <div class="two-col">
+        <article class="panel"><h3>當日收入與人員</h3><p>老闆相關收入 $20,725；小羅相關收入 $5,900，其中 $5,600 尚未收款。</p><div class="bars">
+          <div class="bar-row"><span>老闆相關</span><div class="track"><i class="fill" style="--w:77.8%"></i></div><b>$20,725</b></div>
+          <div class="bar-row"><span>小羅相關</span><div class="track"><i class="fill good" style="--w:22.2%"></i></div><b>$5,900</b></div>
+          <div class="bar-row"><span>實際收款</span><div class="track"><i class="fill blue" style="--w:79%"></i></div><b>$21,025</b></div>
+          <div class="bar-row"><span>完工未收</span><div class="track"><i class="fill accent" style="--w:21%"></i></div><b>$5,600</b></div>
+        </div></article>
+        <article class="panel"><h3>當日支出 $35,000</h3><p>材料行付款是現金流出；仍需確認貨款所屬月份與對應進貨，不能直接視為當日工單材料成本。</p><div class="bars">
+          <div class="bar-row"><span>材料行付款</span><div class="track"><i class="fill accent" style="--w:99.4%"></i></div><b>$34,800</b></div>
+          <div class="bar-row"><span>定位成本</span><div class="track"><i class="fill blue" style="--w:.6%"></i></div><b>$200</b></div>
+        </div><div class="formula"><strong>8/13 現金差額</strong><code>$21,025－$34,800－$200＝−$13,975</code><p>這是當日確認現金變化，不是當日損益。</p></div></article>
+      </div>
+      <div class="table-wrap" style="margin-top:1rem"><table aria-label="8月13日收支與工單">
+        <thead><tr><th>時間／狀態</th><th>內容</th><th>執行者</th><th class="num">收入</th><th class="num">支出</th><th>收款／管理判讀</th></tr></thead>
+        <tbody>
+          <tr><td>09:00</td><td>Suzuki 機油、兩條輪胎、外皮帶及相關項目</td><td>老闆</td><td class="num">$11,025</td><td class="num">—</td><td><span class="tag">現金</span> 與系統工單合併，不重複計算</td></tr>
+          <tr><td>11:00</td><td>整理保險資料、申辦玉山銀行資料</td><td>老闆</td><td class="num">—</td><td class="num">—</td><td>管理／行政；依下一工作時間扣午餐，約 210 分鐘</td></tr>
+          <tr><td>15:00</td><td>外部定位</td><td>老闆</td><td class="num">—</td><td class="num">$200</td><td>定位成本；對應收入是否含在工單內待確認</td></tr>
+          <tr><td>15:30</td><td>貨車更換兩條 195/75-16 輪胎</td><td>老闆</td><td class="num">$7,200</td><td class="num">—</td><td><span class="tag warn">原始紀錄已收／系統草稿</span></td></tr>
+          <tr><td>完工未收</td><td>更換左右前避震器</td><td>小羅</td><td class="num">$5,600</td><td class="num">—</td><td><span class="tag danger">完工未收</span> 需補付款承諾日</td></tr>
+          <tr><td>當日</td><td>補胎</td><td>小羅</td><td class="num">$300</td><td class="num">—</td><td><span class="tag">現金</span> SALES 散客服務</td></tr>
+          <tr><td>19:00</td><td>更換 205-70-15 輪胎</td><td>老闆</td><td class="num">$2,500</td><td class="num">—</td><td><span class="tag warn">原始紀錄已收／系統草稿</span></td></tr>
+          <tr><td>未記錄</td><td>丞品汽車材料行付款</td><td>店內</td><td class="num">—</td><td class="num">$34,800</td><td>需補所屬月份、單據與對應進貨</td></tr>
+          <tr class="total"><td colspan="3">8/13 合計</td><td class="num">收入 $26,625<br>實收 $21,025</td><td class="num">$35,000</td><td>新增應收 $5,600；確認現金差額 −$13,975</td></tr>
+        </tbody>
+      </table></div>
+      <div class="verdict"><b>8/14</b><div><strong>明日待辦：芎林瓦斯送發票、到竹北辦理加保。</strong><p>完成證據應包含送達／收件確認、加保送件資料與預計生效日；兩張草稿收入工單也要完成系統狀態。</p></div></div>
+    </section>
+
+    <section id="cash">
+      <div class="section-head"><div><h2>可動用現金試算</h2><p>銀行裡有錢不代表都能花。以下資料只存在目前裝置的瀏覽器；Safari 若限制本機儲存，計算仍可使用，但重新開檔後可能不保留。</p></div><div class="section-note">請老闆或顧問每週更新一次</div></div>
+      <div class="calculator">
+        <div class="calc-intro">
+          <h3>扣掉已承諾的錢，才是能拿來擴編的錢。</h3>
+          <p>公式：現金＋銀行－應付－30 日固定支出－稅務準備－設備承諾－其他保留。</p>
+          <div class="calc-result"><span>試算可動用現金</span><strong id="availableCash">待輸入</strong><small id="runwayText">請先填入現金、銀行與應付資料</small></div>
+        </div>
+        <form class="calc-form" onsubmit="return false">
+          <div class="field-grid">
+            <div class="field"><label for="cashOnHand">店內現金</label><div class="money-input"><span>$</span><input id="cashOnHand" inputmode="numeric" type="number" min="0" placeholder="尚未提供"></div></div>
+            <div class="field"><label for="bankBalance">店內銀行餘額</label><div class="money-input"><span>$</span><input id="bankBalance" inputmode="numeric" type="number" min="0" placeholder="尚未提供"></div></div>
+            <div class="field"><label for="payables">近期應付貨款（已知最低）</label><div class="money-input"><span>$</span><input id="payables" inputmode="numeric" type="number" min="0" value="169810"></div></div>
+            <div class="field"><label for="fixed30">未來 30 日固定支出</label><div class="money-input"><span>$</span><input id="fixed30" inputmode="numeric" type="number" min="0" value="106165"></div></div>
+            <div class="field"><label for="taxReserve">稅務準備</label><div class="money-input"><span>$</span><input id="taxReserve" inputmode="numeric" type="number" min="0" placeholder="待盤點"></div></div>
+            <div class="field"><label for="equipmentCommitment">設備承諾款</label><div class="money-input"><span>$</span><input id="equipmentCommitment" inputmode="numeric" type="number" min="0" placeholder="待盤點"></div></div>
+            <div class="field"><label for="otherReserve">其他保留款</label><div class="money-input"><span>$</span><input id="otherReserve" inputmode="numeric" type="number" min="0" value="0"></div></div>
+            <div class="field"><label for="techCost">新技師每月完整成本</label><div class="money-input"><span>$</span><input id="techCost" inputmode="numeric" type="number" min="1" value="52500"></div></div>
+          </div>
+          <div class="calc-actions"><button class="btn" type="button" id="copyCalc">複製試算摘要</button><button class="btn" type="button" id="clearCalc">清除盤點數字</button></div>
+        </form>
+      </div>
+      <div class="status-board">
+        <div class="status-item"><span>已知固定支出最低基線</span><strong>$106,165／月</strong><p>未含老闆薪資、材料、稅金與設備維修。</p></div>
+        <div class="status-item"><span>新技師建議完整成本</span><strong>$50,000–55,000／月</strong><p>薪資之外納入雇主負擔、工具與磨合。</p></div>
+        <div class="status-item"><span>建議新技師準備金</span><strong>$300,000–330,000</strong><p>先保留六個月完整成本，再確認營運週轉。</p></div>
+      </div>
+      <div class="verdict"><b>應付</b><div><strong>8月昇陽汽車材料行零件款$169,810，預計9月支付。</strong><p>這筆不是8/1–8/13的現金支出，但已形成9月現金承諾。已知差額$192,247扣除後只剩$22,437，而且還沒算七個缺漏日的支出、稅金與其他應付。</p></div></div>
+    </section>
+
+    <section id="receivable">
+      <div class="section-head"><div><h2>營收不等於收款</h2><p>8/1–8/13已知營收減實收為$110,600；最新明確未收清單為$97,200，相差$13,400。差額不能自動當成已收，必須逐筆核對工單與銀行／現金。</p></div><div class="section-note">付款狀態需持續回沖更新</div></div>
+      <div class="kpi-lead">
+        <article class="metric primary"><span class="label">目前提供的未收款總額</span><strong>$97,200</strong><small>6筆完工未收；不重複增加營收</small></article>
+        <article class="metric warn"><span class="label">同一客戶集中</span><strong>$52,000</strong><small>統立環保2筆，占目前清單53.5%</small></article>
+        <article class="metric missing"><span class="label">超過4日未收</span><strong>$61,600</strong><small>依8/13截止日計，占63.4%</small></article>
+      </div>
+      <div class="two-col">
+        <article class="panel"><h3>目前未收款客戶分布</h3><p>先處理金額大、日期久與同一客戶累積的款項。</p><div class="bars">
+          <div class="bar-row"><span>統立環保</span><div class="track"><i class="fill accent" style="--w:53.5%"></i></div><b>$52,000</b></div>
+          <div class="bar-row"><span>芎林瓦斯</span><div class="track"><i class="fill" style="--w:28.4%"></i></div><b>$27,600</b></div>
+          <div class="bar-row"><span>一般客戶</span><div class="track"><i class="fill blue" style="--w:8.2%"></i></div><b>$8,000</b></div>
+          <div class="bar-row"><span>錦祥材料</span><div class="track"><i class="fill good" style="--w:5.8%"></i></div><b>$5,600</b></div>
+          <div class="bar-row"><span>泛州</span><div class="track"><i class="fill" style="--w:4.1%"></i></div><b>$4,000</b></div>
+        </div></article>
+        <article class="panel"><h3>未收款帳齡</h3><p>以報告截止日8/13計算，不代表約定付款已逾期；仍需補付款期限。</p><div class="bars">
+          <div class="bar-row"><span>0–3日</span><div class="track"><i class="fill good" style="--w:36.6%"></i></div><b>$35,600</b></div>
+          <div class="bar-row"><span>4–7日</span><div class="track"><i class="fill accent" style="--w:55.1%"></i></div><b>$53,600</b></div>
+          <div class="bar-row"><span>8日以上</span><div class="track"><i class="fill" style="--w:8.2%"></i></div><b>$8,000</b></div>
+        </div><div class="formula"><strong>催收優先順序</strong><p>先確認統立環保$52,000與芎林瓦斯$27,600的付款日，再追蹤8/3一般客戶$8,000；新款項當日補上承諾日。</p></div></article>
+      </div>
+      <div class="table-wrap" style="margin-top:1rem"><table aria-label="目前完工未收款明細">
+        <thead><tr><th>完工日</th><th>客戶</th><th>服務</th><th>執行者</th><th class="num">未收金額</th><th>截至8/13帳齡</th><th>下一步</th></tr></thead>
+        <tbody>
+          <tr><td>8/3</td><td>一般客戶</td><td>主水箱、散熱風扇、水箱精</td><td>老闆</td><td class="num">$8,000</td><td>10日</td><td>確認付款承諾與催收日</td></tr>
+          <tr><td>8/6</td><td>芎林瓦斯</td><td>更換輪胎</td><td>老闆</td><td class="num">$27,600</td><td>7日</td><td>送發票並確認付款日</td></tr>
+          <tr><td>8/7</td><td>統立環保</td><td>更換輪胎</td><td>老闆</td><td class="num">$26,000</td><td>6日</td><td>與8/12款項合併對帳</td></tr>
+          <tr><td>8/12</td><td>泛州</td><td>煞車油、左右前輪培林</td><td>小羅</td><td class="num">$4,000</td><td>1日</td><td>補付款承諾日</td></tr>
+          <tr><td>8/12</td><td>統立環保</td><td>295-70-19.5大胎</td><td>老闆</td><td class="num">$26,000</td><td>1日</td><td>兩筆合計$52,000，設定信用額度</td></tr>
+          <tr><td>8/13</td><td>錦祥汽車材料</td><td>左右前避震器</td><td>小羅</td><td class="num">$5,600</td><td>0日</td><td>補付款承諾日</td></tr>
+          <tr class="total"><td colspan="4">目前提供的未收款清單</td><td class="num">$97,200</td><td colspan="2">其他曾標示未收但不在本次清單者，狀態仍待核對</td></tr>
+        </tbody>
+      </table></div>
+      <div class="verdict"><b>P0</b><div><strong>應收不是營收表上的備註，而是老闆每天必須管理的現金任務。</strong><p>所有未收款都要補「應收日、約定付款日、催收日、負責人、實際收款日」。同一客戶累積超過信用額度時，下一張工單應先收訂金或結清舊款。</p></div></div>
+      <div class="two-col">
+        <article class="panel"><h3>第三週收入去向</h3><p>收入 $296,125 最後分成實收與依當日狀態形成的應收／草稿。</p><div class="bars">
+          <div class="bar-row"><span>實際收款</span><div class="track"><i class="fill good" style="--w:77.4%"></i></div><b>$229,125</b></div>
+          <div class="bar-row"><span>應收／草稿</span><div class="track"><i class="fill accent" style="--w:22.6%"></i></div><b>$67,000</b></div>
+        </div><div class="formula"><strong>收款率</strong><code>$229,125 ÷ $296,125 ＝ 77.4%</code><p>之後每筆應收必須有付款承諾日、催收日及負責人。</p></div></article>
+        <article class="panel"><h3>第三週收入結構</h3><p>服務與商品銷售分開，後續都要補對應成本。</p><div class="bars">
+          <div class="bar-row"><span>服務／維修</span><div class="track"><i class="fill blue" style="--w:87.4%"></i></div><b>$258,825</b></div>
+          <div class="bar-row"><span>商品銷售</span><div class="track"><i class="fill good" style="--w:12.6%"></i></div><b>$37,300</b></div>
+        </div><div class="formula"><strong>管理提醒</strong><p>商品銷售不能只記收入；輪胎、鋁圈與中古胎都要記商品成本，才能知道真實毛利。</p></div></article>
+      </div>
+      <div class="table-wrap" style="margin-top:1rem"><table aria-label="第三週每日營收與收款">
+        <thead><tr><th>日期</th><th class="num">已知收入</th><th class="num">實際收款</th><th class="num">新增應收</th><th class="num">確認現金差額</th><th>資料狀態</th></tr></thead>
+        <tbody>
+          <tr><td>8/5</td><td class="num">$33,650</td><td class="num">$33,650</td><td class="num">$0</td><td class="num">+$33,650*</td><td><span class="tag danger">電池賣貨新增；7005-DK改列現金；支出缺漏</span></td></tr>
+          <tr><td>8/6</td><td class="num">$90,700</td><td class="num">$61,900</td><td class="num bad">$28,800</td><td class="num bad">−$35,003</td><td><span class="tag">含昇陽6月零件款$96,903</span></td></tr>
+          <tr><td>8/7</td><td class="num">$60,325</td><td class="num">$34,325</td><td class="num bad">$26,000</td><td class="num">+$34,325*</td><td><span class="tag danger">支出缺漏</span></td></tr>
+          <tr><td>8/8</td><td class="num">$24,800</td><td class="num">$24,800</td><td class="num">$0</td><td class="num">+$24,800*</td><td><span class="tag warn">可能缺工單</span></td></tr>
+          <tr><td>8/10</td><td class="num">$18,950</td><td class="num">$18,950</td><td class="num">$0</td><td class="num bad">−$23,010</td><td><span class="tag">支出有記錄</span></td></tr>
+          <tr><td>8/11</td><td class="num">$67,700</td><td class="num">$55,500</td><td class="num bad">$12,200</td><td class="num bad">−$55,590</td><td><span class="tag">三筆賣貨移至8/12</span></td></tr>
+          <tr class="total"><td>合計</td><td class="num">$296,125</td><td class="num">$229,125</td><td class="num">$67,000</td><td class="num bad">−$20,828*</td><td>8/5、8/7、8/8支出仍不完整</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="font-size:.78rem;margin-top:.65rem">* 8/5、8/7、8/8沒有完整支出；−$20,828是已確認現金差額，不能視為工單虧損或完整週現金流。</p>
+    </section>
+
+    <section id="expense">
+      <div class="section-head"><div><h2>支出控制與固定需求</h2><p>付款日、費用所屬月份與工單材料成本必須分開。6 月貨款在 8 月支付，會影響 8 月現金，但不是 8 月當日工單成本。</p></div><div class="section-note">先控制，再擴張</div></div>
+      <div class="two-col">
+        <article class="panel"><h3>8/1–8/13已知現金支出 $284,953</h3><p>11個營運資料日中只有4日支出有明確紀錄；以下不是完整期間支出。</p><div class="bars">
+          <div class="bar-row"><span>供應商／零件</span><div class="track"><i class="fill accent" style="--w:73.7%"></i></div><b>$210,053</b></div>
+          <div class="bar-row"><span>小羅薪資</span><div class="track"><i class="fill" style="--w:14.6%"></i></div><b>$41,500</b></div>
+          <div class="bar-row"><span>系統／開發</span><div class="track"><i class="fill blue" style="--w:10.5%"></i></div><b>$29,800</b></div>
+          <div class="bar-row"><span>設備維修</span><div class="track"><i class="fill good" style="--w:1.1%"></i></div><b>$3,000</b></div>
+          <div class="bar-row"><span>驗車／定位</span><div class="track"><i class="fill" style="--w:.2%"></i></div><b>$600</b></div>
+        </div></article>
+        <article class="panel"><h3>每月已知固定現金需求</h3><p>最低基線 $106,165；不代表完整的每月成本。</p><div class="bars">
+          <div class="bar-row"><span>小羅薪資</span><div class="track"><i class="fill" style="--w:39.1%"></i></div><b>$41,500</b></div>
+          <div class="bar-row"><span>店租</span><div class="track"><i class="fill accent" style="--w:18.8%"></i></div><b>$20,000</b></div>
+          <div class="bar-row"><span>顧問／系統</span><div class="track"><i class="fill blue" style="--w:18.8%"></i></div><b>$20,000</b></div>
+          <div class="bar-row"><span>房租</span><div class="track"><i class="fill good" style="--w:13.2%"></i></div><b>$14,000</b></div>
+          <div class="bar-row"><span>勞健保月均</span><div class="track"><i class="fill" style="--w:5.8%"></i></div><b>$6,125</b></div>
+          <div class="bar-row"><span>會計師</span><div class="track"><i class="fill" style="--w:3.5%"></i></div><b>$3,740</b></div>
+          <div class="bar-row"><span>水電</span><div class="track"><i class="fill" style="--w:.8%"></i></div><b>$800</b></div>
+        </div></article>
+      </div>
+      <div class="verdict"><b>缺口</b><div><strong>$106,165 尚未包含老闆薪資、材料、稅金、設備維修與獎金。</strong><p>因此不能拿這個數字直接當損益兩平點。下一版要以會計與實際付款補齊完整固定／變動費用。</p></div></div>
+      <div class="rule-list" style="margin-top:1.3rem">
+        <div class="rule"><div class="rule-num">01</div><div><strong>必要營運</strong><p>薪資、租金、水電與必要材料。</p></div><aside>預先排入月度現金需求</aside></div>
+        <div class="rule"><div class="rule-num">02</div><div><strong>產能投資</strong><p>定位設備、新技師與必要工具。</p></div><aside>先寫回收方式與現金門檻</aside></div>
+        <div class="rule"><div class="rule-num">03</div><div><strong>可延後支出</strong><p>非急迫改善或非必要採購。</p></div><aside>低於現金警戒線就延後</aside></div>
+        <div class="rule"><div class="rule-num">04</div><div><strong>個人／其他事業</strong><p>老闆個人與中古車投資。</p></div><aside>不得混入有利營運帳</aside></div>
+      </div>
+    </section>
+
+    <section id="hiring">
+      <div class="section-head"><div><h2>聘請技師準備度</h2><p>人力需求已成立，現在要確認店裡是否有足夠現金安全承擔。徵才與現金準備可以同時開始。</p></div><div class="section-note">先找人，達標後正式聘用</div></div>
+      <div class="status-board">
+        <div class="status-item"><span>需求證據</span><strong class="good-text">已成立</strong><p>車流大、小羅長工時、老闆仍需施工。</p></div>
+        <div class="status-item"><span>承接證據</span><strong class="good-text">已成立</strong><p>去重校正後，小羅第三週承接55.1%已知收入。</p></div>
+        <div class="status-item"><span>財務證據</span><strong class="bad">尚未成立</strong><p>可動用現金與真實毛利仍算不出來。</p></div>
+      </div>
+      <div class="two-col" style="margin-top:1rem">
+        <article class="panel"><h3>正式聘用前的五道門檻</h3><div class="rule-list">
+          <div class="rule"><div class="rule-num">1</div><div><strong>成本完整</strong><p>連續四週工單材料成本完整率 ≥ 90%。</p></div></div>
+          <div class="rule"><div class="rule-num">2</div><div><strong>收款受控</strong><p>每筆應收有到期日、催收日與負責人。</p></div></div>
+          <div class="rule"><div class="rule-num">3</div><div><strong>現金流穩定</strong><p>連續三個月營運現金流為正。</p></div></div>
+          <div class="rule"><div class="rule-num">4</div><div><strong>人事準備金</strong><p>另存 $300,000–330,000。</p></div></div>
+          <div class="rule"><div class="rule-num">5</div><div><strong>週轉金仍在</strong><p>扣完應付、固定支出、稅與設備款後仍有餘裕。</p></div></div>
+        </div></article>
+        <article class="panel"><h3>新技師先承接什麼</h3><p>目的不是只增加車數，而是釋放小羅管理時間與老闆經營時間。</p><div class="rule-list">
+          <div class="rule"><div class="rule-num">A</div><div><strong>補胎、換胎與基礎保養</strong><p>高頻、可標準化、容易訓練。</p></div></div>
+          <div class="rule"><div class="rule-num">B</div><div><strong>拆裝、清潔與工位復原</strong><p>降低主力技師被低價值步驟占用。</p></div></div>
+          <div class="rule"><div class="rule-num">C</div><div><strong>定位前後準備</strong><p>配合 10 月定位設備正式營運。</p></div></div>
+          <div class="rule"><div class="rule-num">D</div><div><strong>交車前標準檢查</strong><p>依清單執行，由小羅管理品質。</p></div></div>
+        </div></article>
+      </div>
+    </section>
+
+    <section id="margin">
+      <div class="section-head"><div><h2>毛利目前仍是最大的資料缺口</h2><p>現金流告訴我們錢何時進出；工單毛利告訴我們工作有沒有賺。兩者不能混為一談。</p></div><div class="section-note">每張完工工單當日補齊成本</div></div>
+      <div class="two-col">
+        <article class="panel"><h3>工單損益帳</h3><div class="formula"><strong>正確公式</strong><code>售價 − 該車實際材料成本 ＝ 工單毛利</code><p>再用毛利支付薪資、租金、水電、稅金與其他固定費用。</p></div><p style="margin-top:1rem">最低欄位：日期、服務分類、執行者、售價、實收、材料成本、付款狀態、毛利。</p></article>
+        <article class="panel"><h3>現金流水帳</h3><div class="formula"><strong>正確公式</strong><code>期初現金＋今日實收−今日實付＝期末現金</code><p>付款要標示對應月份與用途，不得直接視為當日材料成本。</p></div><p style="margin-top:1rem">最低欄位：付款日、收支分類、金額、帳戶、單據、所屬月份、是否為中古車。</p></article>
+      </div>
+    </section>
+
+    <section id="used-car">
+      <div class="section-head"><div><h2>中古車是另一個生意</h2><p>CX-5 與 Outlander 的投入、整備與未來售車收入完全另帳，不得列入有利車業營運現金活動。</p></div><div class="section-note">老闆已知出資 $55,850</div></div>
+      <div class="table-wrap"><table aria-label="中古車獨立事業">
+        <thead><tr><th>車輛投資</th><th class="num">總庫存成本</th><th class="num">老闆出資</th><th class="num">阿皓出資</th><th>狀態</th></tr></thead>
+        <tbody><tr><td>CX-5</td><td class="num">$71,700</td><td class="num">$35,850</td><td class="num">$35,850</td><td>開價 $168,000，尚未成交</td></tr><tr><td>Outlander</td><td class="num">$40,000</td><td class="num">$20,000</td><td class="num">$20,000</td><td>待整備／出售</td></tr><tr class="total"><td>合計</td><td class="num">$111,700</td><td class="num">$55,850</td><td class="num">$55,850</td><td>不列有利車業營運收支</td></tr></tbody>
+      </table></div>
+      <div class="formula"><strong>每車獨立損益</strong><p>買價＋過戶＋保險＋整備材料＋人工＋持有費＋交易費，全部扣除後才是售車淨利。開價不是收入，價差也不是淨利。</p></div>
+    </section>
+
+    <section id="operations">
+      <div class="section-head"><div><h2>營運與時間，改為輔助訊號</h2><p>時間資料保留，但不再主導首頁。只用來驗證小羅能否接店、老闆是否逐步停止親自承接所有施工。</p></div><div class="section-note">先看錢，再看分工</div></div>
+      <div class="kpi-strip">
+        <div class="mini"><span>累計已知服務量</span><b>至少 155</b></div>
+        <div class="mini"><span>截至 8/6 輪胎相關</span><b>53.4%</b></div>
+        <div class="mini"><span>第三週小羅收入占比</span><b>55.1%</b></div>
+        <div class="mini"><span>第三週小羅推估工時</span><b>63 小時</b></div>
+        <div class="mini"><span>有資料日平均</span><b>10.5 小時</b></div>
+      </div>
+      <div class="verdict"><b>分工</b><div><strong>小羅進入四週代理店長測試，老闆改以財務成果管理自己。</strong><p>小羅負責排工、進度、品質、工單狀態與收工回報；老闆負責現金、成本、應收應付、定位設備及人力決策。</p></div></div>
+    </section>
+
+    <section id="trend">
+      <div class="section-head"><div><h2>8月每日已知營收</h2><p>統計自8/1開始；11個營運資料日合計587,800元，平均53,436元。同工單摘要與品項明細只計一次。</p></div><div class="section-note">最高：8/12 $136,425</div></div>
+      <div class="trend" aria-label="每日營收長條圖">
+        <div class="daybar" style="--h:22.6"><b>$30,800</b><span>8/1</span></div><div class="daybar" style="--h:23.2"><b>$31,600</b><span>8/3</span></div><div class="daybar" style="--h:48.5"><b>$66,225</b><span>8/4</span></div><div class="daybar" style="--h:24.7"><b>$33,650</b><span>8/5</span></div><div class="daybar" style="--h:66.5"><b>$90,700</b><span>8/6</span></div><div class="daybar" style="--h:44.2"><b>$60,325</b><span>8/7</span></div><div class="daybar" style="--h:18.2"><b>$24,800</b><span>8/8</span></div><div class="daybar" style="--h:13.9"><b>$18,950</b><span>8/10</span></div><div class="daybar" style="--h:49.6"><b>$67,700</b><span>8/11</span></div><div class="daybar current" style="--h:100"><b>$136,425</b><span>8/12</span></div><div class="daybar" style="--h:19.5"><b>$26,625</b><span>8/13</span></div>
+      </div>
+      <div class="table-wrap" style="margin-top:2.2rem"><table aria-label="每日營收摘要">
+        <thead><tr><th>Day</th><th>日期</th><th class="num">已知收入</th><th>重要說明</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>8/1</td><td class="num">$30,800</td><td>5張去重工單均列現金</td></tr><tr><td>2</td><td>8/3</td><td class="num">$31,600</td><td>實收$23,600；BRE-3831未收$8,000</td></tr><tr><td>3</td><td>8/4</td><td class="num">$66,225</td><td>AKY／ARY暫視為同筆車牌誤植</td></tr><tr><td>4</td><td>8/5</td><td class="num">$33,650</td><td>新增電池賣貨$4,800；ANY校正為$4,550</td></tr><tr><td>5</td><td>8/6</td><td class="num">$90,700</td><td>含芎林瓦斯$27,600未收款</td></tr><tr><td>6</td><td>8/7</td><td class="num">$60,325</td><td>含商品銷售</td></tr><tr><td>7</td><td>8/8</td><td class="num">$24,800</td><td>目前僅一張工單</td></tr><tr><td>8</td><td>8/10</td><td class="num">$18,950</td><td>—</td></tr><tr><td>9</td><td>8/11</td><td class="num">$67,700</td><td>三筆輪胎賣貨移到8/12</td></tr>
+          <tr><td>10</td><td>8/12</td><td class="num">$136,425</td><td>實收$106,425；新增應收$30,000</td></tr>
+          <tr><td>11</td><td>8/13</td><td class="num">$26,625</td><td>實收$21,025；新增應收$5,600</td></tr>
+          <tr class="total"><td colspan="2">11個營運資料日</td><td class="num">$587,800</td><td>平均 $53,436／日</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="actions">
+      <div class="section-head"><div><h2>未來四週，只做能把錢看清楚的事</h2><p>每個動作都要留下可以核對的結果，不再用「有處理」或「很忙」當完成證據。</p></div><div class="section-note">第四週起執行</div></div>
+      <div class="rule-list">
+        <div class="rule"><div class="rule-num">01</div><div><strong>每天收工前完成現金日結</strong><p>工單營收、實收、應收、材料成本、支出、現金與銀行餘額。</p></div><aside>負責：小羅初核、老闆確認</aside></div>
+        <div class="rule"><div class="rule-num">02</div><div><strong>建立應收／應付到期表</strong><p>每筆都要有客戶／供應商、金額、到期日、付款承諾與負責人。</p></div><aside>每週至少檢查一次</aside></div>
+        <div class="rule"><div class="rule-num">03</div><div><strong>補齊材料成本</strong><p>連續四週工單成本完整率達 90%，才能看服務別毛利。</p></div><aside>每天完工當日補齊</aside></div>
+        <div class="rule"><div class="rule-num">04</div><div><strong>建立現金警戒線</strong><p>30 日固定支出＋近期應付＋稅務／設備承諾，不得被其他用途挪用。</p></div><aside>每週更新可動用現金</aside></div>
+        <div class="rule"><div class="rule-num">05</div><div><strong>啟動技師招募</strong><p>先定工作範圍、面談與試工；達到現金門檻後正式聘用。</p></div><aside>準備金目標 $30–33 萬</aside></div>
+      </div>
+      <div class="timeline" style="margin-top:2rem">
+        <article class="goal"><time>2026 年 10 月</time><strong>定位設備正式運轉</strong><p>先完成場地、電力、預算、安裝、定價與回本車次。</p></article>
+        <article class="goal"><time>2 年後</time><strong>完成第二店開設</strong><p>前提是第一店有正向現金流、小羅可管理、老闆不靠親自施工維持營運。</p></article>
+        <article class="goal"><time>5 年後</time><strong>成為連盟主要經營者</strong><p>以可複製的工單、財務、人員、品質與店長制度支撐擴張。</p></article>
+      </div>
+    </section>
+
+    <section id="notes">
+      <div class="section-head"><div><h2>資料口徑與限制</h2><p>報告主動揭露缺口，避免把推估、應收、開價或跨期付款誤當成實際獲利。</p></div></div>
+      <details open><summary>目前不能回答什麼？</summary><div class="details-body">尚不能回答店裡真正淨利、目前可動用現金、完整損益兩平營收及是否已能安全聘人。原因是多數工單材料成本、現金／銀行期末餘額、完整應付、稅務及部分實際支出仍缺。</div></details>
+      <details><summary>服務量如何計算？</summary><div class="details-body">截至8/6累計116車次；8/7–8/11增加至少25張，8/12增加10張，8/13增加4張，因此累計至少155。另有8/11的8項、8/12的5項與8/13的1項SALES，因無法確認唯一車數，沒有硬加成14台。</div></details>
+      <details><summary>為何第三週 −$20,828 不是虧損？</summary><div class="details-body">這是229,125元實收減去249,953元已確認支出；8/5、8/7、8/8支出仍不完整，且昇陽與廣豐付款屬前期貨款。它代表付款時點造成的現金變化，不等於第三週工單損益。</div></details>
+      <details><summary>時間分析為什麼還保留？</summary><div class="details-body">時間不再是主指標，但仍可驗證新技師是否真的釋放小羅管理時間、老闆是否從施工轉向現金、成本、人力與設備決策。</div></details>
+    </section>
+  </main>
+
+  <footer>有利車業｜現金經營控制與營運報告｜截至 2026/08/13。財務數字以實際工單、銀行、現金、供應商帳單及會計資料為準；本報告不以缺漏推估代替真實獲利。</footer>
+
+  <script>
+    (function(){
+      var ids=['cashOnHand','bankBalance','payables','fixed30','taxReserve','equipmentCommitment','otherReserve','techCost'];
+      var required=['cashOnHand','bankBalance','payables','taxReserve','equipmentCommitment'];
+      var storageKey='yuli_cash_control_20260813_v2';
+      function money(n){return new Intl.NumberFormat('zh-TW',{style:'currency',currency:'TWD',maximumFractionDigits:0}).format(n)}
+      function value(id){var raw=document.getElementById(id).value;return raw===''?null:Number(raw)||0}
+      function save(){try{var data={};ids.forEach(function(id){data[id]=document.getElementById(id).value});localStorage.setItem(storageKey,JSON.stringify(data))}catch(e){}}
+      function calculate(){
+        var complete=required.every(function(id){return document.getElementById(id).value!==''});
+        var out=document.getElementById('availableCash'),note=document.getElementById('runwayText');
+        if(!complete){out.textContent='待輸入';note.textContent='請填入現金、銀行、應付、稅務與設備資料';save();return}
+        var available=value('cashOnHand')+value('bankBalance')-value('payables')-value('fixed30')-value('taxReserve')-value('equipmentCommitment')-value('otherReserve');
+        var tech=value('techCost')||52500;var months=available>0?available/tech:0;
+        out.textContent=money(available);
+        if(available<0){note.textContent='目前低於安全線 '+money(Math.abs(available))+'，不宜新增長期人事承諾'}
+        else if(months<6){note.textContent='約可支撐新技師 '+months.toFixed(1)+' 個月；尚未達 6 個月建議門檻'}
+        else{note.textContent='約可支撐新技師 '+months.toFixed(1)+' 個月；仍需確認連續 3 個月正現金流'}
+        save();
+      }
+      function load(){try{var raw=localStorage.getItem(storageKey);if(!raw)return;var data=JSON.parse(raw);ids.forEach(function(id){if(data[id]!==undefined)document.getElementById(id).value=data[id]})}catch(e){}}
+      ids.forEach(function(id){document.getElementById(id).addEventListener('input',calculate)});
+      document.getElementById('clearCalc').addEventListener('click',function(){
+        ['cashOnHand','bankBalance','taxReserve','equipmentCommitment'].forEach(function(id){document.getElementById(id).value=''});
+        document.getElementById('payables').value='169810';document.getElementById('fixed30').value='106165';document.getElementById('otherReserve').value='0';document.getElementById('techCost').value='52500';
+        try{localStorage.removeItem(storageKey)}catch(e){}calculate();
+      });
+      document.getElementById('copyCalc').addEventListener('click',function(){
+        var button=this;var lines=['有利車業｜可動用現金試算'];ids.forEach(function(id){var el=document.getElementById(id);var label=el.closest('.field').querySelector('label').textContent;lines.push(label+'：'+(el.value===''?'未填':money(Number(el.value)||0)))});lines.push('試算結果：'+document.getElementById('availableCash').textContent);lines.push(document.getElementById('runwayText').textContent);
+        var text=lines.join('\n');
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){button.textContent='已複製';setTimeout(function(){button.textContent='複製試算摘要'},1500)})}
+        else{var area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();button.textContent='已複製';setTimeout(function(){button.textContent='複製試算摘要'},1500)}
+      });
+      load();calculate();
+    })();
+  </script>
+</body>
+</html>
