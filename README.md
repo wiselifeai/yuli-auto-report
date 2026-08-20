@@ -7,7 +7,8 @@
 - `index.html`：報告中心首頁。
 - `operations/index.html`：最新完整營運報告。
 - `weekly/index.html`：每週報告索引。
-- `weekly/week-03.html`：最新第三週週報，已使用校正後數字。
+- `weekly/week-04.html`：最新第四週正式週報，已使用Supabase與管理口徑校正後數字。
+- `weekly/week-03.html`：第三週營運與現金流週報。
 - `weekly/week-02.html`：第二週管理檢討。
 - `analysis/annual-simulation.html`：年度營收與獲利情境模擬。
 - `strategy/index.html`：舊版經營戰略與營運日報。
