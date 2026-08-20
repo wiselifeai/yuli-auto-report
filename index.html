@@ -28,14 +28,14 @@
     .hero-copy{max-width:62ch;color:var(--muted);font-size:clamp(1rem,2vw,1.15rem)}
     .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}.button{display:inline-flex;min-height:46px;align-items:center;justify-content:center;padding:.72rem 1rem;border:1px solid var(--deep);border-radius:.7rem;text-decoration:none;font-weight:800}.button.primary{background:var(--deep);color:var(--surface)}.button:hover,.button:focus-visible{transform:translateY(-1px);outline:3px solid rgba(184,100,52,.32);outline:3px solid color-mix(in oklch,var(--accent) 32%,transparent);outline-offset:2px}
     .status{border-top:1px solid var(--line);padding-top:1rem}.status time{display:block;color:var(--muted);font-size:.78rem;font-weight:750}.status strong{display:block;margin:.35rem 0;font-size:1.15rem}.status p{margin:0;color:var(--muted);font-size:.88rem}
-    .metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
-    .metric{padding:1.15rem 1.25rem;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric span{display:block;color:var(--muted);font-size:.75rem;font-weight:750}.metric b{display:block;margin:.2rem 0;font-size:clamp(1.25rem,3vw,2rem);letter-spacing:-.04em}.metric small{color:var(--muted);font-size:.72rem}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--line)}
+    .metric{padding:1.15rem 1.25rem;background:var(--surface)}.metric span{display:block;color:var(--muted);font-size:.75rem;font-weight:750}.metric b{display:block;margin:.2rem 0;font-size:clamp(1.25rem,3vw,2rem);letter-spacing:-.04em}.metric small{color:var(--muted);font-size:.72rem}
     section{padding-top:clamp(3rem,8vw,6rem)}.section-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1.2rem;border-bottom:1px solid var(--line);padding-bottom:.9rem}.section-head h2{margin:0;font-size:clamp(1.55rem,4vw,2.5rem);letter-spacing:-.045em}.section-head p{max-width:50ch;margin:0;color:var(--muted);font-size:.88rem}
     .report-list{border-top:1px solid var(--line)}.report-row{display:grid;grid-template-columns:7.5rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding:1.25rem .2rem;border-bottom:1px solid var(--line);text-decoration:none}.report-row:hover .open,.report-row:focus-visible .open{background:var(--deep);color:var(--surface)}.report-row:focus-visible{outline:3px solid rgba(184,100,52,.32);outline:3px solid color-mix(in oklch,var(--accent) 32%,transparent);outline-offset:3px}.report-type{color:var(--accent);font-size:.72rem;font-weight:850;letter-spacing:.08em}.report-row h3{margin:0 0 .2rem;font-size:1.1rem;letter-spacing:-.025em}.report-row p{margin:0;color:var(--muted);font-size:.83rem}.open{min-width:4.4rem;padding:.52rem .7rem;border:1px solid var(--line);border-radius:.6rem;text-align:center;font-size:.78rem;font-weight:800;transition:background .18s ease-out,color .18s ease-out}
     .week-feature{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(16rem,.8fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.week-feature>div{background:var(--surface);padding:clamp(1.25rem,4vw,2.3rem)}.week-feature h3{font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.04em}.week-feature p{color:var(--muted)}.week-numbers{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.week-number{border-top:1px solid var(--line);padding-top:.8rem}.week-number span{display:block;color:var(--muted);font-size:.72rem}.week-number b{display:block;font-size:1.25rem}.caution{margin-top:1.2rem;padding:1rem;border:1px solid color-mix(in oklch,var(--accent) 45%,var(--line));border-radius:.8rem;background:var(--warn-soft);font-size:.85rem}
     .goals{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.goal{background:var(--surface);padding:1.3rem}.goal time{color:var(--accent);font-size:.72rem;font-weight:850}.goal strong{display:block;margin:.35rem 0;font-size:1.05rem}.goal p{margin:0;color:var(--muted);font-size:.8rem}
     footer{margin-top:5rem;padding:1.4rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.77rem}
-    @media(max-width:760px){.topbar-inner{align-items:flex-start;flex-direction:column;gap:.45rem}.hero{grid-template-columns:1fr;align-items:start}.hero h1{font-size:clamp(2.55rem,15vw,4.4rem)}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.report-row{grid-template-columns:1fr auto}.report-type{grid-column:1/-1}.report-row p{display:none}.week-feature{grid-template-columns:1fr}.goals{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:.35rem}}
+    @media(max-width:760px){.topbar-inner{align-items:flex-start;flex-direction:column;gap:.45rem}.hero{grid-template-columns:1fr;align-items:start}.hero h1{font-size:clamp(2.55rem,15vw,4.4rem)}.metrics{grid-template-columns:1fr 1fr}.report-row{grid-template-columns:1fr auto}.report-type{grid-column:1/-1}.report-row p{display:none}.week-feature{grid-template-columns:1fr}.goals{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:.35rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.open{transition:none}.button:hover{transform:none}}
   </style>
 </head>
@@ -55,24 +55,26 @@
         <p class="hero-copy">同一個入口查看最新營運、現金流、每週檢討與歷史版本。首頁只保留管理者需要先知道的數字，完整細節放進各份報告。</p>
         <div class="hero-actions"><a class="button primary" href="operations/">查看最新營運報告</a><a class="button" href="weekly/week-03.html">查看最新週報</a></div>
       </div>
-      <aside class="status" aria-label="資料狀態"><time datetime="2026-08-18">資料截至 2026/08/18</time><strong>第四週正在盤點現金</strong><p>重複工單已從資料庫刪除；農會餘額、手頭現金與完整支出仍待確認，支出完整度目前只有5／16日。</p></aside>
+      <aside class="status" aria-label="資料狀態"><time datetime="2026-08-19">資料截至 2026/08/19</time><strong>第五週開始追現金</strong><p>8/19大額供應商付款已加入；農會餘額、手頭現金與完整支出仍待確認，支出完整度目前只有6／17日。</p></aside>
     </section>
 
     <div class="metrics" aria-label="八月營運摘要">
-      <div class="metric"><span>8/1起已知營收</span><b>$757,875</b><small>系統＋確認未Key</small></div>
-      <div class="metric"><span>已知實收</span><b>$653,950</b><small>收款率86.3%</small></div>
-      <div class="metric"><span>管理口徑應收</span><b>$103,925</b><small>12筆；草稿$0</small></div>
+      <div class="metric"><span>8/1起已知營收</span><b>$786,600</b><small>系統＋確認未Key</small></div>
+      <div class="metric"><span>已知實收</span><b>$658,900</b><small>收款率83.8%</small></div>
+      <div class="metric"><span>已知實付</span><b>$500,907</b><small>仍缺11日完整支出</small></div>
+      <div class="metric"><span>已知收支差額</span><b>+$157,993</b><small>扣9月預留後−$11,817</small></div>
+      <div class="metric"><span>管理口徑應收</span><b>$127,700</b><small>16筆；草稿$0</small></div>
       <div class="metric"><span>9月已知預留</span><b>$169,810</b><small>昇陽零件款</small></div>
     </div>
 
     <section id="routes">
-      <div class="section-head"><div><h2>營運路線</h2></div><p>8/1–8/18有利車業營收依服務內容拆成五條路線；中古車維持獨立事業。</p></div>
+      <div class="section-head"><div><h2>營運路線</h2></div><p>8/1–8/19有利車業營收依服務內容拆成五條路線；中古車維持獨立事業。</p></div>
       <div class="goals">
-        <div class="goal"><time>46.8% · 第一大</time><strong>輪胎更換 $354,400</strong><p>新／中古胎、鋁圈、大胎與調胎施工。</p></div>
-        <div class="goal"><time>25.3% · 第二大</time><strong>汽車維修 $191,850</strong><p>機件、底盤、電系、冷氣及故障處理。</p></div>
-        <div class="goal"><time>17.2% · 穩定回廠</time><strong>汽車保養 $130,575</strong><p>機油、油液、濾網與例行養護。</p></div>
-        <div class="goal"><time>9.0% · SALES主力</time><strong>買賣零件 $68,300</strong><p>純銷售輪胎、電池、鋁圈與其他零件。</p></div>
-        <div class="goal"><time>1.7% · 入口服務</time><strong>補胎 $12,750</strong><p>獨立追蹤散客來店與後續轉換。</p></div>
+        <div class="goal"><time>46.9% · 第一大</time><strong>輪胎更換 $369,000</strong><p>新／中古胎、鋁圈、大胎與調胎施工。</p></div>
+        <div class="goal"><time>25.9% · 第二大</time><strong>汽車維修 $204,050</strong><p>機件、底盤、電系、冷氣及故障處理。</p></div>
+        <div class="goal"><time>16.8% · 穩定回廠</time><strong>汽車保養 $132,350</strong><p>機油、油液、濾網與例行養護。</p></div>
+        <div class="goal"><time>8.7% · SALES主力</time><strong>買賣零件 $68,300</strong><p>純銷售輪胎、電池、鋁圈與其他零件。</p></div>
+        <div class="goal"><time>1.6% · 入口服務</time><strong>補胎 $12,900</strong><p>獨立追蹤散客來店與後續轉換。</p></div>
         <div class="goal"><time>獨立帳</time><strong>買賣中古車</strong><p>已知庫存成本$111,700，不混入車業營收與現金流。</p></div>
       </div>
       <div class="hero-actions"><a class="button" href="operations/#routes">查看分類依據與SALES明細</a></div>
@@ -89,10 +91,10 @@
     </section>
 
     <section id="week">
-      <div class="section-head"><div><h2>第四週資料</h2></div><p>8/12–8/18營收與收款已彙整；完整支出、農會及手頭現金仍待補齊。</p></div>
+      <div class="section-head"><div><h2>第五週開始</h2></div><p>8/19已先把營收、收款、應收與四筆支出分開；第四週完整支出、農會及手頭現金仍待補齊。</p></div>
       <div class="week-feature">
-        <div><p class="eyebrow">第四週 · 8/12–8/18</p><h3>8/18工單與支出已重新對帳。</h3><p>本週已知營收$354,125，實收$314,300，管理應收$39,825、草稿$0。8/18系統共17張完工工單，另有拆裝圈胎$700尚未Key。</p><div class="hero-actions"><a class="button primary" href="operations/#recent">查看最新明細</a><a class="button" href="weekly/week-03.html">第三週正式週報</a></div></div>
-        <div><div class="week-numbers"><div class="week-number"><span>本週營收</span><b>$354,125</b></div><div class="week-number"><span>本週實收</span><b>$314,300</b></div><div class="week-number"><span>管理應收</span><b>$39,825</b></div><div class="week-number"><span>已知支出</span><b>$74,220</b></div></div><p class="caution"><strong>注意：</strong>七個營運資料日只有8/13與8/18提供支出，現在仍不能計算完整第四週現金流或獲利。</p></div>
+        <div><p class="eyebrow">第五週 · 自8/19起</p><h3>第一天就看到現金壓力。</h3><p>8/19管理營收$28,725，實收$4,950，新增應收$23,775；同日支付供應商與中古胎庫存$176,734。馬3工單及金額仍待補。</p><div class="hero-actions"><a class="button primary" href="operations/#recent">查看8/19明細</a><a class="button" href="weekly/week-03.html">第三週正式週報</a></div></div>
+        <div><div class="week-numbers"><div class="week-number"><span>本週營收</span><b>$28,725</b></div><div class="week-number"><span>本週實收</span><b>$4,950</b></div><div class="week-number"><span>新增應收</span><b>$23,775</b></div><div class="week-number"><span>已知支出</span><b>$176,734</b></div></div><p class="caution"><strong>現金提醒：</strong>8/19已知現金差額−$171,784；累計已知差額扣除9月昇陽預留後為−$11,817，不能據此承諾聘人或設備付款。</p></div>
       </div>
     </section>
 
