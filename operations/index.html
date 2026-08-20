@@ -117,9 +117,9 @@
         <div class="mini"><span>已知現金支出</span><b>$500,907</b></div>
         <div class="mini"><span>已知現金差額*</span><b>+$318,878</b></div>
         <div class="mini"><span>管理應收</span><b>$100,100</b></div>
-        <div class="mini"><span>9月應付預留</span><b>$169,810</b></div>
+        <div class="mini"><span>8月底至9月材料預留</span><b>$362,829</b></div>
       </div>
-      <div class="verdict"><b>結論</b><div><strong>芎林$160,885已於8/15軋票並存入農會；累計已知差額扣9月預留後為+$149,068。</strong><p>票據中的本期$27,600沖應收、前期$133,285只增加現金流入，不增加本期營收。仍缺11日支出及期末餘額，+$149,068不能直接視為可自由動用現金。</p></div></div>
+      <div class="verdict"><b>結論</b><div><strong>已知現金差額+$318,878，扣除近期材料預留$362,829後為−$43,951。</strong><p>材料預留包含昇陽$169,810與本批四家供應商$193,019；仍缺11日支出及期末餘額，目前沒有證據可認定存在自由現金。</p></div></div>
     </section>
 
     <section id="routes">
@@ -179,8 +179,8 @@
           <tr><td>8/15</td><td class="num">$197,485</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 工單收款$36,600＋芎林票據$160,885存入農會</td></tr>
           <tr><td>8/16</td><td class="num">$7,500</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 原草稿已完工並標示現金</td></tr>
           <tr><td>8/17</td><td class="num">$45,075</td><td class="num">未提供</td><td class="num">不可計算</td><td><span class="tag danger">缺支出</span> 統立$700與鳳凰$1,300列管理應收</td></tr>
-          <tr><td>8/18</td><td class="num">$39,675</td><td class="num">$39,220</td><td class="num good">+$455</td><td><span class="tag">已知完整</span> 拆裝圈胎$700於8/19補Key，仍歸回8/18</td></tr>
-          <tr><td>8/19</td><td class="num">$4,950</td><td class="num">$176,734</td><td class="num bad">−$171,784</td><td><span class="tag">已知完整</span> 新增應收$23,775；馬3待補工單與金額</td></tr>
+          <tr><td>8/18</td><td class="num">$38,975</td><td class="num">$39,220</td><td class="num bad">−$245</td><td><span class="tag">已知完整</span> 依Supabase工單日期統計</td></tr>
+          <tr><td>8/19</td><td class="num">$5,650</td><td class="num">$176,734</td><td class="num bad">−$171,084</td><td><span class="tag">已知完整</span> 系統已收$5,300＋未Key$350；新增應收$23,775</td></tr>
           <tr class="total"><td>已知合計</td><td class="num">$819,785</td><td class="num">$500,907</td><td class="num">+$318,878*</td><td>＊含前期應收$133,285；因11日支出缺漏，不是完整淨現金流</td></tr>
         </tbody>
       </table></div>
@@ -306,7 +306,7 @@
     <section id="recent">
       <div class="section-head"><div><h2>8/14–8/19 最新營運</h2><p>以系統工單為主要金額來源，手寫日誌負責補時間、待辦與未Key工作；相同工作不重複計算，公開版不列車牌。</p></div><div class="section-note">8/19系統資料已核對</div></div>
       <div class="kpi-lead">
-        <article class="metric primary"><span class="label">六日已知營收</span><strong>$219,800</strong><small>8/19管理營收$28,725</small></article>
+        <article class="metric primary"><span class="label">六日已知營收</span><strong>$219,800</strong><small>8/19系統$29,075；管理$29,425</small></article>
         <article class="metric warn"><span class="label">六日現金流入</span><strong>$348,685</strong><small>含芎林跨期票據$160,885</small></article>
         <article class="metric missing"><span class="label">管理應收</span><strong>$32,000</strong><small>8/19新增$23,775；草稿$0</small></article>
       </div>
@@ -375,17 +375,18 @@
           <tr><td>8/18</td><td>機油、油芯及例行保養</td><td class="num">$8,975</td><td><span class="tag">現金</span></td></tr>
           <tr><td>8/18</td><td>雷登與玲瓏貨車胎</td><td class="num">$15,100</td><td><span class="tag">信用卡／現金</span></td></tr>
           <tr><td>8/18</td><td>Altis機油與兩條韓泰輪胎</td><td class="num">$8,400</td><td><span class="tag">現金</span></td></tr>
-          <tr><td>8/18</td><td>代工拆裝圈胎分離</td><td class="num">$700</td><td><span class="tag warn">8/19補Key；收入歸回8/18</span></td></tr>
-          <tr class="total"><td colspan="2">8/18合計</td><td class="num">營收／實收$39,675</td><td>系統$38,975＋跨日補Key$700；支出$39,220</td></tr>
+          <tr class="total"><td colspan="2">8/18系統合計</td><td class="num">營收／實收$38,975</td><td>依Supabase `work_order_date`；支出$39,220</td></tr>
         </tbody></table></div>
       <div class="table-wrap" style="margin-top:1rem"><table aria-label="8月19日收支與工單摘要">
         <thead><tr><th>日期</th><th>工作內容</th><th class="num">營收</th><th class="num">實收</th><th>付款狀態／校正</th></tr></thead><tbody>
-          <tr><td>8/19</td><td>代工更換後下引擎腳</td><td class="num">$300</td><td class="num">$300</td><td><span class="tag">系統現金</span></td></tr>
+          <tr><td>8/19</td><td>代工更換後下引擎腳</td><td class="num">$300</td><td class="num">$300</td><td><span class="tag">系統日期8/19；日誌8/18</span></td></tr>
+          <tr><td>8/19</td><td>代工拆裝圈胎分離</td><td class="num">$700</td><td class="num">$700</td><td><span class="tag">系統日期8/19；日誌8/18</span></td></tr>
           <tr><td>8/19</td><td>輪胎與中古胎工單</td><td class="num">$15,300</td><td class="num">$4,300</td><td>$11,000未收；含Wish中古胎$1,400</td></tr>
           <tr><td>8/19</td><td>機油與機油芯</td><td class="num">$1,775</td><td class="num">$0</td><td><span class="tag danger">完工未收</span></td></tr>
           <tr><td>8/19</td><td>Wish冷媒與變速箱電腦維修</td><td class="num">$11,000</td><td class="num">$0</td><td>電腦售價$10,000、成本$7,000；$3,000是毛利</td></tr>
           <tr><td>8/19</td><td>補胎與外出接電</td><td class="num">$350</td><td class="num">$350</td><td><span class="tag warn">尚未Key</span></td></tr>
-          <tr class="total"><td colspan="2">8/19管理合計</td><td class="num">$28,725</td><td class="num">$4,950</td><td>新增應收$23,775；馬3待補工單與金額</td></tr>
+          <tr><td>8/19</td><td>Supabase系統小計</td><td class="num">$29,075</td><td class="num">$5,300</td><td>8張完工工單；未收$23,775</td></tr>
+          <tr class="total"><td colspan="2">8/19管理合計</td><td class="num">$29,425</td><td class="num">$5,650</td><td>另加未Key$350；馬3待補工單與金額</td></tr>
         </tbody></table></div>
       <div class="table-wrap" style="margin-top:1rem"><table aria-label="8月19日支出">
         <thead><tr><th>支出內容</th><th class="num">金額</th><th>管理判讀</th></tr></thead><tbody>
@@ -393,13 +394,13 @@
           <tr><td>琥斑輪胎</td><td class="num">$3,620</td><td>供應商付款；補對應進貨月份</td></tr>
           <tr><td>耀鑫輪胎</td><td class="num">$156,700</td><td>大額付款；留存對帳單與付款證明</td></tr>
           <tr><td>7條中古胎</td><td class="num">$2,100</td><td>庫存進貨；每條平均進貨$300</td></tr>
-          <tr class="total"><td>8/19支出合計</td><td class="num">$176,734</td><td>當日已知現金差額−$171,784</td></tr>
+          <tr class="total"><td>8/19支出合計</td><td class="num">$176,734</td><td>當日已知現金差額−$171,084</td></tr>
         </tbody></table></div>
       <div class="two-col" style="margin-top:1rem">
         <article class="panel"><h3>未形成收入的營運活動</h3><p>8/15安排Outlander看車，屬中古車獨立事業，未成交前不列有利車業收入。8/19馬3保養、煞車、碟盤、兩條輪胎與空氣濾網仍未Key且沒有金額，不自行估列。</p></article>
         <article class="panel"><h3>開場同時四台車</h3><p>8/17 08:30同時有四台車進場，是排工與接待壓力的直接證據。請記錄等待時間、交車承諾與由誰分流，作為聘人及小羅代理店長評估。</p></article>
       </div>
-      <div class="verdict"><b>待核</b><div><strong>Wish日誌寫冷氣「查修未定」，但系統已列冷媒$1,000且整張單完成未收。</strong><p>請確認是否確實完工；若尚未完成，修正工單狀態或品項。拆裝圈胎$700已於8/19補Key，不再列未Key收入。</p></div></div>
+      <div class="verdict"><b>已對帳</b><div><strong>8/19 Supabase營收為$29,075，管理營收為$29,425。</strong><p>管理營收只比系統多尚未Key的補胎$150與接電$200。引擎腳$300與圈胎拆裝$700雖寫在8/18日誌，系統日期均為8/19；每日圖表依系統日期呈現，避免報告與資料庫不符。Wish冷媒完工狀態仍待確認。</p></div></div>
     </section>
 
     <section id="cash">
@@ -414,7 +415,7 @@
           <div class="field-grid">
             <div class="field"><label for="cashOnHand">店內現金</label><div class="money-input"><span>$</span><input id="cashOnHand" inputmode="numeric" type="number" min="0" placeholder="尚未提供"></div></div>
             <div class="field"><label for="bankBalance">店內銀行餘額</label><div class="money-input"><span>$</span><input id="bankBalance" inputmode="numeric" type="number" min="0" placeholder="尚未提供"></div></div>
-            <div class="field"><label for="payables">近期應付貨款（已知最低）</label><div class="money-input"><span>$</span><input id="payables" inputmode="numeric" type="number" min="0" value="169810"></div></div>
+            <div class="field"><label for="payables">近期應付貨款（已知最低）</label><div class="money-input"><span>$</span><input id="payables" inputmode="numeric" type="number" min="0" value="362829"></div></div>
             <div class="field"><label for="fixed30">未來 30 日固定支出</label><div class="money-input"><span>$</span><input id="fixed30" inputmode="numeric" type="number" min="0" value="106165"></div></div>
             <div class="field"><label for="taxReserve">稅務準備</label><div class="money-input"><span>$</span><input id="taxReserve" inputmode="numeric" type="number" min="0" placeholder="待盤點"></div></div>
             <div class="field"><label for="equipmentCommitment">設備承諾款</label><div class="money-input"><span>$</span><input id="equipmentCommitment" inputmode="numeric" type="number" min="0" placeholder="待盤點"></div></div>
@@ -429,7 +430,20 @@
         <div class="status-item"><span>新技師建議完整成本</span><strong>$50,000–55,000／月</strong><p>薪資之外納入雇主負擔、工具與磨合。</p></div>
         <div class="status-item"><span>建議新技師準備金</span><strong>$300,000–330,000</strong><p>先保留六個月完整成本，再確認營運週轉。</p></div>
       </div>
-      <div class="verdict"><b>應付</b><div><strong>8月昇陽汽車材料行零件款$169,810，預計9月支付。</strong><p>納入芎林票據後，已知差額$318,878扣除這筆預留為+$149,068；但仍缺十一個缺漏日的支出、稅金、其他應付及農會期末餘額對帳。</p></div></div>
+      <div class="table-wrap" style="margin-top:1rem"><table aria-label="8月底至9月材料應付預留">
+        <thead><tr><th>供應商</th><th>帳款期間</th><th>類別</th><th class="num">預留金額</th><th>依據</th></tr></thead><tbody>
+          <tr><td>昇陽汽車材料行</td><td>8月</td><td>汽車零件</td><td class="num">$169,810</td><td>原已知9月應付</td></tr>
+          <tr><td>企隆股份有限公司</td><td>7月</td><td>油品</td><td class="num">$13,800</td><td>請款單備註油品</td></tr>
+          <tr><td>延典汽車材料行（湯淺電池）</td><td>2026/07</td><td>電瓶</td><td class="num">$82,700</td><td>對帳單本期未收</td></tr>
+          <tr><td>廣豐國際企業有限公司</td><td>2026/07</td><td>輪胎</td><td class="num">$77,619</td><td>$13,000＋$64,619</td></tr>
+          <tr><td>鈞航企業有限公司</td><td>6/25–7/24</td><td>油品</td><td class="num">$18,900</td><td>依手寫更正，原印刷$25,620</td></tr>
+          <tr class="total"><td colspan="3">材料應付預留合計</td><td class="num">$362,829</td><td>原預留$169,810＋本批新增$193,019</td></tr>
+        </tbody></table></div>
+      <div class="two-col" style="margin-top:1rem">
+        <article class="panel"><h3>預留分類</h3><div class="bars"><div class="bar-row"><span>汽車零件</span><div class="track"><i class="fill accent" style="--w:46.8%"></i></div><b>$169,810</b></div><div class="bar-row"><span>電瓶</span><div class="track"><i class="fill blue" style="--w:22.8%"></i></div><b>$82,700</b></div><div class="bar-row"><span>輪胎</span><div class="track"><i class="fill" style="--w:21.4%"></i></div><b>$77,619</b></div><div class="bar-row"><span>油品</span><div class="track"><i class="fill good" style="--w:9.0%"></i></div><b>$32,700</b></div></div></article>
+        <article class="panel"><h3>現金警戒</h3><p>已知現金差額$318,878仍不足以覆蓋近期材料預留$362,829，差額為−$43,951；而且尚未計入十一個缺漏日的支出。</p><div class="formula"><strong>判讀</strong><p>現在不能把銀行餘額直接拿來聘人、買設備或老闆取用。</p></div></article>
+      </div>
+      <div class="verdict"><b>應付</b><div><strong>8月底至9月材料應付預留合計$362,829。</strong><p>這些尚未支付，不列8/1–8/19實付；已知差額$318,878扣除後為−$43,951，仍須補實際到期日、付款帳戶及農會／手頭餘額對帳。</p></div></div>
     </section>
 
     <section id="receivable">
@@ -594,7 +608,7 @@
     <section id="trend">
       <div class="section-head"><div><h2>8月每日已知營收</h2><p>統計自8/1開始；17個營運資料日合計786,600元，平均46,271元。重複及跨日已Key項目已移除；系統$773,600加確認未Key$13,000。</p></div><div class="section-note">最高：8/12 $136,425</div></div>
       <div class="trend" aria-label="每日營收長條圖">
-        <div class="daybar" style="--h:22.6"><b>$30,800</b><span>8/1</span></div><div class="daybar" style="--h:23.2"><b>$31,600</b><span>8/3</span></div><div class="daybar" style="--h:45.1"><b>$61,525</b><span>8/4</span></div><div class="daybar" style="--h:24.7"><b>$33,650</b><span>8/5</span></div><div class="daybar" style="--h:66.5"><b>$90,700</b><span>8/6</span></div><div class="daybar" style="--h:44.2"><b>$60,325</b><span>8/7</span></div><div class="daybar" style="--h:18.2"><b>$24,800</b><span>8/8</span></div><div class="daybar" style="--h:13.0"><b>$17,750</b><span>8/10</span></div><div class="daybar" style="--h:38.6"><b>$52,600</b><span>8/11</span></div><div class="daybar current" style="--h:100"><b>$136,425</b><span>8/12</span></div><div class="daybar" style="--h:19.5"><b>$26,625</b><span>8/13</span></div><div class="daybar" style="--h:43.1"><b>$58,825</b><span>8/14</span></div><div class="daybar" style="--h:27.9"><b>$38,000</b><span>8/15</span></div><div class="daybar" style="--h:5.5"><b>$7,500</b><span>8/16</span></div><div class="daybar" style="--h:34.5"><b>$47,075</b><span>8/17</span></div><div class="daybar" style="--h:29.1"><b>$39,675</b><span>8/18</span></div><div class="daybar" style="--h:21.1"><b>$28,725</b><span>8/19</span></div>
+        <div class="daybar" style="--h:22.6"><b>$30,800</b><span>8/1</span></div><div class="daybar" style="--h:23.2"><b>$31,600</b><span>8/3</span></div><div class="daybar" style="--h:45.1"><b>$61,525</b><span>8/4</span></div><div class="daybar" style="--h:24.7"><b>$33,650</b><span>8/5</span></div><div class="daybar" style="--h:66.5"><b>$90,700</b><span>8/6</span></div><div class="daybar" style="--h:44.2"><b>$60,325</b><span>8/7</span></div><div class="daybar" style="--h:18.2"><b>$24,800</b><span>8/8</span></div><div class="daybar" style="--h:13.0"><b>$17,750</b><span>8/10</span></div><div class="daybar" style="--h:38.6"><b>$52,600</b><span>8/11</span></div><div class="daybar current" style="--h:100"><b>$136,425</b><span>8/12</span></div><div class="daybar" style="--h:19.5"><b>$26,625</b><span>8/13</span></div><div class="daybar" style="--h:43.1"><b>$58,825</b><span>8/14</span></div><div class="daybar" style="--h:27.9"><b>$38,000</b><span>8/15</span></div><div class="daybar" style="--h:5.5"><b>$7,500</b><span>8/16</span></div><div class="daybar" style="--h:34.5"><b>$47,075</b><span>8/17</span></div><div class="daybar" style="--h:28.6"><b>$38,975</b><span>8/18</span></div><div class="daybar" style="--h:21.6"><b>$29,425</b><span>8/19</span></div>
       </div>
       <div class="table-wrap" style="margin-top:2.2rem"><table aria-label="每日營收摘要">
         <thead><tr><th>Day</th><th>日期</th><th class="num">已知收入</th><th>重要說明</th></tr></thead>
@@ -606,8 +620,8 @@
           <tr><td>13</td><td>8/15</td><td class="num">$38,000</td><td>工單收款$36,600；芎林跨期票據$160,885存入農會；統立未收$1,400</td></tr>
           <tr><td>14</td><td>8/16</td><td class="num">$7,500</td><td>實收$7,500；原草稿已完成收款</td></tr>
           <tr><td>15</td><td>8/17</td><td class="num">$47,075</td><td>實收$45,075；統立$700與鳳凰$1,300列管理應收</td></tr>
-          <tr><td>16</td><td>8/18</td><td class="num">$39,675</td><td>拆裝圈胎$700於8/19補Key；支出$39,220</td></tr>
-          <tr><td>17</td><td>8/19</td><td class="num">$28,725</td><td>實收$4,950、應收$23,775；支出$176,734；馬3待補工單與金額</td></tr>
+          <tr><td>16</td><td>8/18</td><td class="num">$38,975</td><td>依Supabase工單日期統計；實收$38,975、支出$39,220</td></tr>
+          <tr><td>17</td><td>8/19</td><td class="num">$29,425</td><td>系統$29,075＋未Key$350；實收$5,650、應收$23,775；支出$176,734</td></tr>
           <tr class="total"><td colspan="2">17個營運資料日</td><td class="num">$786,600</td><td>平均 $46,271／日</td></tr>
         </tbody>
       </table></div>
