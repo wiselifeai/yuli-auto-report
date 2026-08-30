@@ -118,11 +118,12 @@
         <div class="mini"><span>已知現金支出</span><b>$562,407</b></div>
         <div class="mini cash-positive"><span>已知現金差額*</span><b>🟢 +$586,828</b></div>
         <div class="mini"><span>管理應收</span><b>$168,175</b></div>
-        <div class="mini"><span>8月底至9月材料預留</span><b>$557,820</b></div>
+        <div class="mini"><span>剩餘材料預留</span><b>$527,120</b></div>
+        <div class="mini cash-positive"><span>下月確認含稅應收</span><b>+$125,633</b></div>
         <div class="mini"><span>每月固定支出基線</span><b>$106,165</b></div>
         <div class="mini"><span>固定支出已核付</span><b>$61,500</b></div>
       </div>
-      <div class="verdict cash-positive-block"><b>🟢</b><div><strong>已知差額扣材料預留後暫為 +$29,008。</strong><p>已把8/12統立$26,000從「系統轉帳」重分類為下月應收；仍缺15個營運日完整支出、玉山與手頭餘額，還不是可自由動用現金。</p></div></div>
+      <div class="verdict cash-positive-block"><b>🟢</b><div><strong>已知差額扣剩餘材料預留後暫為 +$59,708；下月確認應收進帳後預計為 +$185,341。</strong><p>下月含稅收款$125,633中有$5,983為銷項稅，保留稅款後的營運暫餘為+$179,358。仍缺15個營運日完整支出、玉山與手頭餘額，不能視為自由現金。</p></div></div>
     </section>
 
     <section id="routes">
@@ -242,8 +243,8 @@
           <tr><td>8/20</td><td>小峰工資</td><td>活動人力</td><td class="num">$1,000</td><td>非固定成員，獨立追蹤</td></tr>
           <tr><td>8/20</td><td><strong>小羅預支</strong></td><td>員工預支</td><td class="num"><strong>$20,000</strong></td><td>薪資結算時沖轉，避免重複列費用</td></tr>
           <tr><td>8/25</td><td><strong>竹大行輪胎貨款</strong></td><td>供應商／輪胎</td><td class="num"><strong>$7,100</strong></td><td>確認是否已含原材料預留，避免重複扣款</td></tr>
-          <tr><td>8/27</td><td><strong>和格斯機油</strong></td><td>供應商／油品</td><td class="num"><strong>$18,900</strong></td><td>店內材料支出；需確認是否已含材料預留</td></tr>
-          <tr><td>8/28</td><td><strong>錦祥材料行</strong></td><td>供應商／零件</td><td class="num"><strong>$11,800</strong></td><td>店內材料支出；需確認對應月份與工單</td></tr>
+          <tr><td>8/27</td><td><strong>和格斯機油</strong></td><td>供應商／油品</td><td class="num"><strong>$18,900</strong></td><td>已確認包含於原材料預留，已自剩餘預留扣除</td></tr>
+          <tr><td>8/28</td><td><strong>錦祥材料行</strong></td><td>供應商／零件</td><td class="num"><strong>$11,800</strong></td><td>已確認包含於原材料預留，已自剩餘預留扣除</td></tr>
           <tr class="total"><td colspan="3">已知現金支出合計</td><td class="num">$562,407</td><td>新增支出$30,700；仍缺15日完整支出</td></tr>
         </tbody>
       </table></div>
@@ -506,7 +507,7 @@
           <div class="field-grid">
             <div class="field"><label for="cashOnHand">店內現金</label><div class="money-input"><span>$</span><input id="cashOnHand" inputmode="numeric" type="number" min="0" placeholder="尚未提供"></div></div>
             <div class="field"><label for="bankBalance">店內銀行餘額</label><div class="money-input"><span>$</span><input id="bankBalance" inputmode="numeric" type="number" min="0" placeholder="尚未提供"></div></div>
-            <div class="field"><label for="payables">近期應付貨款（已知最低）</label><div class="money-input"><span>$</span><input id="payables" inputmode="numeric" type="number" min="0" value="557820"></div></div>
+            <div class="field"><label for="payables">近期應付貨款（已知最低）</label><div class="money-input"><span>$</span><input id="payables" inputmode="numeric" type="number" min="0" value="527120"></div></div>
             <div class="field"><label for="fixed30">未來 30 日固定支出</label><div class="money-input"><span>$</span><input id="fixed30" inputmode="numeric" type="number" min="0" value="106165"></div></div>
             <div class="field"><label for="taxReserve">稅務準備</label><div class="money-input"><span>$</span><input id="taxReserve" inputmode="numeric" type="number" min="0" placeholder="待盤點"></div></div>
             <div class="field"><label for="equipmentCommitment">設備承諾款</label><div class="money-input"><span>$</span><input id="equipmentCommitment" inputmode="numeric" type="number" min="0" placeholder="待盤點"></div></div>
@@ -530,13 +531,23 @@
           <tr><td>鈞航企業有限公司</td><td>6/25–7/24</td><td>油品</td><td class="num">$18,900</td><td>依手寫更正，原印刷$25,620</td></tr>
           <tr><td>耀鑫有限公司</td><td>6/25–7/24；9月預留</td><td>輪胎</td><td class="num">$176,500</td><td>依手寫金額；印刷本期$190,330、期前$167,630不重複加計</td></tr>
           <tr><td>普利司通輪胎販賣（股）公司</td><td>2026/07；9月預留</td><td>輪胎</td><td class="num">$18,491</td><td>7月應收帳款</td></tr>
-          <tr class="total"><td colspan="3">材料應付預留合計</td><td class="num">$557,820</td><td>原預留$362,829＋本次新增$194,991</td></tr>
+          <tr><td>8/27已付：和格斯機油</td><td>已付款</td><td>油品</td><td class="num">−$18,900</td><td>老闆確認已含原預留；原帳單供應商名稱仍需對照</td></tr>
+          <tr><td>8/28已付：錦祥材料行</td><td>已付款</td><td>汽車零件</td><td class="num">−$11,800</td><td>老闆確認已含原預留</td></tr>
+          <tr class="total"><td colspan="3">剩餘材料應付預留</td><td class="num">$527,120</td><td>原$557,820－已付$30,700</td></tr>
         </tbody></table></div>
+      <div class="table-wrap" style="margin-top:1rem"><table aria-label="下月應收現金與材料預留抵銷">
+        <thead><tr><th>下月現金項目</th><th class="num">未稅本金</th><th class="num">銷項稅</th><th class="num">預計入帳</th><th>判讀</th></tr></thead><tbody>
+          <tr><td>統立環保工程</td><td class="num">$28,950</td><td class="num">$1,448</td><td class="num">$30,398</td><td>已確認開票請款</td></tr>
+          <tr><td>統煜企業</td><td class="num">$90,700</td><td class="num">$4,535</td><td class="num">$95,235</td><td>已確認開票請款</td></tr>
+          <tr class="total"><td>下月確認應收合計</td><td class="num">$119,650</td><td class="num">$5,983</td><td class="num">$125,633</td><td>實際入帳前仍列應收</td></tr>
+          <tr class="total"><td colspan="3">剩餘材料預留扣下月含稅應收</td><td class="num">$401,487</td><td>$527,120－$125,633；仍需現有資金支應</td></tr>
+        </tbody></table></div>
+      <p class="muted" style="font-size:.78rem;margin-top:.65rem">＊其餘管理應收本金$48,525尚無確認的下月付款日，因此不先拿來抵銷材料預留。若保守保留銷項稅$5,983，可抵用的營運本金為$119,650，材料資金仍需準備$407,470。</p>
       <div class="two-col" style="margin-top:1rem">
-        <article class="panel"><h3>預留分類</h3><div class="bars"><div class="bar-row"><span>輪胎</span><div class="track"><i class="fill" style="--w:48.9%"></i></div><b>$272,610</b></div><div class="bar-row"><span>汽車零件</span><div class="track"><i class="fill accent" style="--w:30.4%"></i></div><b>$169,810</b></div><div class="bar-row"><span>電瓶</span><div class="track"><i class="fill blue" style="--w:14.8%"></i></div><b>$82,700</b></div><div class="bar-row"><span>油品</span><div class="track"><i class="fill good" style="--w:5.9%"></i></div><b>$32,700</b></div></div></article>
-        <article class="panel"><h3>🟢 預留後暫餘：+$29,008</h3><p>已知現金差額$586,828扣材料預留$557,820後仍為正，但尚未計入十五個缺漏日的支出。</p><div class="formula"><strong>判讀</strong><p>現金資料已轉正是好訊號；在玉山、手頭現金與所有應付核對完成前，仍不能視為自由現金。</p></div></article>
+        <article class="panel"><h3>剩餘預留分類</h3><div class="bars"><div class="bar-row"><span>輪胎</span><div class="track"><i class="fill" style="--w:51.7%"></i></div><b>$272,610</b></div><div class="bar-row"><span>汽車零件</span><div class="track"><i class="fill accent" style="--w:30%"></i></div><b>$158,010</b></div><div class="bar-row"><span>電瓶</span><div class="track"><i class="fill blue" style="--w:15.7%"></i></div><b>$82,700</b></div><div class="bar-row"><span>油品</span><div class="track"><i class="fill good" style="--w:2.6%"></i></div><b>$13,800</b></div></div></article>
+        <article class="panel"><h3>🟢 收付後預計暫餘：+$185,341</h3><p>已知現金差額$586,828－剩餘材料預留$527,120＋下月含稅應收$125,633。</p><div class="formula"><strong>保守判讀</strong><p>另保留銷項稅$5,983後，營運暫餘為+$179,358；在玉山、手頭現金與所有應付核對完成前，仍不能視為自由現金。</p></div></article>
       </div>
-      <div class="verdict cash-positive-block"><b>🟢</b><div><strong>材料預留合計$557,820，預留後已知差額+$29,008。</strong><p>8/12統立$26,000已移回應收；農會餘額$795,747已提供，玉山與手頭仍待填。</p></div></div>
+      <div class="verdict cash-positive-block"><b>🟢</b><div><strong>剩餘材料預留$527,120；下月確認含稅應收$125,633可降低資金壓力。</strong><p>兩者抵銷後材料資金需求$401,487；若保留銷項稅則為$407,470。其他應收尚未確認付款日，不提前當成可用現金。</p></div></div>
     </section>
 
     <section id="receivable">
@@ -746,7 +757,7 @@
     (function(){
       var ids=['cashOnHand','bankBalance','payables','fixed30','taxReserve','equipmentCommitment','otherReserve','techCost'];
       var required=['cashOnHand','bankBalance','payables','taxReserve','equipmentCommitment'];
-      var storageKey='yuli_cash_control_20260813_v2';
+      var storageKey='yuli_cash_control_20260830_v3';
       function money(n){return new Intl.NumberFormat('zh-TW',{style:'currency',currency:'TWD',maximumFractionDigits:0}).format(n)}
       function value(id){var raw=document.getElementById(id).value;return raw===''?null:Number(raw)||0}
       function save(){try{var data={};ids.forEach(function(id){data[id]=document.getElementById(id).value});localStorage.setItem(storageKey,JSON.stringify(data))}catch(e){}}
@@ -766,7 +777,7 @@
       ids.forEach(function(id){document.getElementById(id).addEventListener('input',calculate)});
       document.getElementById('clearCalc').addEventListener('click',function(){
         ['cashOnHand','bankBalance','taxReserve','equipmentCommitment'].forEach(function(id){document.getElementById(id).value=''});
-        document.getElementById('payables').value='557820';document.getElementById('fixed30').value='106165';document.getElementById('otherReserve').value='0';document.getElementById('techCost').value='52500';
+        document.getElementById('payables').value='527120';document.getElementById('fixed30').value='106165';document.getElementById('otherReserve').value='0';document.getElementById('techCost').value='52500';
         try{localStorage.removeItem(storageKey)}catch(e){}calculate();
       });
       document.getElementById('copyCalc').addEventListener('click',function(){
