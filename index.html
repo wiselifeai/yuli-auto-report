@@ -3,123 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="有利營運報告">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#f4f1e8">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta name="description" content="有利車業營運報告中心，集中最新營運報告、每週管理檢討、現金流分析與歷史版本。">
-  <title>有利車業｜營運報告中心</title>
+  <title>有利車業｜經營管理報告中心</title>
   <style>
-    :root{--paper:#f4f1e8;--surface:#fffdf8;--ink:#17231f;--muted:#69736f;--line:#d9d6cb;--deep:#173f34;--deep-2:#102f27;--accent:#b86434;--soft:#e7ede7;--warn-soft:#f6e6da;--good:#2f6b4e;--radius:22px}
-    @supports(color:oklch(50% .1 120)){:root{--paper:oklch(96% .012 88);--surface:oklch(99% .008 88);--ink:oklch(25% .025 165);--muted:oklch(52% .018 165);--line:oklch(86% .014 88);--deep:oklch(35% .065 165);--deep-2:oklch(28% .055 165);--accent:oklch(57% .105 48);--soft:oklch(92% .025 155);--warn-soft:oklch(92% .035 55);--good:oklch(48% .075 155)}}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;background:var(--paper)}
-    body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}
-    a{color:inherit}.skip{position:fixed;left:1rem;top:-5rem;z-index:20;background:var(--deep);color:var(--surface);padding:.7rem 1rem;border-radius:.6rem}.skip:focus{top:1rem}
-    .topbar{position:sticky;top:0;z-index:10;background:rgba(244,241,232,.95);background:color-mix(in oklch,var(--paper) 94%,transparent);border-bottom:1px solid var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
-    .topbar-inner{max-width:1160px;margin:auto;display:flex;align-items:center;gap:1rem;padding:.72rem max(1rem,env(safe-area-inset-left))}
-    .brand{white-space:nowrap;text-decoration:none;font-weight:850;letter-spacing:-.03em}.brand small{display:block;color:var(--muted);font-size:.67rem;letter-spacing:.08em}
-    nav{display:flex;gap:.25rem;overflow:auto;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.82rem;font-weight:700;padding:.48rem .7rem;border-radius:.55rem}nav a:hover,nav a:focus-visible{background:var(--soft);color:var(--deep);outline:none}
-    main{max-width:1160px;margin:auto;padding:clamp(1.2rem,4vw,3rem) max(1rem,env(safe-area-inset-left)) calc(4rem + env(safe-area-inset-bottom))}
-    .hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(17rem,.55fr);gap:clamp(1.5rem,5vw,5rem);align-items:end;padding:clamp(1.25rem,4vw,3.8rem) 0 clamp(2rem,6vw,5rem)}
-    .eyebrow{margin:0 0 .8rem;color:var(--accent);font-size:.76rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
-    h1,h2,h3,p{margin-top:0}h1{max-width:12ch;margin-bottom:1.2rem;font-size:clamp(2.6rem,7.5vw,5.9rem);line-height:.98;letter-spacing:-.07em}h1 em{font-style:normal;color:var(--deep)}
-    .hero-copy{max-width:62ch;color:var(--muted);font-size:clamp(1rem,2vw,1.15rem)}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}.button{display:inline-flex;min-height:46px;align-items:center;justify-content:center;padding:.72rem 1rem;border:1px solid var(--deep);border-radius:.7rem;text-decoration:none;font-weight:800}.button.primary{background:var(--deep);color:var(--surface)}.button:hover,.button:focus-visible{transform:translateY(-1px);outline:3px solid rgba(184,100,52,.32);outline:3px solid color-mix(in oklch,var(--accent) 32%,transparent);outline-offset:2px}
-    .status{border-top:1px solid var(--line);padding-top:1rem}.status time{display:block;color:var(--muted);font-size:.78rem;font-weight:750}.status strong{display:block;margin:.35rem 0;font-size:1.15rem}.status p{margin:0;color:var(--muted);font-size:.88rem}
-    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--line)}
-    .metric{padding:1.15rem 1.25rem;background:var(--surface)}.metric span{display:block;color:var(--muted);font-size:.75rem;font-weight:750}.metric b{display:block;margin:.2rem 0;font-size:clamp(1.25rem,3vw,2rem);letter-spacing:-.04em}.metric small{color:var(--muted);font-size:.72rem}.metric.risk{background:#fff0ec}.metric.risk b,.metric.risk small{color:#a43a26}
-    section{padding-top:clamp(3rem,8vw,6rem)}.section-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1.2rem;border-bottom:1px solid var(--line);padding-bottom:.9rem}.section-head h2{margin:0;font-size:clamp(1.55rem,4vw,2.5rem);letter-spacing:-.045em}.section-head p{max-width:50ch;margin:0;color:var(--muted);font-size:.88rem}
-    .report-list{border-top:1px solid var(--line)}.report-row{display:grid;grid-template-columns:7.5rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding:1.25rem .2rem;border-bottom:1px solid var(--line);text-decoration:none}.report-row:hover .open,.report-row:focus-visible .open{background:var(--deep);color:var(--surface)}.report-row:focus-visible{outline:3px solid rgba(184,100,52,.32);outline:3px solid color-mix(in oklch,var(--accent) 32%,transparent);outline-offset:3px}.report-type{color:var(--accent);font-size:.72rem;font-weight:850;letter-spacing:.08em}.report-row h3{margin:0 0 .2rem;font-size:1.1rem;letter-spacing:-.025em}.report-row p{margin:0;color:var(--muted);font-size:.83rem}.open{min-width:4.4rem;padding:.52rem .7rem;border:1px solid var(--line);border-radius:.6rem;text-align:center;font-size:.78rem;font-weight:800;transition:background .18s ease-out,color .18s ease-out}
-    .week-feature{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(16rem,.8fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.week-feature>div{background:var(--surface);padding:clamp(1.25rem,4vw,2.3rem)}.week-feature h3{font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.04em}.week-feature p{color:var(--muted)}.week-numbers{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.week-number{border-top:1px solid var(--line);padding-top:.8rem}.week-number span{display:block;color:var(--muted);font-size:.72rem}.week-number b{display:block;font-size:1.25rem}.caution{margin-top:1.2rem;padding:1rem;border:1px solid color-mix(in oklch,var(--accent) 45%,var(--line));border-radius:.8rem;background:var(--warn-soft);font-size:.85rem}
-    .goals{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.goal{background:var(--surface);padding:1.3rem}.goal time{color:var(--accent);font-size:.72rem;font-weight:850}.goal strong{display:block;margin:.35rem 0;font-size:1.05rem}.goal p{margin:0;color:var(--muted);font-size:.8rem}
-    footer{margin-top:5rem;padding:1.4rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.77rem}
-    @media(max-width:760px){.topbar-inner{align-items:flex-start;flex-direction:column;gap:.45rem}.hero{grid-template-columns:1fr;align-items:start}.hero h1{font-size:clamp(2.55rem,15vw,4.4rem)}.metrics{grid-template-columns:1fr 1fr}.report-row{grid-template-columns:1fr auto}.report-type{grid-column:1/-1}.report-row p{display:none}.week-feature{grid-template-columns:1fr}.goals{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:.35rem}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.open{transition:none}.button:hover{transform:none}}
+    :root{--paper:#f4f1e8;--surface:#fffdf8;--ink:#17231f;--muted:#68736f;--line:#d9d6cb;--deep:#173f34;--accent:#b86434;--good:#256443;--good-bg:#dcecdf;--warn:#8a5b16;--warn-bg:#f7ebc9;--danger:#a23d36;--danger-bg:#f8e1dc}
+    *{box-sizing:border-box}html{background:var(--paper);scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}a{color:inherit}h1,h2,h3,p{margin-top:0}header{border-bottom:1px solid var(--line);background:var(--paper)}.nav{max-width:1040px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem max(1rem,env(safe-area-inset-left))}.brand{text-decoration:none;font-weight:850}.nav nav{display:flex;gap:.35rem;overflow:auto}.nav nav a{text-decoration:none;white-space:nowrap;color:var(--muted);font-size:.8rem;font-weight:700;padding:.45rem .55rem;border-radius:.5rem}.nav nav a:focus-visible,.button:focus-visible,.report:focus-visible{outline:3px solid rgba(184,100,52,.35);outline-offset:3px}main{max-width:1040px;margin:auto;padding:clamp(2rem,6vw,5rem) max(1rem,env(safe-area-inset-left)) calc(4rem + env(safe-area-inset-bottom))}.eyebrow{margin:0 0 .75rem;color:var(--accent);font-size:.75rem;font-weight:850}.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(16rem,.65fr);gap:clamp(2rem,6vw,5rem);align-items:end;padding-bottom:clamp(2.5rem,7vw,5rem)}h1{max-width:11ch;margin-bottom:1rem;font-size:clamp(2.7rem,8vw,5.3rem);line-height:1;text-wrap:balance}.lead{max-width:58ch;color:var(--muted);text-wrap:pretty}.status{border-top:1px solid var(--line);padding-top:1rem}.status time{display:block;color:var(--accent);font-size:.73rem;font-weight:850}.status strong{display:block;margin:.35rem 0;font-size:1.1rem}.status p{margin:0;color:var(--muted);font-size:.84rem}.reports{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.report{display:flex;min-height:15rem;flex-direction:column;padding:1.3rem;border:1px solid var(--line);border-radius:1rem;background:var(--surface);text-decoration:none}.report:hover{border-color:var(--accent)}.report-type{color:var(--accent);font-size:.72rem;font-weight:850}.report h2{margin:.65rem 0 .45rem;font-size:1.4rem;line-height:1.2;text-wrap:balance}.report p{color:var(--muted);font-size:.84rem;text-wrap:pretty}.report .open{margin-top:auto;font-size:.8rem;font-weight:850}.numbers{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(3rem,7vw,5rem);border:1px solid var(--line);border-radius:1rem;overflow:hidden;background:var(--surface)}.number{padding:1rem;border-right:1px solid var(--line)}.number:last-child{border:0}.number span{display:block;color:var(--muted);font-size:.72rem}.number b{display:block;margin-top:.25rem;font-size:1.35rem}.number.good b{color:var(--good)}.number.warn b{color:var(--warn)}.number.danger b{color:var(--danger)}.focus{margin-top:clamp(3rem,7vw,5rem);padding:clamp(1.3rem,4vw,2.2rem);border-radius:1rem;background:var(--deep);color:var(--surface)}.focus h2{margin-bottom:.35rem;font-size:clamp(1.5rem,4vw,2.1rem);text-wrap:balance}.focus>p{color:#d6e2dc}.focus ol{margin:1.2rem 0 0;padding:0;list-style:none;counter-reset:item}.focus li{counter-increment:item;display:grid;grid-template-columns:2rem 1fr;gap:.8rem;padding:.9rem 0;border-top:1px solid rgba(255,255,255,.2)}.focus li:before{content:counter(item,decimal-leading-zero);color:#e6b58e;font-size:.75rem;font-weight:850}.focus li strong{display:block}.focus li span{display:block;color:#cbdad3;font-size:.8rem}.links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}.button{padding:.65rem .85rem;border:1px solid var(--line);border-radius:.65rem;text-decoration:none;font-size:.8rem;font-weight:800;background:var(--surface)}footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted);font-size:.76rem}@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr}.reports{grid-template-columns:1fr}.report{min-height:12rem}.numbers{grid-template-columns:1fr 1fr}.number:nth-child(2){border-right:0}.number:nth-child(-n+2){border-bottom:1px solid var(--line)}}
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">跳到主要內容</a>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="./">有利車業<small>營運報告中心</small></a>
-      <nav aria-label="主要導覽"><a href="operations/index.html">最新營運</a><a href="analysis/september-work-order-margin.html">工單毛利</a><a href="weekly/">每週報告</a><a href="analysis/annual-simulation.html">獲利模擬</a><a href="strategy/">策略報告</a></nav>
-    </div>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <p class="eyebrow">Yuli Auto · Management Desk</p>
-        <h1 id="hero-title">把每天的營運，變成<em>每週可決策</em>的數字。</h1>
-        <p class="hero-copy">同一個入口查看最新營運、現金流、每週檢討與歷史版本。首頁只保留管理者需要先知道的數字，完整細節放進各份報告。</p>
-        <div class="hero-actions"><a class="button primary" href="operations/index.html">查看最新營運報告</a><a class="button" href="weekly/week-06.html">查看9月月中比較</a></div>
-      </div>
-      <aside class="status" aria-label="資料狀態"><time datetime="2026-09-14">資料截至 2026/09/14</time><strong>九月現金控制持續更新</strong><p>已確認收款及其他收入$587,258、店內實付$905,231，營運現金淨流出$317,973；帳戶須重新盤點。</p></aside>
+  <header><div class="nav"><a class="brand" href="./">有利車業報告中心</a><nav aria-label="主要導覽"><a href="operations/index.html">營運</a><a href="analysis/september-work-order-margin.html">毛利</a><a href="weekly/">週報</a></nav></div></header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">OWNER MANAGEMENT DASHBOARD</p><h1>先看現金，再看毛利。</h1><p class="lead">首頁只保留現在真正要用的三份報告：營運現金、工單毛利、每週管理。歷史細節留在各報告內，不再塞滿首頁。</p></div>
+      <aside class="status"><time datetime="2026-09-16">資料更新至 2026/09/16</time><strong>本週核心：錢留下多少？</strong><p>9月現金收支目前完整至9/14；工單毛利與週報已更新至9/16。</p></aside>
     </section>
 
-    <div class="metrics" aria-label="九月資金控制摘要">
-      <div class="metric risk"><span>9月已知對外支出</span><b>−$416,401</b><small>截至9/3；不含帳戶間移轉</small></div>
-      <div class="metric"><span>農會轉入玉山</span><b>$400,000</b><small>內部移轉，整體資金不變</small></div>
-      <div class="metric"><span>明確有發票支出</span><b>$267,501</b><small>進項稅拆分仍待完成</small></div>
-      <div class="metric risk"><span>明確無發票支出</span><b>$99,800</b><small>變速箱、機油與輪胎</small></div>
-      <div class="metric"><span>9月預計含稅應收</span><b>$125,633</b><small>未入帳前不可當現金</small></div>
-      <div class="metric risk"><span>9月可動用現金</span><b>尚不可算</b><small>缺玉山、手頭現金與9月收入</small></div>
-    </div>
-
-    <section id="routes">
-      <div class="section-head"><div><h2>有利車業五條營運路線</h2></div><p>8/1–8/31保養廠本業依服務內容拆成五條路線；不包含中古車買賣。</p></div>
-      <div class="goals">
-        <div class="goal"><time>47.1% · 第一大</time><strong>輪胎更換 $573,150</strong><p>新／中古胎、鋁圈、大胎與調胎施工。</p></div>
-        <div class="goal"><time>26.9% · 第二大</time><strong>汽車維修 $326,950</strong><p>機件、底盤、電系、冷氣及故障處理。</p></div>
-        <div class="goal"><time>18.4% · 穩定回廠</time><strong>汽車保養 $224,275</strong><p>機油、油液、濾網與例行養護。</p></div>
-        <div class="goal"><time>6.2% · SALES主力</time><strong>買賣零件 $75,200</strong><p>純銷售輪胎、電池、鋁圈與其他零件。</p></div>
-        <div class="goal"><time>1.5% · 入口服務</time><strong>補胎 $18,100</strong><p>獨立追蹤散客來店與後續轉換。</p></div>
-      </div>
-      <div class="hero-actions"><a class="button" href="operations/index.html#routes">查看分類依據與SALES明細</a></div>
+    <section class="reports" aria-label="主要報告">
+      <a class="report" href="operations/index.html#september"><span class="report-type">01 · 現金經營</span><h2>營運與現金流</h2><p>每天的營收、實收、支出、付款帳戶、應收應付與10月材料預留。</p><span class="open">查看最新營運 →</span></a>
+      <a class="report" href="analysis/september-work-order-margin.html"><span class="report-type">02 · 每週同步</span><h2>8月至今毛利追蹤</h2><p>375張工單逐筆檢查；搜尋低於50%、缺成本與待確認$0材料。</p><span class="open">查看毛利追蹤 →</span></a>
+      <a class="report" href="weekly/"><span class="report-type">03 · 週三檢討</span><h2>每週管理報告</h2><p>所有週報統一由索引進入，查看當週數字、顧問看見、行動與老闆回饋。</p><span class="open">進入週報索引 →</span></a>
     </section>
 
-    <section id="used-car-business">
-      <div class="section-head"><div><h2>中古車買賣｜另一個事業體</h2></div><p>買價、整備、庫存、售車收入、合夥分配與損益全部獨立，不列入有利車業保養廠營收及現金流。</p></div>
-      <div class="goals">
-        <div class="goal"><time>獨立庫存投入</time><strong>$585,900</strong><p>五台中古車已知總投入。</p></div>
-        <div class="goal"><time>老闆出資</time><strong>$475,050</strong><p>不使用保養廠營收掩蓋資金需求。</p></div>
-        <div class="goal"><time>阿皓出資</time><strong>$110,850</strong><p>合夥車輛須按車記錄成本與分配。</p></div>
-      </div>
-      <div class="hero-actions"><a class="button" href="operations/index.html#used-car">查看中古車獨立事業體專章</a></div>
+    <section class="numbers" aria-label="核心數字">
+      <div class="number"><span>8月至今系統營收</span><b>$1,823,708</b></div>
+      <div class="number warn"><span>直接材料毛利率</span><b>45.5%</b></div>
+      <div class="number danger"><span>9/1–9/14現金淨變動</span><b>−$317,973</b></div>
+      <div class="number warn"><span>10月材料應付預留</span><b>$304,263</b></div>
     </section>
 
-    <section id="latest">
-      <div class="section-head"><div><h2>報告入口</h2></div><p>最新版放前面，歷史版本保留原始截止日，避免數字口徑混用。</p></div>
-      <div class="report-list">
-        <a class="report-row" href="analysis/august-cost-price-workbench.html"><span class="report-type">8月稽核</span><div><h3>營運、現金流與成本售價修正工作台</h3><p>8月全面檢討、成本完整度、低毛利工單與安全回寫指令</p></div><span class="open">開啟</span></a>
-        <a class="report-row" href="analysis/september-work-order-margin.html"><span class="report-type">毛利追蹤 · 9/3</span><div><h3>逐筆工單毛利與成本檢查</h3><p>每張工單的售價、材料成本、直接毛利，及零成本車號清單</p></div><span class="open">開啟</span></a>
-        <a class="report-row" href="operations/index.html#september"><span class="report-type">最新營運 · 9/14</span><div><h3>9月現金經營控制與營運報告</h3><p>每日營收、收款、店內支出、付款帳戶、個人分帳與10月材料預留</p></div><span class="open">開啟</span></a>
-        <a class="report-row" href="weekly/week-06.html"><span class="report-type">最新比較 · 9/16</span><div><h3>8月 vs 9月月對月管理比較</h3><p>同期工單、營收、客單價、材料毛利、現金流與10月資金警戒線</p></div><span class="open">開啟</span></a>
-        <a class="report-row" href="weekly/september-week-01.html"><span class="report-type">9月第一週 · 9/1–9/7</span><div><h3>工單有毛利，現金卻被舊帳抽走</h3><p>實際工作日營收、材料毛利、逐日現金流與58.95萬元支出分類</p></div><span class="open">開啟</span></a>
-        <a class="report-row" href="weekly/"><span class="report-type">週報索引</span><div><h3>每週管理檢討</h3><p>依週次查看經營主題、數據變化與老闆回饋項目</p></div><span class="open">開啟</span></a>
-        <a class="report-row" href="analysis/annual-simulation.html"><span class="report-type">決策模型</span><div><h3>年度營收與獲利情境模擬</h3><p>老闆薪資、技師人力、材料成本與損益兩平情境</p></div><span class="open">開啟</span></a>
-        <a class="report-row" href="strategy/"><span class="report-type">歷史策略</span><div><h3>經營戰略與營運日報</h3><p>早期時間分配、角色轉型與長期目標的完整背景</p></div><span class="open">開啟</span></a>
-      </div>
-    </section>
+    <section class="focus"><h2>現在只盯三件事</h2><p>管理者每天都能快速回答，才代表錢真的管得住。</p><ol><li><div><strong>今日現金增加或減少多少？</strong><span>收入、支出、付款帳戶與內部移轉當天關帳。</span></div></li><li><div><strong>每張工單毛利是否達50%？</strong><span>材料與工資拆開；缺成本不准當成零成本。</span></div></li><li><div><strong>下個月一定要付多少？</strong><span>按供應商帳期鎖定應付、固定支出與薪資。</span></div></li></ol></section>
 
-    <section id="week">
-      <div class="section-head"><div><h2>9月月中月對月比較</h2></div><p>用相同日期範圍比較8月與9月，避免拿完整月份與半個月直接判斷成長。</p></div>
-      <div class="week-feature">
-        <div><p class="eyebrow">第六週／9月月中 · 截至9/16</p><h3>車更多了，但錢沒有等比例增加。</h3><p>9月同期工單量增加42.6%，營收比8月同期少1.9%；平均客單價下降31.2%，直接材料毛利率則由43.5%改善至46.0%。</p><div class="hero-actions"><a class="button primary" href="weekly/week-06.html">查看完整比較報告</a><a class="button" href="operations/index.html">查看最新營運</a></div></div>
-        <div><div class="week-numbers"><div class="week-number"><span>9月同期營收</span><b>$646,083</b></div><div class="week-number"><span>完工工單</span><b>144張</b></div><div class="week-number"><span>平均客單價</span><b>$4,487</b></div><div class="week-number"><span>材料毛利率</span><b>46.0%</b></div></div><p class="caution"><strong>🟡 管理警訊：</strong>工單變多但客單價下降；9月付款方式待補$42,150、另有85筆零／空成本項目。現金流只完整至9/14，不能把半個月工單毛利直接當成可用現金。</p></div>
-      </div>
-    </section>
-
-    <section id="goals">
-      <div class="section-head"><div><h2>短中長期方向</h2></div><p>目標保留，但每一步都要受現金、人力與營運證據約束。</p></div>
-      <div class="goals">
-        <div class="goal"><time>短期目標</time><strong>增加1名人力</strong><p>先補可承接補胎、換胎與基礎保養的人員，並建立三個月人事安全準備金。</p></div>
-        <div class="goal"><time>中期目標</time><strong>增加輪胎定位設備</strong><p>排定場地、設備預算、施工日與預估回收期。</p></div>
-        <div class="goal"><time>長期目標</time><strong>完成第二店開設</strong><p>第一店須能由小羅帶店，並維持正向現金流。</p></div>
-      </div>
-    </section>
-    <footer>有利車業營運報告中心。財務數字以實際工單、現金、銀行、供應商帳單及會計資料為準。本網站設定不索引，但 GitHub Pages仍應視為公開網址。</footer>
+    <div class="links"><a class="button" href="analysis/annual-simulation.html">年度獲利模擬</a><a class="button" href="strategy/">經營策略背景</a><a class="button" href="operations/index.html#used-car">中古車獨立事業</a></div>
+    <footer>毛利追蹤固定從2026/08/01開始，並在每次週報更新時同步刷新。所有數字仍以Supabase工單、銀行、現金、發票與供應商帳單核對為準。</footer>
   </main>
 </body>
 </html>
