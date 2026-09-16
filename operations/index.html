@@ -107,7 +107,7 @@
 
     <section id="september">
       <div class="section-head"><div><h2>9月資金控制啟動</h2><p>先把實際付款、帳戶移轉與憑證分開。以下只計算已明確提供的支出，不把帳戶間移轉灌大現金流。</p></div><div class="section-note">資料期間 9/1–9/14</div></div>
-      <div class="verdict"><b>警示</b><div><strong>截至9/14系統營收$622,708、已知店內支出$905,231；兩者不能直接相減為虧損，因支出主要是前期供應商貨款與庫存。</strong><p>9/5、9/6、9/9尚未提供支出日誌，因此完整淨現金變動仍不可算。9/7帳戶快照是歷史截點；9/8後已有新收支，不能再視為目前餘額。</p></div></div>
+      <div class="verdict cash-negative-block"><b>現金流</b><div><strong>截至9/14已確認收款及其他收入$587,258、店內實付$905,231，營運現金淨流出為 🔴 −$317,973。</strong><p>9/5、9/6、9/9已確認無支出，因此本段期間現金流已可計算。負數主要來自前期供應商貨款與備庫，不代表9月工單本身虧損；但確實解釋了為什麼手上沒有賺錢感。</p></div></div>
       <div class="kpi-lead">
         <article class="metric primary"><span class="label">系統完成工單營收</span><strong>$622,708</strong><small>129張完成工單；$41,850付款方式待補</small></article>
         <article class="metric warn"><span class="label">已知店內現金流出</span><strong>🔴 −$905,231</strong><small>不含中古車BMW加油與家庭／個人支出$41,625</small></article>
@@ -159,7 +159,7 @@
 
       <section id="daily-cashflow" class="subsection">
         <div class="section-head"><div><h2>9月每日現金流｜日誌 × Supabase 對帳</h2><p>以實際工作日只計一次；跨日補 Key 已回歸實際服務日。個人小費與中古車投資不列入本表。工單付款方式是收款來源分類，信用卡仍須等撥款、轉帳須在玉山入帳後完成帳戶核對。</p></div><div class="section-note">每日先看流入、再看實付</div></div>
-        <div class="verdict cash-negative-block"><b>已知支出日</b><div><strong>已有支出資料的11天：客戶收款$520,183、其他收入$6,400、店內實付$905,231，淨現金變動為 🔴 −$378,648。</strong><p>9/5、9/6、9/9尚未提供支出，不能併入淨額。整段期間另有$41,850完成工單未填付款方式；個人／家庭$41,625與BMW油資$1,637均另帳。</p></div></div>
+        <div class="verdict cash-negative-block"><b>9月現金</b><div><strong>9/1–9/14客戶收款$580,858、其他收入$6,400、店內實付$905,231，淨現金變動為 🔴 −$317,973。</strong><p>9/5、9/6、9/9已確認無支出。另有$41,850完成工單未填付款方式；個人／家庭$41,625與BMW油資$1,637均另帳，不列店內損益。</p></div></div>
         <div class="cash-legend"><span class="cash-positive">🟢 正數：當日已登錄收款大於實付</span><span class="cash-negative">🔴 負數：當日實付大於已登錄收款</span><span class="cash-unknown">🟡 待補：完工但未填付款方式</span></div>
         <div class="table-wrap"><table aria-label="9月每日現金流量">
           <thead><tr><th>日期</th><th class="num">完工營收</th><th class="num">已登錄客戶收款</th><th class="num">其他收入</th><th>收款拆分</th><th class="num">店內實付</th><th>支出重點／帳戶</th><th class="num">當日淨現金變動</th><th>待補／提醒</th></tr></thead>
@@ -168,17 +168,17 @@
             <tr><td>9/2</td><td class="num">$38,400</td><td class="num">$38,400</td><td class="num">$0</td><td>現金$38,400</td><td class="num">−$21,500</td><td>手頭現金：小羅薪資預支</td><td class="num cash-positive">🟢 +$16,900</td><td>下次薪資結算須沖回預支</td></tr>
             <tr><td>9/3</td><td class="num">$58,600</td><td class="num">$48,900</td><td class="num">$0</td><td>現金$45,100／信用卡$3,800</td><td class="num">−$99,800</td><td>玉山：變速箱$58,000、美孚$13,800、米其林$28,000</td><td class="num cash-negative">🔴 −$50,900</td><td><span class="tag warn">$9,700付款方式待補</span>；信用卡待實際撥款</td></tr>
             <tr><td>9/4</td><td class="num">$41,650</td><td class="num">$41,650</td><td class="num">$0</td><td>現金$29,050／轉帳$12,600</td><td class="num">−$90,500</td><td>丞品$82,700、金科輔$7,800；付款帳戶待補</td><td class="num cash-negative">🔴 −$48,850</td><td>企隆水箱精$4,500未結算，不列實付</td></tr>
-            <tr><td>9/5</td><td class="num">$15,900</td><td class="num">$15,900</td><td class="num">$0</td><td>現金$15,900</td><td class="num">待補</td><td>當日支出日誌未提供</td><td class="num cash-unknown">🟡 待補</td><td>先補支出與入帳帳戶</td></tr>
-            <tr><td>9/6</td><td class="num">$15,050</td><td class="num">$15,050</td><td class="num">$0</td><td>現金$14,350／轉帳$700</td><td class="num">待補</td><td>當日支出日誌未提供</td><td class="num cash-unknown">🟡 待補</td><td>先補支出與入帳帳戶</td></tr>
+            <tr><td>9/5</td><td class="num">$15,900</td><td class="num">$15,900</td><td class="num">$0</td><td>現金$15,900</td><td class="num">$0</td><td>已確認無支出</td><td class="num cash-positive">🟢 +$15,900</td><td>—</td></tr>
+            <tr><td>9/6</td><td class="num">$15,050</td><td class="num">$15,050</td><td class="num">$0</td><td>現金$14,350／轉帳$700</td><td class="num">$0</td><td>已確認無支出</td><td class="num cash-positive">🟢 +$15,050</td><td>—</td></tr>
             <tr><td>9/7</td><td class="num">$43,000</td><td class="num">$43,000</td><td class="num">$6,400</td><td>工單現金$28,100／信用卡$14,900；回收現金$6,400</td><td class="num">−$82,619</td><td>廣豐網路轉帳$77,619、會計費現金$5,000</td><td class="num cash-negative">🔴 −$33,219</td><td>回收款是否已含在手頭$300,000基數待確認</td></tr>
             <tr><td>9/8</td><td class="num">$93,258</td><td class="num">$89,933</td><td class="num">$0</td><td>現金$85,733／信用卡$4,200</td><td class="num">−$900</td><td>購買工具；付款帳戶待補</td><td class="num cash-positive">🟢 +$89,033</td><td><span class="tag warn">$3,325付款方式待補</span></td></tr>
-            <tr><td>9/9</td><td class="num">$44,525</td><td class="num">$29,725</td><td class="num">$0</td><td>現金$23,325／轉帳$6,400</td><td class="num">待補</td><td>當日支出日誌未提供</td><td class="num cash-unknown">🟡 待補</td><td><span class="tag warn">$14,800付款方式待補</span></td></tr>
+            <tr><td>9/9</td><td class="num">$44,525</td><td class="num">$29,725</td><td class="num">$0</td><td>現金$23,325／轉帳$6,400</td><td class="num">$0</td><td>已確認無支出</td><td class="num cash-positive">🟢 +$29,725</td><td><span class="tag warn">$14,800付款方式待補</span></td></tr>
             <tr><td>9/10</td><td class="num">$27,275</td><td class="num">$27,275</td><td class="num">$0</td><td>現金$27,275</td><td class="num">−$264,660</td><td>現金$36,860／網路轉帳$227,800</td><td class="num cash-negative">🔴 −$237,385</td><td>耀鑫、貞盈、台新舊帳集中付款</td></tr>
             <tr><td>9/11</td><td class="num">$82,625</td><td class="num">$69,300</td><td class="num">$0</td><td>現金$62,300／轉帳$7,000</td><td class="num">$0</td><td>已確認無支出</td><td class="num cash-positive">🟢 +$69,300</td><td><span class="tag warn">$13,325付款方式待補</span></td></tr>
             <tr><td>9/12</td><td class="num">$103,700</td><td class="num">$103,000</td><td class="num">$0</td><td>現金$103,000</td><td class="num">−$17,000</td><td>小羅預支，手頭現金</td><td class="num cash-positive">🟢 +$86,000</td><td><span class="tag warn">$700付款方式待補</span></td></tr>
             <tr><td>9/13</td><td class="num">$0</td><td class="num">$0</td><td class="num">$0</td><td>無完工工單</td><td class="num">−$1,241</td><td>電話費；另有BMW油資$1,637及個人整骨$1,500另帳</td><td class="num cash-negative">🔴 −$1,241</td><td>只計店內電話費</td></tr>
             <tr><td>9/14</td><td class="num">$13,825</td><td class="num">$13,825</td><td class="num">$0</td><td>現金$13,825</td><td class="num">−$31,910</td><td>數字輪胎$29,380、良御$2,530，均網路轉帳</td><td class="num cash-negative">🔴 −$18,085</td><td>女兒安親班$40,125列個人，不列店內</td></tr>
-            <tr class="total"><td>9/1–9/14系統合計</td><td class="num">$622,708</td><td class="num">$580,858</td><td class="num">$6,400</td><td>現金$511,658／轉帳$41,900／信用卡$27,300</td><td class="num">−$905,231</td><td>9/5、9/6、9/9支出未提供</td><td class="num cash-unknown">🟡 不完整</td><td>$41,850未填付款方式；完整期間淨額不可算</td></tr>
+            <tr class="total"><td>9/1–9/14合計</td><td class="num">$622,708</td><td class="num">$580,858</td><td class="num">$6,400</td><td>現金$511,658／轉帳$41,900／信用卡$27,300</td><td class="num">−$905,231</td><td>所有日期支出狀態已確認</td><td class="num cash-negative">🔴 −$317,973</td><td>$41,850未填付款方式，不列現金流入</td></tr>
           </tbody>
         </table></div>
         <p class="muted" style="font-size:.78rem;margin-top:.7rem">計算口徑：<strong>當日淨現金變動＝已登錄客戶收款＋其他已收收入－當日店內實付</strong>，不含帳戶間移轉、不含尚未付款應收、不含中古車投資與個人小費。這是每日資金壓力指標，不是損益或帳戶期末餘額。</p>
@@ -239,6 +239,11 @@
     <section id="snapshot">
       <div class="section-head"><div><h2>8月關帳基準</h2><p>保留8月營運能力、應收、支出與材料預留，供9月比較；以下不是9月現金餘額。</p></div><div class="section-note">歷史基準截至8/31</div></div>
       <div class="verdict"><b>一句話</b><div><strong>8月有利車業營收121.8萬元，但真正淨利尚不能確認；目前只知道現金流入扣已知支出為＋60.6萬元，扣除材料預留後暫餘＋7.9萬元。</strong><p>成本仍有缺漏、16個營運日沒有支出資料，因此＋7.9萬元也不是可分配利潤。</p></div></div>
+      <div class="two-col" style="margin-top:1rem">
+        <article class="panel"><h3>8月營收與工單毛利口徑</h3><p>管理營收<strong>$1,217,675</strong>；其中Supabase系統營收$1,177,625。系統已登錄直接材料成本$644,704，直接材料毛利$532,921、毛利率45.3%。</p><div class="formula"><strong>尚不是淨利</strong><p>管理調整$40,050的成本未完整；另有76筆非贈品項目成本仍為零／空白，且尚未扣薪資、租金、水電、顧問、會計、稅金、刷卡費及老闆薪資。</p></div></article>
+        <article class="panel cash-negative-block"><h3>為什麼沒有感覺賺錢？</h3><p>8月本期收款$1,054,450，另收回前期應收$148,035；已知現金流入合計$1,202,485。扣已知實付$596,407後雖暫差+$606,078，但月底仍須保留材料款$527,120，只剩<strong>$78,958</strong>，且還缺16日支出。</p><div class="formula"><strong>9月現金又流出$317,973</strong><p>截至9/14，大量支付舊貨款及庫存，使8月累積的現金迅速轉成供應商付款與庫存，因此營收高但手上不會有同額現金。</p></div></article>
+      </div>
+      <div class="verdict cash-negative-block"><b>原因</b><div><strong>不是完全沒賺，而是「毛利被應收、材料、舊貨款、庫存與混帳吃掉可見度」。</strong><p>8月尚有管理應收$163,225；材料毛利率45.3%低於50%目標；中古車累計投入$585,900與個人支出必須獨立；老闆薪資、稅務準備與部分營運支出尚未完整，現階段不能把營收或銀行餘額當成可分配利潤。</p></div></div>
       <div class="kpi-lead">
         <article class="metric primary"><span class="label">8月管理營收</span><strong>$1,217,675</strong><small>系統$1,177,625＋管理調整$40,050</small></article>
         <article class="metric warn"><span class="label">管理口徑應收款</span><strong>$163,225</strong><small>系統空白$129,200＋月結重分類$34,025</small></article>
