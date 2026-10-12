@@ -5,12 +5,15 @@
 ## 網站入口
 
 - `index.html`：報告中心首頁。
-- `operations/index.html`：最新完整營運報告。
+- `operations/current.html`：Supabase 截至 2026/10/11 的最新營運與現金流報告；`operations/index.html` 會轉址至此頁。
 - `weekly/index.html`：每週報告索引。
-- `weekly/week-04.html`：最新第四週正式週報，已使用Supabase與管理口徑校正後數字。
+- `weekly/week-06.html`：較新的既有正式週報；10/7–10/11另有未結週期暫行快照，尚非正式週報。
 - `weekly/week-03.html`：第三週營運與現金流週報。
 - `weekly/week-02.html`：第二週管理檢討。
-- `analysis/annual-simulation.html`：年度營收與獲利情境模擬。
+- `analysis/monthly-comparison.html`：9月完整月與10月截至11日的月對月營運、毛利及現金流比較。
+- `analysis/work-order-margin-current.html`：截至 2026/10/11 的工單毛利與缺成本彙總。
+- `analysis/annual-simulation-current.html`：依最新完整成本期間重估的年度情境；舊 `analysis/annual-simulation.html` 轉址至此頁。
+- `weekly/system-update-2026-10-11.html`：10/7–10/11未結週期的系統暫行快照，非正式週報。
 - `strategy/index.html`：舊版經營戰略與營運日報。
 - `archive/`：凍結的歷史版本與原始舊版。
 
@@ -27,10 +30,10 @@
 
 ## 每日更新流程
 
-1. 最新完整營運報告覆蓋 `operations/index.html`。
+1. 更新 `operations/current.html` 為最新營運報告；保留 `operations/index.html` 的轉址。
 2. 當日版本另存到 `archive/operations/YYYY-MM-DD.html`。
-3. 最新 Markdown 覆蓋 `operations/report.md` 與根目錄 `report.md`。
-4. 更新根目錄 `index.html` 的資料截止日及四個摘要數字。
+3. 最新 Markdown 同步更新 `operations/report.md` 與根目錄 `report.md`。
+4. 更新根目錄 `index.html` 的資料截止日及摘要數字；舊檔名應轉址至最新頁。
 
 ## 每週更新流程
 
