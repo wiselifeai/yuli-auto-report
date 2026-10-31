@@ -5,14 +5,14 @@
 ## 網站入口
 
 - `index.html`：報告中心首頁。
-- `operations/current.html`：Supabase 截至 2026/10/11 的最新營運與現金流報告；`operations/index.html` 會轉址至此頁。
+- `operations/current.html`：Supabase 2026/10/31重查、已完工工單與交易截至10/30的最新營運及現金流報告；`operations/index.html` 會轉址至此頁。
 - `weekly/index.html`：每週報告索引。
 - `weekly/week-06.html`：較新的既有正式週報；10/7–10/11另有未結週期暫行快照，尚非正式週報。
 - `weekly/week-03.html`：第三週營運與現金流週報。
 - `weekly/week-02.html`：第二週管理檢討。
-- `analysis/monthly-comparison.html`：9月完整月與10月截至11日的月對月營運、毛利及現金流比較。
-- `analysis/work-order-margin-current.html`：截至 2026/10/11 的工單毛利與缺成本彙總。
-- `analysis/annual-simulation-current.html`：依最新完整成本期間重估的年度情境；舊 `analysis/annual-simulation.html` 轉址至此頁。
+- `analysis/monthly-comparison.html`：9月完整月與10月截至30日的月對月營運、毛利及現金流比較。
+- `analysis/work-order-margin-current.html`：工單毛利與缺成本明細頁，資料截點為2026/10/23；累計摘要以營運報告為準。
+- `analysis/annual-simulation-current.html`：截至2026/10/23的年度情境；尚未套入本次10/30資料。
 - `weekly/system-update-2026-10-11.html`：10/7–10/11未結週期的系統暫行快照，非正式週報。
 - `strategy/index.html`：舊版經營戰略與營運日報。
 - `archive/`：凍結的歷史版本與原始舊版。
